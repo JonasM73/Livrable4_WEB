@@ -1,0 +1,266 @@
+/* Définition des styles pour le corps de la page */
+body {
+	font-family: "Century Gothic", sans-serif; /* Utilisation de la police "Century Gothic" ou une police sans empattement par défaut */
+	margin: 0; /*Définition de la marge de tous les côtés de l'élément*/
+	padding: 0;
+	background-color: rgb(208 220 238);}
+
+header {   
+	display: flex;
+    align-items: center; /* aligner verticalement */
+    background-color: white;
+    font-size: 20px; /* Taille de police de 12 pixels */
+    text-align: left;
+}
+
+/* Styles pour les ensembles de champs de formulaire */
+fieldset {
+	background-color: #f3f3f3; /* Couleur de fond gris clair */
+    color: black; /* Couleur du texte noir */
+    font-weight: bold; /* Police en gras */
+	text-align: center; /* Centrer le texte dans le champ */
+	width: 50%; /* Largeur du champ à 50% de la largeur de son conteneur */
+    height: 25%; /* Hauteur du champ à 25% de la hauteur de son conteneur */
+	display: block; /* Affichage en tant que bloc */
+    margin: 0 auto; /* Marge automatique horizontale pour centrer le champ */
+}
+
+main{
+	padding: 0% 0.5%;
+}
+
+/* Styles pour les champs de saisie de texte */
+input {
+    background-color: #fff; /* Couleur de fond blanc */
+    color: grey; /* Couleur du texte gris */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px; /* Espacement interne */
+	width: 40%; /* Largeur fixe de 200 pixels */
+    border: none; /* Pas de bordure */
+    outline: none; /* Pas de contour de sélection */
+}
+
+/* Styles pour les éléments de type "create" */
+input[type="submit"] {
+    background-color: black; /* Définit la couleur de fond en noir */
+    color: white; /* Définit la couleur du texte en blanc */
+    border: none; /* Supprime la bordure */
+    padding: 10px 20px; /* Ajoute un espace intérieur de 10px en haut/bas et 20px à gauche/droite */
+    text-align: center; /* Centre le texte horizontalement */
+    text-decoration: none; /* Supprime la décoration du texte (soulignement par défaut) */
+    font-size: 16px; /* Définit la taille de la police à 16 pixels */
+    margin: 0 10px; /* Ajoute une marge de 5 pixels en haut et en bas */
+    width: 150px; /* Définit une largeur fixe de 100 pixels */
+}
+
+/* Lorsque le curseur survole un élément de type "create", applique les styles suivants */
+input[type="submit"]:hover {
+    text-decoration: underline; /* Souligne le texte lors du survol */
+    background-color: #333; /* Change la couleur de fond en gris foncé */
+
+}
+
+/* Styles pour le texte en rouge */
+.TextRed {
+    width: 200px; /* Largeur de 200px */
+    color: red; /* Couleur du texte en rouge */
+    text-align: center; /* Centrage du texte */
+    margin: 0 auto; /* Marge automatique horizontale */
+    font-size: 11px; /* Taille de police de 9 pixels */
+}
+
+.logo {
+    width: 130px; /* ajuster la largeur de l'image selon vos besoins */
+    height: auto; /* permettre à la hauteur de s'ajuster automatiquement */
+    border-radius: 15px; /* Arrondir les coins */
+    padding: 0.5% 0.5%;
+    margin-left: 10px;
+}
+
+.moncompte {
+	text-align: right;
+    padding-right: 5%;
+}
+
+.moncompte a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.moncompte a:hover {
+    text-decoration: underline;
+}
+
+.moncompte .active-link {
+    color: black;
+}
+
+.moncompte a {
+    color: white; /* Texte blanc */
+    display: inline-block;
+	padding: 10px 20px;
+	background-color: black;
+	border-radius: 20px; 
+}
+
+.navbar {      
+	padding: 0.5% 4.5%;
+	width: 100%;    
+	color: black;
+	text-align: left;
+}
+
+.navbar a {    
+	color: black;
+    text-decoration: none;
+	font-weight: bold;
+}
+
+.navbar a:hover {  
+	text-decoration: none; 
+	background-color: #f1f1f1; 
+	border-radius: 10px;
+}
+
+.navbar a.active{
+	backgroung-color:#a8c6fa;
+}
+
+/* Style pour le conteneur du menu déroulant */
+.dropdown {   
+	position: relative;  
+	display: inline-block; 
+}
+
+/* Style pour le contenu du menu déroulant */
+.dropdown-content {    
+	font-size: 15px;   
+	display: none;   
+	position: absolute;   
+	background-color: white; 
+	min-width: 150px; z-index: 1;
+	border: 1px solid black; /* Contour noir autour du contenu */
+    border-radius: 10px; 
+	padding: 10px;  
+	transition: opacity 0.5s ease-in-out 0.5s, background-color 0.5s ease; /* Transition de l'opacité et du fond */
+}
+
+/* Style pour les liens dans le contenu du menu déroulant */
+.dropdown-content a {    
+	color: black; 
+	padding: 20px 16px; 
+	text-decoration: none;  
+	display: block;
+	background-color: white; 
+	text-align: left;
+}
+
+/* Style pour les liens lorsqu'ils sont survolés */
+.dropdown-content a:hover {
+    text-decoration: none; /* Pas de soulignement au survol */
+    background-color: #f1f1f1; /* Couleur de fond lorsqu'un lien est survolé */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Afficher le contenu du menu déroulant lorsque le conteneur est survolé */
+.dropdown:hover .dropdown-content {
+    display: block; /* Afficher le contenu */
+}
+
+/* Styles pour les liens */
+.link {
+    color: blue; /* Couleur du texte en bleu */
+    text-decoration: none; /* Pas de soulignement par défaut */
+}
+
+/* Styles au survol des liens */
+.link:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+.linkMDP {
+	color: blue;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+/* Styles au survol des liens */
+.linkMDP:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+.connectext {
+	font-size: 14px; /* Taille de police*/
+}
+
+/* Styles pour la ligne horizontale */
+.horizontal {
+    border: none; /* Supprime la bordure par défaut */
+    border-top: 1px solid black; /* Ajoute une bordure supérieure d'une épaisseur de 1 pixel */
+    width: 350px; /* Largeur de la ligne */
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+    /* Styles pour les ensembles de champs de formulaire */
+	fieldset {
+		background-color: #f3f3f3; /* Couleur de fond gris clair */
+		color: black; /* Couleur du texte noir */
+		font-weight: bold; /* Police en gras */
+		text-align: center; /* Centrer le texte dans le champ */
+		width: 80%; /* Largeur du champ à 50% de la largeur de son conteneur */
+		height: 25%; /* Hauteur du champ à 25% de la hauteur de son conteneur */
+		display: block; /* Affichage en tant que bloc */
+		margin: 0 auto; /* Marge automatique horizontale pour centrer le champ */
+	}
+
+	.linkMDP {
+		color: blue;
+		text-decoration: none;
+		font-size: 60%;
+	}
+
+	.connectext {
+		font-size: 70%; /* Taille de police*/
+	}
+	
+	/* Styles pour la ligne horizontale */
+	.horizontal {
+		border: none; /* Supprime la bordure par défaut */
+		border-top: 1px solid black; /* Ajoute une bordure supérieure d'une épaisseur de 1 pixel */
+		width: 50%; /* Largeur de la ligne */
+	}
+	
+    .navbar{
+        padding: 5% 5%; /*Définition de la mare en haut et en bas à 10px et à droite et à gauche à 0*/
+    }
+	
+	.navbar a{
+        padding: 1% 0; /*Définition de la mare en haut et en bas à 10px et à droite et à gauche à 0*/
+    }
+	
+	/* Styles pour le logo */
+	.logo {
+		display : none;
+	}
+}
+.leftfooter {    background-color: #1B5684;  }
+.rightfooter{    background-color: #6FA1BD; }
+.social-media {    display: flex;    }
+.social-media img {    margin-right: 10px; }
+.basfooter {    background-color: #153548;   }
+.leftfooter, .rightfooter, .basfooter   {	; color: white;    padding: 10px 20px;    text-align: center;}
+.footer-container {    display: flex;  }
+.leftfooter, .rightfooter {    flex: 1;}
+.logoinsta {    width: 50px; border-radius: 15px; margin-right: 10px; margin-bottom: 10px}
+.logoCesi{width: 100px;}
+
+
+.navbarfooter {   width: 100%;    color: black;    text-align: center;}
+.navbarfooter a {    color: white;    text-decoration: none;    font-weight: bold;}
+.navbarfooter a:hover {   text-decoration: none;    background-color: black;}
+
+#navigation-label {    font-weight: bold; font-size: 1.2em; color: white; text-decoration: underline;}
+#reseaux-label {    font-weight: bold; font-size: 1.2em; color: white; text-decoration: underline; padding-right: 50% ;}
+#bas-label { font-size: 1.2em; color: white; text-decoration: underline;margin-top: 20px;}
+

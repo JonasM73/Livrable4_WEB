@@ -1,0 +1,34 @@
+/* Styles pour la ligne horizontale */
+.horizontal_postul {
+    border: none; /* Supprime la bordure par défaut */
+    border-top: 1px solid black; /* Ajoute une bordure supérieure d'une épaisseur de 1 pixel */
+    width: 50%; /* Largeur de la ligne */
+}
+
+#LM{
+	width: 70%;
+	height: 200px;
+	text-align: left;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload label {
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.custom-file-upload label:hover {
+  background-color: #333;
+}
+
+textarea {
+  width: 300px; /* Largeur fixe */
+  height: 200px; /* Hauteur fixe */
+  resize: none; /* Désactive le redimensionnement */
+}
