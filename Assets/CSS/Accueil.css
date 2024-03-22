@@ -33,11 +33,10 @@ textarea {    resize: none;    font-size: 18px;    font-family: "Century Gothic"
 .affichage {  border: 2px solid black;    height: 290px;    margin-left: 30%; margin-right: 15px;   margin-top: 25px;    overflow: auto;    display: grid; grid-template-columns: 250px auto;border-radius: 15px; background-color: white;
     box-shadow: 5px 5px 10px rgba(215, 216, 219, 0.5); /* Ombre */}
 .affichage1 {    border: 2px solid black;    height: 250px;    width: 250px; margin-top: 15px; margin-left: 15px;border-radius: 15px; background-color: #ABABAB;}
-.logostage {  height: 250px; bac}
+.logostage {  height: 250px;}
 .conteneur-droite {  margin-left: 30px; display: flex;    flex-direction: column; height: 250px;margin-top: 15px; margin-right: 25px;}
 .texte_affichage1 {         height: 35px;    width: 200px;}
 .presentation_affichage1 {    margin-top: 15px;    border: 1px solid black;    height: 170px;    width: 500px;    margin-left: 15px;    overflow: auto; border-top-left-radius: 15px; /* Coin supérieur gauche arrondi */
     border-bottom-left-radius: 15px; /* Coin inférieur gauche arrondi */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Ombre */}
 .texte-presentation {    padding: 10px;     text-align: justify; }
-

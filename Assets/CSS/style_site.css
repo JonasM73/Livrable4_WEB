@@ -244,23 +244,87 @@ input[type="submit"]:hover {
 		display : none;
 	}
 }
-.leftfooter {    background-color: #1B5684;  }
-.rightfooter{    background-color: #6FA1BD; }
-.social-media {    display: flex;    }
-.social-media img {    margin-right: 10px; }
-.basfooter {    background-color: #153548;   }
-.leftfooter, .rightfooter, .basfooter   {	; color: white;    padding: 10px 20px;    text-align: center;}
-.footer-container {    display: flex;  }
-.leftfooter, .rightfooter {    flex: 1;}
-.logoinsta {    width: 50px; border-radius: 15px; margin-right: 10px; margin-bottom: 10px}
-.logoCesi{width: 100px;}
 
+.leftfooter {    
+	background-color: #1B5684;  
+}
 
-.navbarfooter {   width: 100%;    color: black;    text-align: center;}
-.navbarfooter a {    color: white;    text-decoration: none;    font-weight: bold;}
-.navbarfooter a:hover {   text-decoration: none;    background-color: black;}
+.rightfooter{    
+	background-color: #6FA1BD; 
+}
 
-#navigation-label {    font-weight: bold; font-size: 1.2em; color: white; text-decoration: underline;}
-#reseaux-label {    font-weight: bold; font-size: 1.2em; color: white; text-decoration: underline; padding-right: 50% ;}
-#bas-label { font-size: 1.2em; color: white; text-decoration: underline;margin-top: 20px;}
+.social-media {    
+	display: flex;    
+}
 
+.social-media img {    
+	margin-right: 10px; 
+}
+
+.basfooter {    
+	background-color: #153548;   
+}
+
+.leftfooter, .rightfooter, .basfooter   { 
+	color: white;    
+	padding: 10px 20px;    
+	text-align: center;
+}
+
+.footer-container {   
+	display: flex;  
+}
+
+.leftfooter, .rightfooter {    
+	flex: 1;
+}
+
+.logoinsta {    
+	width: 50px; 
+	border-radius: 15px; 
+	margin-right: 10px; 
+	margin-bottom: 10px;
+}
+
+.logoCesi{
+	width: 100px;
+}
+
+.navbarfooter {   
+	width: 100%;    
+	color: black;    
+	text-align: center;
+}
+
+.navbarfooter a {    
+	color: white;    
+	text-decoration: none;    
+	font-weight: bold;
+}
+
+.navbarfooter a:hover {   
+	text-decoration: none;    
+	background-color: black;
+}
+
+#navigation-label {    
+	font-weight: bold; 
+	font-size: 1.2em; 
+	color: white; 
+	text-decoration: underline;
+}
+
+#reseaux-label {    
+	font-weight: bold; 
+	font-size: 1.2em; 
+	color: white; 
+	text-decoration: underline; 
+	padding-right: 50% ;
+}
+
+#bas-label { 
+	font-size: 1.2em; 
+	color: white; 
+	text-decoration: underline;
+	margin-top: 20px;
+}
