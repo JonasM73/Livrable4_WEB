@@ -54,7 +54,7 @@
 		
 		<main>
 			<br><br>
-			<form id="connexion">
+			<form id="connexion" action="Connexion.php" method="POST">
 				<fieldset>
 					<h1>LOGIN</h1>
 					<label>Identifiant</label><br><br>
@@ -64,7 +64,7 @@
 					<input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required><br>
 					<span id="MotDePasse" class="TextRed"></span><br><br>
 					<a href="" class="linkMDP">Mot de passe oublié ?</a><br><br>
-					<input type="submit" value="Se connecter"><br>
+					<input type="submit" name="action" value="Connexion"><br>
 					<span id="soumission" class="TextRed"></span><br><br>
 					<hr class="horizontal">
 					<p class="connectext">Vous n'avez pas encore de compte ? <a href="Creer_un_compte.html" class="link">Créez-en un !</a></p>

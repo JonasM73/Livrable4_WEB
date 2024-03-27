@@ -11,7 +11,7 @@ function validateEmail() {
         const extension = domaine[1];
         
         // Vérifier si le nom de la boîte mail existe bien
-        const boitesMailsConnu = ['outlook', 'gmail', 'hotmail', 'yahoo', 'icloud', 'viacesi'];
+        const boitesMailsConnu = ['outlook', 'gmail', 'hotmail', 'yahoo', 'icloud', 'viacesi', 'exemple'];
         const isValidBoiteMail = boitesMailsConnu.includes(boiteMail.toLowerCase());
         
         // Vérifier si les deux derniers caractères existent

@@ -55,9 +55,10 @@ input[type="submit"] {
 
 /* Lorsque le curseur survole un élément de type "create", applique les styles suivants */
 input[type="submit"]:hover {
+    cursor: pointer;
     text-decoration: underline; /* Souligne le texte lors du survol */
     background-color: #333; /* Change la couleur de fond en gris foncé */
-
+    
 }
 
 /* Styles pour le texte en rouge */
@@ -87,9 +88,8 @@ input[type="submit"]:hover {
     font-weight: bold;
 }
 
-.moncompte a:hover {
-    text-decoration: underline;
-}
+.moncompte a:hover { background-color: rgba(0, 0, 0, 0.7);}
+
 
 .moncompte .active-link {
     color: black;
@@ -102,57 +102,75 @@ input[type="submit"]:hover {
 	background-color: black;
 	border-radius: 20px; 
 }
-
-.navbar {      
-	padding: 0.5% 4.5%;
-	width: 100%;    
-	color: black;
-	text-align: left;
+.navbar {
+    padding: 0.5% 4.5%;
+    width: 100%;
+    color: black;
+    text-align: left;
 }
 
-.navbar a {    
-	color: black;
+.navbar a {
+    color: black;
     text-decoration: none;
-	font-weight: bold;
+    font-weight: bold;
+    position: relative; /* Nécessaire pour positionner le pseudo-élément */
 }
 
-.navbar a:hover {  
-	text-decoration: none; 
-	background-color: #f1f1f1; 
-	border-radius: 10px;
+/* CSS pour l'effet de soulignement */
+.navbar a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px; /* Éloignement du texte */
+    left: 50%;
+    background-color: black;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+	height: 3px; 
 }
 
-.navbar a.active{
-	backgroung-color:#a8c6fa;
+.navbar a:hover::before {
+    width: 100%;
+    left: 0;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
+.navbar a.active {
+    background-color: #a8c6fa;
+}
 /* Style pour le conteneur du menu déroulant */
 .dropdown {   
-	position: relative;  
-	display: inline-block; 
+    position: relative;  
+    display: inline-block; 
+    margin-top: 10px; /* Décalage vers le bas par rapport au texte */
 }
 
 /* Style pour le contenu du menu déroulant */
 .dropdown-content {    
-	font-size: 15px;   
-	display: none;   
-	position: absolute;   
-	background-color: white; 
-	min-width: 150px; z-index: 1;
-	border: 1px solid black; /* Contour noir autour du contenu */
+    font-size: 15px;   
+    display: none;   
+    position: absolute;   
+    background-color: white; 
+    min-width: 150px; 
+    z-index: 1;
+    border: 1px solid black; /* Contour noir autour du contenu */
     border-radius: 10px; 
-	padding: 10px;  
-	transition: opacity 0.5s ease-in-out 0.5s, background-color 0.5s ease; /* Transition de l'opacité et du fond */
+    padding: 10px;  
+    transition: opacity 0.5s ease-in-out 0.5s, background-color 0.5s ease; /* Transition de l'opacité et du fond */
+    top: 30px; /* Décalage vers le bas par rapport au conteneur */
 }
+.moncompte .dropdown-content {    top :45px;}
 
 /* Style pour les liens dans le contenu du menu déroulant */
 .dropdown-content a {    
-	color: black; 
-	padding: 20px 16px; 
-	text-decoration: none;  
-	display: block;
-	background-color: white; 
-	text-align: left;
+    color: black; 
+    padding: 20px 16px; 
+    text-decoration: none;  
+    display: block;
+    background-color: white; 
+    text-align: left;
+	margin-bottom: 5px; /* Ajoute un espace entre chaque option */
+
 }
 
 /* Style pour les liens lorsqu'ils sont survolés */
@@ -166,6 +184,7 @@ input[type="submit"]:hover {
 .dropdown:hover .dropdown-content {
     display: block; /* Afficher le contenu */
 }
+
 
 /* Styles pour les liens */
 .link {
@@ -249,7 +268,7 @@ input[type="submit"]:hover {
 .social-media {    display: flex;    }
 .social-media img {    margin-right: 10px; }
 .basfooter {    background-color: #153548;   }
-.leftfooter, .rightfooter, .basfooter   {	; color: white;    padding: 10px 20px;    text-align: center;}
+.leftfooter, .rightfooter, .basfooter   { color: white;    padding: 10px 20px;    text-align: center;}
 .footer-container {    display: flex;  }
 .leftfooter, .rightfooter {    flex: 1;}
 .logoinsta {    width: 50px; border-radius: 15px; margin-right: 10px; margin-bottom: 10px}
