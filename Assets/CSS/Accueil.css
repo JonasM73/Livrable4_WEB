@@ -1,46 +1,81 @@
-.menu-container {    border: 2px solid black;    border-radius: 10px;    padding: 5px;    flex-grow:1;
-                     margin-top: 10px;    margin-right: 10px; margin-bottom: 10px; margin-left: 10px;    background-color: white;}    
-.menu {    list-style-type: none;    padding: 0;}
+.menu-container { 
+    border: 2px solid black; border-radius: 10px; padding: 5px; flex-grow:1; margin-top: 10px;    
+    margin-right: 10px; margin-bottom: 10px; margin-left: 10px; background-color: white;
+}
 
-.option {    margin-bottom: 5px;}
-.submenu {    display: none;    margin-top: 5px;}
-.option input[type="checkbox"] {    display: none;}
-.option input[type="checkbox"] + label {    display: inline-block; border-top: 0.5px solid black;    padding-bottom: 10px;    padding-top: 10px;    width: 100%;}
-.option input[type="checkbox"]:checked + label + .submenu {    display: block;}
+.menu { list-style-type: none; padding: 0;}
 
+.option { margin-bottom: 5px;}
 
-.Nom_E {    display: flex;    flex-wrap: wrap;}
-.input-group {    display: flex;    flex-direction: row; align-items: center; margin-right: 100px;margin-bottom: 10px; }
-.text-area-container {    display: flex;    flex-direction: column; }
+.submenu { display: none; margin-top: 5px;}
 
+.option input[type="checkbox"] { display: none;}
 
-textarea {    resize: none;    font-size: 18px;    font-family: "Century Gothic", sans-serif; width: 240px;   text-align: left; margin: 0; padding: 0; height: 40px; padding-left: 10px; margin-top: 5px;}
+.option input[type="checkbox"] + label { 
+    display: inline-block; border-top: 0.5px solid black; padding-bottom: 10px; padding-top: 10px; width: 100%;
+}
+
+.option input[type="checkbox"]:checked + label + .submenu { display: block;}
+
+.Nom_E { display: flex; flex-wrap: wrap;}
+
+.input-group { display: flex; flex-direction: row; align-items: center; margin-right: 100px; margin-bottom: 10px;}
+
+.text-area-container { display: flex; flex-direction: column;}
+
+textarea { 
+    resize: none; font-size: 18px; font-family: "Century Gothic", sans-serif; text-align: left; margin: 0; 
+    padding: 0; height: 40px; padding-left: 10px; margin-top: 5px;
+}
+
 .input-group button[type="submit"] {margin-top: 45.5px; height: 42px;}
 
-#Nom,#ou {   font-family: "Century Gothic", sans-serif;    font-size: 24px;    font-weight: bold; margin-top: 10px;}
+#Nom,#ou { font-family: "Century Gothic", sans-serif; font-size: 24px; font-weight: bold; margin-top: 10px;}
+
 #Nom,#textarea_E {margin-left: 5px;}
+
 #ou, #textarea_O{margin-left: 25px;}
 #buttonO{margin-top: 47px;}
 #buttonE{margin-top: 45px;}
 
-.bloc-droite-high, .bloc-gauche, .bloc-droitedroite-high{float: left; margin-top: 10px;      background-color: rgb(208 220 238);   }
-.bloc-gauche {    width: 500px;  }
-.bloc-droite-high {    width: 750px;height:100px; }
-.btn-rechercher {    padding: 10px 20px;    background-color: #007bff;    color: white; border: none; cursor: pointer; font-size: 16px;  font-size: 20px; font-weight: bold;
-    transition: background-color 0.3s ease; border-radius: 15px; margin-top: 30px; width: 200px; height: 55px; font-family: "Century Gothic", sans-serif;   margin-right: 200px;   transition: transform 0.5s ease;}
+.bloc-droite-high, .bloc-gauche, .bloc-droitedroite-high{ float: left; margin-top: 10px; background-color:rgb(208 220 238);}
 
-.btn-rechercher:hover {    background-color: #0056b3;  transform: scale(1.08); }
+.bloc-gauche { width: 500px;}
 
-.bloc-droite-container{display: flex;    flex-direction: row;    justify-content: space-between; }
+.bloc-droite-high { width:750px; height:100px;}
 
-.affichage {  border: 2px solid black;    height: 290px;    margin-left: 30%; margin-right: 15px;   margin-top: 25px;    overflow: auto;    display: grid; grid-template-columns: 250px auto;border-radius: 15px; background-color: white;
-    box-shadow: 5px 5px 10px rgba(215, 216, 219, 0.5); /* Ombre */}
-.affichage1 {    border: 2px solid black;    height: 250px;    width: 250px; margin-top: 15px; margin-left: 15px;border-radius: 15px; background-color: #ABABAB;}
-.logostage {  height: 250px; }
-.conteneur-droite {  margin-left: 30px; display: flex;    flex-direction: column; height: 250px;margin-top: 15px; margin-right: 25px;}
-.texte_affichage1 {         height: 35px;    width: 200px;}
-.presentation_affichage1 {    margin-top: 15px;    border: 1px solid black;    height: 170px;    width: 500px;    margin-left: 15px;    overflow: auto; border-top-left-radius: 15px; /* Coin supérieur gauche arrondi */
+.btn-rechercher { 
+    padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer; font-size: 16px;
+    font-size: 20px; font-weight: bold; transition: background-color 0.3s ease; border-radius: 15px; margin-top: 30px; 
+    width: 200px; height: 55px; font-family: "Century Gothic", sans-serif;   margin-right: 200px;
+}
+
+.btn-rechercher:hover { background-color: #0056b3; }
+
+.bloc-droite-container{ display: flex; flex-direction: row; justify-content: space-between;}
+
+.affichage { 
+    border: 2px solid black; height: 290px; margin-left: 30%; margin-right: 15px; margin-top: 25px; overflow: auto; 
+    display: grid; grid-template-columns: 250px auto;border-radius: 15px; background-color: white;
+    box-shadow: 5px 5px 10px rgba(215, 216, 219, 0.5); /* Ombre */
+}
+
+.affichage1 { 
+    border: 2px solid black; height: 250px; width: 250px; margin-top: 15px; margin-left: 15px; border-radius: 15px;
+    background-color: #ABABAB;
+}
+
+.logostage { height: 250px;}
+
+.conteneur-droite { margin-left: 30px; display: flex; flex-direction: column; height: 250px; margin-top: 15px; margin-right: 25px;}
+
+.texte_affichage1 { height: 35px; width: 200px;}
+
+.presentation_affichage1 { 
+    margin-top: 15px; border: 1px solid black; height: 170px; width: 500px; margin-left: 15px;    
+    overflow: auto; border-top-left-radius: 15px; /* Coin supérieur gauche arrondi */
     border-bottom-left-radius: 15px; /* Coin inférieur gauche arrondi */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Ombre */}
-.texte-presentation {    padding: 10px;     text-align: justify; }
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Ombre */
+}
 
+.texte-presentation { padding: 10px; text-align: justify;}
