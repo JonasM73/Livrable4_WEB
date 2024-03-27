@@ -2,7 +2,7 @@
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
-		<title>StageLinkCesi - Statistiques étudiant</title>
+		<title>StageLinkCesi - Statistiques étudiants</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
 		<link rel="stylesheet" href="Assets/CSS/style_creer_compte.css">
 	</head>

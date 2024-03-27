@@ -219,50 +219,6 @@ input[type="submit"]:hover {
     width: 350px; /* Largeur de la ligne */
 }
 
-/* Styles pour les petits écrans */
-@media (max-width: 768px) {
-    /* Styles pour les ensembles de champs de formulaire */
-	fieldset {
-		background-color: #f3f3f3; /* Couleur de fond gris clair */
-		color: black; /* Couleur du texte noir */
-		font-weight: bold; /* Police en gras */
-		text-align: center; /* Centrer le texte dans le champ */
-		width: 80%; /* Largeur du champ à 50% de la largeur de son conteneur */
-		height: 25%; /* Hauteur du champ à 25% de la hauteur de son conteneur */
-		display: block; /* Affichage en tant que bloc */
-		margin: 0 auto; /* Marge automatique horizontale pour centrer le champ */
-	}
-
-	.linkMDP {
-		color: blue;
-		text-decoration: none;
-		font-size: 60%;
-	}
-
-	.connectext {
-		font-size: 70%; /* Taille de police*/
-	}
-	
-	/* Styles pour la ligne horizontale */
-	.horizontal {
-		border: none; /* Supprime la bordure par défaut */
-		border-top: 1px solid black; /* Ajoute une bordure supérieure d'une épaisseur de 1 pixel */
-		width: 50%; /* Largeur de la ligne */
-	}
-	
-    .navbar{
-        padding: 5% 5%; /*Définition de la mare en haut et en bas à 10px et à droite et à gauche à 0*/
-    }
-	
-	.navbar a{
-        padding: 1% 0; /*Définition de la mare en haut et en bas à 10px et à droite et à gauche à 0*/
-    }
-	
-	/* Styles pour le logo */
-	.logo {
-		display : none;
-	}
-}
 
 .leftfooter {    
 	background-color: #1B5684;  
@@ -346,4 +302,49 @@ input[type="submit"]:hover {
 	color: white; 
 	text-decoration: underline;
 	margin-top: 20px;
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+    /* Styles pour les ensembles de champs de formulaire */
+	fieldset {
+		background-color: #f3f3f3; /* Couleur de fond gris clair */
+		color: black; /* Couleur du texte noir */
+		font-weight: bold; /* Police en gras */
+		text-align: center; /* Centrer le texte dans le champ */
+		width: 80%; /* Largeur du champ à 50% de la largeur de son conteneur */
+		height: 25%; /* Hauteur du champ à 25% de la hauteur de son conteneur */
+		display: block; /* Affichage en tant que bloc */
+		margin: 0 auto; /* Marge automatique horizontale pour centrer le champ */
+	}
+
+	.linkMDP {
+		color: blue;
+		text-decoration: none;
+		font-size: 60%;
+	}
+
+	.connectext {
+		font-size: 70%; /* Taille de police*/
+	}
+	
+	/* Styles pour la ligne horizontale */
+	.horizontal {
+		border: none; /* Supprime la bordure par défaut */
+		border-top: 1px solid black; /* Ajoute une bordure supérieure d'une épaisseur de 1 pixel */
+		width: 50%; /* Largeur de la ligne */
+	}
+	
+    .navbar{
+        padding: 5% 5%; /*Définition de la mare en haut et en bas à 10px et à droite et à gauche à 0*/
+    }
+	
+	.navbar a{
+        padding: 1% 0; /*Définition de la mare en haut et en bas à 10px et à droite et à gauche à 0*/
+    }
+	
+	/* Styles pour le logo */
+	.logo {
+		display : none;
+	}
 }

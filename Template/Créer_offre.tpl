@@ -2,7 +2,7 @@
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
-		<title>StageLinkCesi - Inscrire mon entreprise</title>
+		<title>StageLinkCesi - Créer une offre</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
 		<link rel="stylesheet" href="Assets/CSS/style_creer_compte.css">
 		<link rel="stylesheet" href="Assets/CSS/style_creer_entreprise.css">

@@ -172,7 +172,6 @@ VALUES
 ('Bertrand', 'Enzo', 'Étudiant', 'ebertrand@viacesi.com', 'mot_de_passe', 9);
 
 
-
 CREATE TABLE Offre_stage(
    id_Offre_stage INT auto_increment,
    titre_offre_stage VARCHAR(50) NOT NULL,
