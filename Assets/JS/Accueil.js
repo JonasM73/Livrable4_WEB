@@ -35,6 +35,15 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function updateCate(radio) {
+    if (radio.checked) {
+        var cate = document.getElementById('Compétence');
+        cate.value = radio.id;
+        document.getElementById('catValue').textContent = "Catégorie sélectionnée : " + cate.value;
+    }
+}
+
+
 const textarea = document.getElementById('singleLineTextarea');
 
 textarea.addEventListener('input', function() {
@@ -62,4 +71,5 @@ function validation() {
         }
     });
 }
+
 

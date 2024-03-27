@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-27 11:03:36
-  from 'C:\xampp\htdocs\Livrable4_WEB\Template\Rechercher_un_compte_etudiant.tpl' */
+/* Smarty version 4.3.2, created on 2024-03-27 15:16:07
+  from 'C:\www\Livrable4_WEB\Template\Rechercher_un_compte_etudiant.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6603eef83beeb3_65752434',
+  'unifunc' => 'content_66042a27e3acd4_33756298',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '537990abfd67ba9593725e6d4aae6d8c8813ea66' => 
+    'eba3a54ca4f6840205c170f86148bd7f52f1290d' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Livrable4_WEB\\Template\\Rechercher_un_compte_etudiant.tpl',
-      1 => 1711533765,
+      0 => 'C:\\www\\Livrable4_WEB\\Template\\Rechercher_un_compte_etudiant.tpl',
+      1 => 1711541563,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6603eef83beeb3_65752434 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66042a27e3acd4_33756298 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-27 11:04:08
-  from 'C:\xampp\htdocs\Livrable4_WEB\Template\Creer_un_compte.tpl' */
+/* Smarty version 4.3.2, created on 2024-03-27 15:16:03
+  from 'C:\www\Livrable4_WEB\Template\Creer_un_compte.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6603ef187a3086_56898816',
+  'unifunc' => 'content_66042a233b3294_30151217',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'b42d1c4b2e519c44404e7ba495601a07290630db' => 
+    'eefc43192eafe51dc9d0e41048eb950ef32f15a6' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Livrable4_WEB\\Template\\Creer_un_compte.tpl',
-      1 => 1711533846,
+      0 => 'C:\\www\\Livrable4_WEB\\Template\\Creer_un_compte.tpl',
+      1 => 1711541563,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6603ef187a3086_56898816 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66042a233b3294_30151217 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>

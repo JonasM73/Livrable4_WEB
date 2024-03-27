@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-27 11:49:49
-  from 'C:\xampp\htdocs\Livrable4_WEB\Template\Accueil.tpl' */
+/* Smarty version 4.3.2, created on 2024-03-27 15:45:17
+  from 'C:\www\Livrable4_WEB\Template\Accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6603f9cdb50b54_56399212',
+  'unifunc' => 'content_660430fdd88760_95149403',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '5fe8d93a936ec1cec15243286d209764d6ee17bf' => 
+    'c0f4060e7f52157a3bb140bf813de2db282700c5' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Livrable4_WEB\\Template\\Accueil.tpl',
-      1 => 1711536574,
+      0 => 'C:\\www\\Livrable4_WEB\\Template\\Accueil.tpl',
+      1 => 1711550713,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6603f9cdb50b54_56399212 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660430fdd88760_95149403 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>
@@ -30,9 +30,11 @@ function content_6603f9cdb50b54_56399212 (Smarty_Internal_Template $_smarty_tpl)
 		<link rel="stylesheet" type="text/css" href="Assets\CSS\Accueil.css">
 	</head>
 
-	<body>
+	<body action='Accueil.tpl' method='POST'>
+	<img src="Images/B.png" alt="logo Stage Cesi Link" class="banière_1">
+
 		<header>
-			<img src="Images/logo.png" alt="logo Stage Cesi Link" class="logo">
+		<img src="Images/logo.png" alt="logo Stage Cesi Link" class="logo">
 			<hr>
 			<nav class="navbar">
 				<div class="dropdown">
@@ -43,14 +45,14 @@ function content_6603f9cdb50b54_56399212 (Smarty_Internal_Template $_smarty_tpl)
 				<div class="dropdown-content">
 					<a href="#">Entreprises</a>
 					<a href="index.php?page=Créer_entreprise">Inscrire mon Entreprise</a>
-					<a href="#">Dashboard Entreprise</a>
+					<a href="index.php?page=Dashboard_E">Dashboard Entreprise</a>
 				</div>
 				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 				<div class="dropdown">
 					<a href="#">Offres </a>
 					<div class="dropdown-content">
 						<a href="index.php?page=Créer_offre">Créer mon offre </a>
-						<a href="#">Dashboard offre</a>
+						<a href="index.php?page=Dashboard_O">Dashboard offre</a>
 					</div>
 				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 				<div class="dropdown">
@@ -69,54 +71,56 @@ function content_6603f9cdb50b54_56399212 (Smarty_Internal_Template $_smarty_tpl)
 					<div class="dropdown-content">
 						<a href="index.php?page=Connexion">S'identifier</a>
 						<a href="index.php?page=Creer_un_compte">Créer un compte</a>
-						<a href="#">Mon compte</a>
+						<a href="index.php?page=Mon_Compte">Mon compte</a>
 					</div>
 				</div>
 			</nav>
 			<hr>
-		</header><br><br>
+		</header>
 		
 		<main>
 			<div class="bloc-gauche">
     			<div class="menu-container">
         			<div class="menu">
             			<div class="option">
-                			<input type="checkbox" id="interest" name="category">
-                			<label for="interest" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Compétences :</label>
+                			<input type="checkbox" id="Compétence" name="category">
+                			<label for="Compétence" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Compétences :</label>
                 			&nbsp;
                 			<div class="submenu">
                     			<div>
-									<input type="radio" id="finance_et_banque" name="interest">
+									<input type="radio" id="finance_et_banque" name="Compétence" onchange="updateCate(this)">
 									<label for="finance_et_banque">Finance et banque</label>
-								</div>
+								</div>	
                     			<div>
-									<input type="radio" id="ingenieur_informatique" name="interest">
+									<input type="radio" id="ingenieur_informatique" name="Compétence" onchange="updateCate(this)">
 									<label for="ingenieur_informatique">Ingénieur Informatique</label>
 								</div>
                     			<div>
-									<input type="radio" id="marketing_et_publicite" name="interest">
+									<input type="radio" id="marketing_et_publicite" name="Compétence" onchange="updateCate(this)">
 									<label for="marketing_et_publicite">Marketing et publicité</label>
 								</div>
                     			<div>
-									<input type="radio" id="ressources_humaines" name="interest">
+									<input type="radio" id="ressources_humaines" name="Compétence" onchange="updateCate(this)">
 									<label for="ressources_humaines">Ressources Humaines</label>
 								</div>
                     			<div>
-									<input type="radio" id="agriculture" name="interest">
+									<input type="radio" id="agriculture" name="Compétence" onchange="updateCate(this)">
 									<label for="agriculture">Agriculture</label>
 								</div>
                     			<div>
-									<input type="radio" id="immobilier" name="interest">
+									<input type="radio" id="immobilier" name="Compétence" onchange="updateCate(this)">
 									<label for="immobilier">Immobilier</label>
 								</div>
                     			<div>
-									<input type="radio" id="aucune_selection" name="interest" value="">
+									<input type="radio" id="aucune_selection" name="Compétence" onchange="updateCate(this)" >
 									<label for="aucune_selection">Aucune sélection</label>
 								</div>
                 			</div>
             			</div>
+						<p id="catValue"></p>
+
             			<div class="option">
-                			<input type="checkbox" id="city" name="category">
+                			<input type="checkbox" id="city" name="Time">
                 			<label for="city"style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Durée du Stage :</label>
                 			<div class="submenu">
                     			<div>

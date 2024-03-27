@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-27 11:03:17
-  from 'C:\xampp\htdocs\Livrable4_WEB\Template\Créer_entreprise.tpl' */
+/* Smarty version 4.3.2, created on 2024-03-27 15:08:04
+  from 'C:\www\Livrable4_WEB\Template\Créer_offre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6603eee5be0c11_26790163',
+  'unifunc' => 'content_660428449a78c4_87784988',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'a77073458c953e0d7a2d99c176a32811fc3040e2' => 
+    'e868aa8749aa3623b516549847ee96668184996b' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Livrable4_WEB\\Template\\Créer_entreprise.tpl',
-      1 => 1711533717,
+      0 => 'C:\\www\\Livrable4_WEB\\Template\\Créer_offre.tpl',
+      1 => 1711541563,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6603eee5be0c11_26790163 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660428449a78c4_87784988 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>
@@ -78,15 +78,35 @@ function content_6603eee5be0c11_26790163 (Smarty_Internal_Template $_smarty_tpl)
 		</header><br><br>
 		
 		<main>
-			<form id="créer_entreprise">
+			<form id="creer_offre">
 				<fieldset>
-					<h1>Inscrire mon entreprise</h1>
+					<h1>Créer une offre</h1>
 					<label>Nom de l'entreprise</label><br><br>
 					<input type="text" id="enterprise" name="enterprise" placeholder="Entrez le nom d'entreprise" required><br><br>
-					<label>Secteur d'activité</label><br><br>
-					<input type="text" id="sector" name="sector" placeholder="Entrez un secteur d'activité" required><br><br><br>
-					<label>Nombre de centre de l'entreprise</label><br><br>
-					<input type="number" name="number" placeholder="Entrez le nombre de centres" id="num_add" oninput="generateAddressFields(this.value)" required min="1"><br><br>
+					<label>Places disponibles</label><br><br>
+					<input type="number" name="number" id="num_add" placeholder="Entrez le nombre de places" required min="1"><br><br>
+					<label>Date de publication</label><br><br>
+					<input type="date" id="date_input" name="date_input" required><br><br>
+					<label>Date de début du stage</label><br><br>
+					<input type="date" id="date_debut" name="date_debut" required><br><br>
+					<label>Date de fin du stage</label><br><br>
+					<input type="date" id="date_fin" name="date_fin" required><br><br>
+					<label>Base de rémunération en euros</label><br><br>
+					<input type="number" id="remuneration" name="remuneration" min="0" placeholder="Entrez la rémunération" required><br><br>
+
+					<fieldset>
+						<h3>Localisation de l'adresse</h3>
+						<label>Code postal</label><br><br>
+						<input name='CP' placeholder='CP' id='CP' oninput="fetchCities(this.value)" required><br>
+						<span id='errorCP' class='error'></span><br><br>
+						<label>Ville</label><br>
+						<select name='ville' class='selecity' id='city'></select><br>
+						<span id='error' class='error'></span><br><br>
+						<label>Adresse</label><br><br>
+						<input type='text' id='address' name='address' placeholder='Entrez votre adresse' oninput='validateAddress(this)' required><br>
+						<span id='erroraddress' class='TextRed'></span><br><br>
+					</fieldset><br><br>
+					
 					<table>
 						<td>
 							<input type="submit" value="Créer"><br>
@@ -97,14 +117,24 @@ function content_6603eee5be0c11_26790163 (Smarty_Internal_Template $_smarty_tpl)
 					</table>
 					<span id="soumission" class="TextRed"></span><br><br>
 				</fieldset><br><br>
-				<div id="addresses"></div>
+				<fieldset>
+				<h1>Compétences</h1>
+				<label>Nombre de compétences requises</label><br><br>
+				<input type="number" id="num_compétence" min="0" placeholder="Entrez le nombre de compétences" required><br><br>
+				</fieldset><br><br>
+				<fieldset>
+				<h1>Promotions concernées</h1>
+				</fieldset><br><br>
 			</form>
 		</main>
 		<?php echo '<script'; ?>
  src="Assets/JS/Creer_entreprise.js"><?php echo '</script'; ?>
 >
+		<?php echo '<script'; ?>
+ src="Assets/JS/Creer_offre.js"><?php echo '</script'; ?>
+>
 	</body>
-	
+
 	<div class="footer-container">
 		<footer class="leftfooter">
 			<label for="Navigation" id="navigation-label">Navigation :</label>

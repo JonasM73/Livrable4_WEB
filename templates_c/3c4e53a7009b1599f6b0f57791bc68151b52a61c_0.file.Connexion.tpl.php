@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-27 11:03:40
-  from 'C:\xampp\htdocs\Livrable4_WEB\Template\Statistiques_etudiant.tpl' */
+/* Smarty version 4.3.2, created on 2024-03-27 15:15:56
+  from 'C:\www\Livrable4_WEB\Template\Connexion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6603eefc534094_32896999',
+  'unifunc' => 'content_66042a1ceaa6f3_22789626',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '10613c38d45954545445243e852e99ea848b8a76' => 
+    '3c4e53a7009b1599f6b0f57791bc68151b52a61c' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Livrable4_WEB\\Template\\Statistiques_etudiant.tpl',
-      1 => 1711533773,
+      0 => 'C:\\www\\Livrable4_WEB\\Template\\Connexion.tpl',
+      1 => 1711541563,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6603eefc534094_32896999 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66042a1ceaa6f3_22789626 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
-		<title>StageLinkCesi - Statistiques étudiant</title>
+		<title>StageLinkCesi - Connexion</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
-		<link rel="stylesheet" href="Assets/CSS/style_creer_compte.css">
 	</head>
 
 	<body>
@@ -77,47 +76,30 @@ function content_6603eefc534094_32896999 (Smarty_Internal_Template $_smarty_tpl)
 		</header><br><br>
 		
 		<main>
-			<form id="stats_etudiant">
+			<br><br>
+			<form id="connexion" action="Connexion.php" method="POST">
 				<fieldset>
-					<h1>Statistiques étudiant</h1>
-					<label>Nom</label><br><br>
-					<input type="name" id="name" name="name" placeholder="Entrez votre nom" oninput="MAJ(this)" required><br><br>
-					<label>Prénom</label><br><br>
-					<input type="surname" id="surname" name="surname" placeholder="Entrez votre prénom" oninput="firstMAJ(this)" required><br><br>
-					<label>Centre</label><br>
-					<select name="Centre" id="center">
-						<option value="def">Centre 1</option>
-						<option value="2">Centre 2</option>
-						<option value="3">Centre 3</option>
-						<option value="4">Centre 4</option>
-						<option value="5">Centre 5</option>
-					</select><br><br>
-					<label>Promotion(s)</label><br>
-					<select name="Centre" id="center">
-						<option value="def">Promotion 1</option>
-						<option value="2">Promotion 2</option>
-						<option value="3">Promotion 3</option>
-						<option value="4">Promotion 4</option>
-						<option value="5">Promotion 5</option>
-					</select><br><br>
-					<table>
-						<td>
-							<input type="submit" value="Rechercher"><br><br>
-						</td>
-						<td>
-							<input type="button" value="Réinitialiser" onclick="resetForm()"><br><br>
-						</td>
-					</table>
+					<h1>LOGIN</h1>
+					<label>Identifiant</label><br><br>
+					<input type="email" id="email" name="email" placeholder="Entrez votre adresse mail" required><br>
+					<span id="emailMessage" class="TextRed"></span><br><br>
+					<label>Mot de passe</label><br><br>
+					<input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required><br>
+					<span id="MotDePasse" class="TextRed"></span><br><br>
+					<a href="" class="linkMDP">Mot de passe oublié ?</a><br><br>
+					<input type="submit" name="action" value="Connexion"><br>
 					<span id="soumission" class="TextRed"></span><br><br>
+					<hr class="horizontal">
+					<p class="connectext">Vous n'avez pas encore de compte ? <a href="index.php?page=Creer_un_compte" class="link">Créez-en un !</a></p>
 				</fieldset>
 			</form>
 		</main>
 
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        
+		<?php echo '<script'; ?>
+ src="Assets/JS/Connexion.js"><?php echo '</script'; ?>
+>
+		<p>&nbsp;&nbsp;~&nbsp;&nbsp;</p>
+        <p>&nbsp;&nbsp;~&nbsp;&nbsp;</p>
 		<div class="footer-container">
     		<footer class="leftfooter">
        			<label for="Navigation" id="navigation-label">Navigation :</label>
