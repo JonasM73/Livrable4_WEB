@@ -12,19 +12,16 @@ class UtilisateurModel {
     }catch(Exception $e){$e->getMessage();}
 }
 
-    public function Ajouter_E() {}
+//    public function Ajouter_E() { }
 
-    public function Maj_E {    }    
+//    public function Maj_E () { }    
 
-    public function Chercher_E {    }
+//    public function Chercher_E () { }
 
-    public function Evaluer_E {    }
+//    public function Evaluer_E () { }
 
-    public function Invisible_E {    }
+//    public function Invisible_E () { }
 
-    public function Dashbord_E {    }
+//    public function Dashbord_E () { }
 
-
-
-    
 }

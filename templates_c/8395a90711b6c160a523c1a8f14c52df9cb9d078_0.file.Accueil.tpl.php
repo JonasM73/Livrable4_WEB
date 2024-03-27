@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.3.2, created on 2024-03-27 10:37:49
+  from 'C:\xampp\htdocs\Livrable4_WEB\Accueil\Accueil.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_6603e8eda33958_13780194',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8395a90711b6c160a523c1a8f14c52df9cb9d078' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Livrable4_WEB\\Accueil\\Accueil.tpl',
+      1 => 1711532264,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6603e8eda33958_13780194 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
@@ -383,7 +406,9 @@
 			</div>
 		</main>
 
-		<script src="Assets/JS/Accueil.js"></script>
+		<?php echo '<script'; ?>
+ src="Assets/JS/Accueil.js"><?php echo '</script'; ?>
+>
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
@@ -433,4 +458,5 @@
     		</footer>
 		</footer>
 	</body>
-</html>
+</html><?php }
+}
