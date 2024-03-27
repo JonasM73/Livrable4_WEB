@@ -1,13 +1,12 @@
 DROP TABLE IF EXISTS mettre_en_favori, Destiner,Assigner,Evaluer,Candidater,requérir,Offre_stage,Utilisateur,Promotions,Adresse,Ville,Compétence,Entreprise;
 
-
-
 CREATE TABLE Entreprise(
    id_entreprise INT auto_increment,
    nom_entreprise VARCHAR(100) NOT NULL,
    entreprise_secteur_activite VARCHAR(50) NOT NULL,
    PRIMARY KEY(id_entreprise)
 );
+
 INSERT INTO Entreprise (nom_entreprise, entreprise_secteur_activite) VALUES
 ('Entreprise A', 'Technologie'), ('Entreprise B', 'Finance'), ('Entreprise C', 'Industrie'), ('Entreprise D', 'Santé'), 
 ('Entreprise E', 'Éducation'), ('Entreprise F', 'Commerce'), ('Entreprise G', 'Immobilier'), ('Entreprise H', 'Services'), 
@@ -18,16 +17,19 @@ INSERT INTO Entreprise (nom_entreprise, entreprise_secteur_activite) VALUES
 ('Entreprise Y', 'Éducation'), ('Entreprise Z', 'Commerce'), ('Entreprise AA', 'Immobilier'), ('Entreprise BB', 'Services'), 
 ('Entreprise CC', 'Marketing'), ('Entreprise DD', 'Communication');
 
+
 CREATE TABLE Compétence(
    id_Compétence INT auto_increment,
-   nom_competence VARCHAR(50),
+   nom_competence VARCHAR(100),
    PRIMARY KEY(id_Compétence)
-);INSERT INTO Compétence (nom_competence) VALUES
+);
+
+INSERT INTO Compétence (nom_competence) VALUES
 ('Programmation'), ('Développement web'), ('Base de données'), ('Analyse de données'), ('Conception graphique'),
-('Marketing digital'), ('Gestion de projet'), ('Rédaction et communication'), ('Finance d\'entreprise'), ('Comptabilité'),
-('Ressources humaines'), ('Gestion de la chaîne d\'approvisionnement'), ('Stratégie d\'entreprise'), ('Analyse financière'),
-('Développement d\'applications mobiles'), ('Intelligence artificielle '), ('Réseaux et sécurité informatique'),
-('Administration système'),('Design d\'expérience utilisateur (UX/UI)'), ('Analyse des marchés et études de marché'), ('Développement logiciel embarqué'),
+('Marketing digital'), ('Gestion de projet'), ('Rédaction et communication'), ("Finance d'entreprise"), ('Comptabilité'),
+('Ressources humaines'), ("Gestion de la chaîne d'approvisionnement"), ("Stratégie d'entreprise"), ('Analyse financière'),
+("Développement d'applications mobiles"), ('Intelligence artificielle '), ('Réseaux et sécurité informatique'),
+('Administration système'),("Design d'expérience utilisateur (UX/UI)"), ('Analyse des marchés et études de marché'), ('Développement logiciel embarqué'),
 ('Gestion des médias sociaux'), ('Relations publiques'), ('Commerce électronique'), ('Énergie renouvelable et développement durable'),
 ('Mécatronique'), ('Architecture logicielle'), ('Traitement du langage naturel'), ('Blockchain et cryptomonnaies'), ('Internet des objets (IoT)'),
 ('Systèmes embarqués'), ('Sécurité informatique et cybersécurité'), ('Design de produit'), ('Génie mécanique'), ('Modélisation et simulation'),
@@ -38,11 +40,14 @@ CREATE TABLE Ville(
    id_Ville INT auto_increment,
    nom_Ville VARCHAR(50),
    PRIMARY KEY(id_Ville)
-);INSERT INTO Ville (nom_Ville) VALUES
+);
+
+INSERT INTO Ville (nom_Ville) VALUES
 ('Paris'), ('Marseille'), ('Lyon'), ('Toulouse'), ('Nice'), ('Nantes'), ('Strasbourg'), ('Montpellier'), ('Bordeaux'), ('Lille'), 
 ('Rennes'), ('Reims'), ('Le Havre'), ('Saint-Étienne'), ('Toulon'), ('Grenoble'), ('Dijon'), ('Angers'), ('Nîmes'), ('Villeurbanne'), 
 ('Saint-Denis'), ('Le Mans'), ('Clermont-Ferrand'), ('Aix-en-Provence'), ('Brest'), ('Limoges'), ('Tours'), ('Amiens'), ('Perpignan'), 
 ('Metz'), ('Besançon'), ('Orléans'), ('Saint-Denis'), ('Argenteuil'), ('Rouen'), ('Montreuil'), ('Mulhouse'), ('Caen'), ('Nancy'), ('Saint-Paul');
+
 
 CREATE TABLE Adresse(
    id_adresse INT auto_increment,
@@ -53,7 +58,9 @@ CREATE TABLE Adresse(
    PRIMARY KEY(id_adresse),
    FOREIGN KEY(id_entreprise) REFERENCES Entreprise(id_entreprise),
    FOREIGN KEY(id_Ville) REFERENCES Ville(id_Ville)
-);INSERT INTO Adresse (CP_adresse, AD_adresse,id_entreprise, id_Ville) VALUES
+);
+
+INSERT INTO Adresse (CP_adresse, AD_adresse,id_entreprise, id_Ville) VALUES
 (75001, '1 Rue de Rivoli',1, (SELECT id_Ville FROM Ville WHERE nom_Ville = 'Paris')),(13001, '1 Place de la Mairie',1, (SELECT id_Ville FROM Ville WHERE nom_Ville = 'Marseille')),
 (69001, '1 Place des Terreaux',2, (SELECT id_Ville FROM Ville WHERE nom_Ville = 'Lyon')),(31000, '1 Place du Capitole',2, (SELECT id_Ville FROM Ville WHERE nom_Ville = 'Toulouse')),
 (06000, '1 Promenade des Anglais',3, (SELECT id_Ville FROM Ville WHERE nom_Ville = 'Nice')),(44000, '1 Rue de Strasbourg',2, (SELECT id_Ville FROM Ville WHERE nom_Ville = 'Nantes')),
@@ -86,7 +93,9 @@ CREATE TABLE Promotions(
    id_promotion INT auto_increment,
    nom_promotion VARCHAR(50) NOT NULL,
    PRIMARY KEY(id_promotion)
-);INSERT INTO Promotions (nom_promotion) VALUES
+);
+
+INSERT INTO Promotions (nom_promotion) VALUES
 ('CPI A1'),('CPI A2 INFO'),('CPI A2 GENERALISTE'),('CPI A2 BTP'),('CPI A2 S3E'),
 ('CI M1 INFO FISE'),('CI M1 GENERALISTE FISE'),('CI M1 BTP FISE'),('CI M1 S3E FISE'),
 ('CI M1 INFO FISA'),('CI M1 GENERALISTE FISA'),('CI M1 BTP FISA'),('CI M1 S3E FISA'),
@@ -102,38 +111,66 @@ CREATE TABLE Utilisateur(
    nom_utilisateur VARCHAR(50) NOT NULL,
    prenom_utilisateur VARCHAR(50) NOT NULL,
    utilisateur_type VARCHAR(50) NOT NULL,
-   utilisateur_login VARCHAR(50) NOT NULL,
+   utilisateur_login VARCHAR(100) NOT NULL,
    utilisateur_MDP VARCHAR(50) NOT NULL,
    id_Ville INT NOT NULL,
    PRIMARY KEY(id_utilisateur),
    FOREIGN KEY(id_Ville) REFERENCES Ville(id_Ville)
-);INSERT INTO Utilisateur (nom_utilisateur, prenom_utilisateur, utilisateur_type, utilisateur_login, utilisateur_MDP, id_Ville)
+);
+
+INSERT INTO Utilisateur (nom_utilisateur, prenom_utilisateur, utilisateur_type, utilisateur_login, utilisateur_MDP, id_Ville)
 VALUES
-('Dupont', 'Jean', 'Admin', 'jdupont', 'mot_de_passe', 1), ('Martin', 'Pierre', 'Pilote', 'pmartin', 'mot_de_passe', 2), 
-('Dubois', 'Sophie', 'Pilote', 'sdubois', 'mot_de_passe', 3), ('Lefevre', 'Luc', 'Pilote', 'llefevre', 'mot_de_passe', 4), 
-('Moreau', 'Marie', 'Pilote', 'mmoreau', 'mot_de_passe', 5), ('Roux', 'Julie', 'Pilote', 'jroux', 'mot_de_passe', 6), 
-('Garcia', 'Thomas', 'Pilote', 'tgarcia', 'mot_de_passe', 7), ('Fournier', 'Laura', 'Pilote', 'lfournier', 'mot_de_passe', 8), 
-('Chevalier', 'Alex', 'Pilote', 'achevalier', 'mot_de_passe', 9), ('Bonnet', 'Emma', 'Pilote', 'ebonnet', 'mot_de_passe', 10), 
-('Muller', 'Paul', 'Étudiant', 'pmuller', 'mot_de_passe', 11), ('Leroy', 'Camille', 'Étudiant', 'cleroy', 'mot_de_passe', 12), 
-('Sanchez', 'Lucie', 'Étudiant', 'lsanchez', 'mot_de_passe', 13), ('Roussel', 'Maxime', 'Étudiant', 'mroussel', 'mot_de_passe', 14), 
-('Hubert', 'Sarah', 'Étudiant', 'shubert', 'mot_de_passe', 15), ('Caron', 'Antoine', 'Étudiant', 'acaron', 'mot_de_passe', 16), 
-('Marchand', 'Julia', 'Étudiant', 'jmarchand', 'mot_de_passe', 17), ('Guerin', 'Louis', 'Étudiant', 'lguerin', 'mot_de_passe', 18), 
-('Meunier', 'Léa', 'Étudiant', 'lmeunier', 'mot_de_passe', 19), ('Andre', 'Hélène', 'Étudiant', 'handre', 'mot_de_passe', 20), 
-('Girard', 'Lucas', 'Étudiant', 'lgirard', 'mot_de_passe', 21), ('Garnier', 'Manon', 'Étudiant', 'mgarnier', 'mot_de_passe', 22), 
-('Benjamin', 'Emma', 'Étudiant', 'ebenjamin', 'mot_de_passe', 23), ('Dumont', 'Théo', 'Étudiant', 'tdumont', 'mot_de_passe', 24), 
-('Lopez', 'Mathilde', 'Étudiant', 'mlopez', 'mot_de_passe', 25), ('Lemoine', 'Enzo', 'Étudiant', 'elemoine', 'mot_de_passe', 26), 
-('Jean', 'Chloé', 'Étudiant', 'cjean', 'mot_de_passe', 27), ('Noel', 'Zoé', 'Étudiant', 'znoel', 'mot_de_passe', 28), 
-('Paris', 'Léonie', 'Étudiant', 'lparis', 'mot_de_passe', 29), ('Robert', 'Alexandre', 'Étudiant', 'arobert', 'mot_de_passe', 30), 
-('Bernard', 'Lola', 'Étudiant', 'lbernard', 'mot_de_passe', 31), ('Robin', 'Lucie', 'Étudiant', 'lrobin', 'mot_de_passe', 32), 
-('Thomas', 'Noah', 'Étudiant', 'nthomas', 'mot_de_passe', 33), ('Perez', 'Inès', 'Étudiant', 'iperez', 'mot_de_passe', 34), 
-('Petit', 'Nathan', 'Étudiant', 'npetit', 'mot_de_passe', 35), ('Barbier', 'Emma', 'Étudiant', 'ebarbier', 'mot_de_passe', 36), 
-('Hubert', 'Louis', 'Étudiant', 'lhubert', 'mot_de_passe', 37), ('Lefebvre', 'Eva', 'Étudiant', 'elefebvre', 'mot_de_passe', 38), 
-('Renard', 'Théo', 'Étudiant', 'trenard', 'mot_de_passe', 39), ('Pierre', 'Maëlle', 'Étudiant', 'mpierre', 'mot_de_passe', 40), 
-('Mathieu', 'Louise', 'Étudiant', 'lmathieu', 'mot_de_passe', 2), ('Masson', 'Antoine', 'Étudiant', 'amasson', 'mot_de_passe', 4), 
-('Charpentier', 'Lucas', 'Étudiant', 'lcharpentier', 'mot_de_passe', 13), ('Leger', 'Léa', 'Étudiant', 'lleger', 'mot_de_passe', 15), 
-('Hubert', 'Noémie', 'Étudiant', 'nhubert', 'mot_de_passe', 34), ('Morin', 'Théo', 'Étudiant', 'tmorin', 'mot_de_passe', 25), 
-('Schmitt', 'Julie', 'Étudiant', 'jschmitt', 'mot_de_passe', 30), ('Perrin', 'Emma', 'Étudiant', 'eperrin', 'mot_de_passe', 21), 
-('Antoine', 'Jade', 'Étudiant', 'jantoine', 'mot_de_passe', 17), ('Bertrand', 'Enzo', 'Étudiant', 'ebertrand', 'mot_de_passe', 9);
+('Dupont', 'Jean', 'Admin', 'jdupont@viacesi.com', 'mot_de_passe', 1), 
+('Martin', 'Pierre', 'Pilote', 'pmartin@viacesi.com', 'mot_de_passe', 2), 
+('Dubois', 'Sophie', 'Pilote', 'sdubois@viacesi.com', 'mot_de_passe', 3), 
+('Lefevre', 'Luc', 'Pilote', 'llefevre@viacesi.com', 'mot_de_passe', 4), 
+('Moreau', 'Marie', 'Pilote', 'mmoreau@viacesi.com', 'mot_de_passe', 5), 
+('Roux', 'Julie', 'Pilote', 'jroux@viacesi.com', 'mot_de_passe', 6), 
+('Garcia', 'Thomas', 'Pilote', 'tgarcia@viacesi.com', 'mot_de_passe', 7), 
+('Fournier', 'Laura', 'Pilote', 'lfournier@viacesi.com', 'mot_de_passe', 8), 
+('Chevalier', 'Alex', 'Pilote', 'achevalier@viacesi.com', 'mot_de_passe', 9), 
+('Bonnet', 'Emma', 'Pilote', 'ebonnet@viacesi.com', 'mot_de_passe', 10), 
+('Muller', 'Paul', 'Étudiant', 'pmuller@viacesi.com', 'mot_de_passe', 11), 
+('Leroy', 'Camille', 'Étudiant', 'cleroy@viacesi.com', 'mot_de_passe', 12), 
+('Sanchez', 'Lucie', 'Étudiant', 'lsanchez@viacesi.com', 'mot_de_passe', 13), 
+('Roussel', 'Maxime', 'Étudiant', 'mroussel@viacesi.com', 'mot_de_passe', 14), 
+('Hubert', 'Sarah', 'Étudiant', 'shubert@viacesi.com', 'mot_de_passe', 15), 
+('Caron', 'Antoine', 'Étudiant', 'acaron@viacesi.com', 'mot_de_passe', 16), 
+('Marchand', 'Julia', 'Étudiant', 'jmarchand@viacesi.com', 'mot_de_passe', 17), 
+('Guerin', 'Louis', 'Étudiant', 'lguerin@viacesi.com', 'mot_de_passe', 18), 
+('Meunier', 'Léa', 'Étudiant', 'lmeunier@viacesi.com', 'mot_de_passe', 19), 
+('Andre', 'Hélène', 'Étudiant', 'handre@viacesi.com', 'mot_de_passe', 20), 
+('Girard', 'Lucas', 'Étudiant', 'lgirard@viacesi.com', 'mot_de_passe', 21), 
+('Garnier', 'Manon', 'Étudiant', 'mgarnier@viacesi.com', 'mot_de_passe', 22), 
+('Benjamin', 'Emma', 'Étudiant', 'ebenjamin@viacesi.com', 'mot_de_passe', 23), 
+('Dumont', 'Théo', 'Étudiant', 'tdumont@viacesi.com', 'mot_de_passe', 24), 
+('Lopez', 'Mathilde', 'Étudiant', 'mlopez@viacesi.com', 'mot_de_passe', 25), 
+('Lemoine', 'Enzo', 'Étudiant', 'elemoine@viacesi.com', 'mot_de_passe', 26), 
+('Jean', 'Chloé', 'Étudiant', 'cjean@viacesi.com', 'mot_de_passe', 27), 
+('Noel', 'Zoé', 'Étudiant', 'znoel@viacesi.com', 'mot_de_passe', 28), 
+('Paris', 'Léonie', 'Étudiant', 'lparis@viacesi.com', 'mot_de_passe', 29), 
+('Robert', 'Alexandre', 'Étudiant', 'arobert@viacesi.com', 'mot_de_passe', 30), 
+('Bernard', 'Lola', 'Étudiant', 'lbernard@viacesi.com', 'mot_de_passe', 31), 
+('Robin', 'Lucie', 'Étudiant', 'lrobin@viacesi.com', 'mot_de_passe', 32), 
+('Thomas', 'Noah', 'Étudiant', 'nthomas@viacesi.com', 'mot_de_passe', 33), 
+('Perez', 'Inès', 'Étudiant', 'iperez@viacesi.com', 'mot_de_passe', 34), 
+('Petit', 'Nathan', 'Étudiant', 'npetit@viacesi.com', 'mot_de_passe', 35), 
+('Barbier', 'Emma', 'Étudiant', 'ebarbier@viacesi.com', 'mot_de_passe', 36), 
+('Hubert', 'Louis', 'Étudiant', 'lhubert@viacesi.com', 'mot_de_passe', 37), 
+('Lefebvre', 'Eva', 'Étudiant', 'elefebvre@viacesi.com', 'mot_de_passe', 38), 
+('Renard', 'Théo', 'Étudiant', 'trenard@viacesi.com', 'mot_de_passe', 39), 
+('Pierre', 'Maëlle', 'Étudiant', 'mpierre@viacesi.com', 'mot_de_passe', 40), 
+('Mathieu', 'Louise', 'Étudiant', 'lmathieu@viacesi.com', 'mot_de_passe', 2), 
+('Masson', 'Antoine', 'Étudiant', 'amasson@viacesi.com', 'mot_de_passe', 4), 
+('Charpentier', 'Lucas', 'Étudiant', 'lcharpentier@viacesi.com', 'mot_de_passe', 13), 
+('Leger', 'Léa', 'Étudiant', 'lleger@viacesi.com', 'mot_de_passe', 15), 
+('Hubert', 'Noémie', 'Étudiant', 'nhubert@viacesi.com', 'mot_de_passe', 34), 
+('Morin', 'Théo', 'Étudiant', 'tmorin@viacesi.com', 'mot_de_passe', 25), 
+('Schmitt','Julie', 'Étudiant', 'jschmitt@viacesi.com', 'mot_de_passe', 30), 
+('Perrin', 'Emma', 'Étudiant', 'eperrin@viacesi.com', 'mot_de_passe', 21), 
+('Antoine', 'Jade', 'Étudiant', 'jantoine@viacesi.com', 'mot_de_passe', 17), 
+('Bertrand', 'Enzo', 'Étudiant', 'ebertrand@viacesi.com', 'mot_de_passe', 9);
+
 
 
 CREATE TABLE Offre_stage(
@@ -149,7 +186,9 @@ CREATE TABLE Offre_stage(
    PRIMARY KEY(id_Offre_stage),
    FOREIGN KEY(id_adresse) REFERENCES Adresse(id_adresse),
    FOREIGN KEY(id_entreprise) REFERENCES Entreprise(id_entreprise)
-);INSERT INTO Offre_stage (titre_offre_stage, Stage_Date_depart, Stage_Date_fin, Remuneration, Date_publication, NB_places_restantes, id_adresse, id_entreprise) 
+);
+
+INSERT INTO Offre_stage (titre_offre_stage, Stage_Date_depart, Stage_Date_fin, Remuneration, Date_publication, NB_places_restantes, id_adresse, id_entreprise) 
 VALUES
 ('Développeur Web', '2024-03-01', '2024-06-01', 1500.00, '2024-02-13', 5, 1, 1),('Analyste financier', '2024-03-15', '2024-05-15', 2000.00, '2024-02-13', 3, 2, 2),
 ('Ingénieur mécanique', '2024-03-10', '2024-06-30', 2500.00, '2024-02-13', 7, 3, 3),('Infirmier stagiaire', '2024-04-01', '2024-07-01', 1200.00, '2024-02-13', 4, 4, 4),
@@ -183,6 +222,7 @@ CREATE TABLE requérir(
    FOREIGN KEY(id_Offre_stage) REFERENCES Offre_stage(id_Offre_stage),
    FOREIGN KEY(id_Compétence) REFERENCES Compétence(id_Compétence)
 );
+
 INSERT INTO requérir (id_Offre_stage, id_Compétence) VALUES
 (1, 1), (1, 2),(2, 9), (2, 14),(3, 35), (3, 38),(4, 11), (4, 21),(5, 25), (5, 29),(6, 6), (6, 27),(7, 18), (7, 33),(8, 8), (8, 12),(9, 7), (9, 15),
 (10, 3), (10, 28),(11, 20), (11, 24),(12, 23), (12, 25),(13, 10), (13, 17),(14, 5), (14, 22),(15, 4), (15, 13),(16, 16), (16, 32),(17, 31), (17, 34),
@@ -191,7 +231,6 @@ INSERT INTO requérir (id_Offre_stage, id_Compétence) VALUES
 (30, 29), (30, 34),(31, 30), (31, 33), (31, 35),(32, 28), (32, 36), (32, 38),(33, 37), (33, 39), (33, 4),(34, 40), (34, 24), (34, 14),(35, 33), (35, 35), (35, 1),
 (36, 2), (36, 3), (36, 4),(37, 5), (37, 6), (37, 7),(38, 8), (38, 9), (38, 10),(39, 11), (39, 12), (39, 13),(40, 14), (40, 15), (40, 16),(41, 17), (41, 18), (41, 19),
 (42, 20), (42, 21), (42, 22),(43, 23), (43, 24), (43, 25),(44, 26), (44, 27), (44, 28),(45, 29), (45, 30), (45, 31);
-
 
 
 CREATE TABLE Candidater(
@@ -203,6 +242,7 @@ CREATE TABLE Candidater(
    FOREIGN KEY(id_utilisateur) REFERENCES Utilisateur(id_utilisateur),
    FOREIGN KEY(id_Offre_stage) REFERENCES Offre_stage(id_Offre_stage)
 );
+
 INSERT INTO Candidater (id_utilisateur, id_Offre_stage, cv_utilisateur_offre,lettre_motiv_utilisateur) VALUES
 ( 1, 5, 'CV', ' Lettre de motiv'),( 9, 16, 'CV', ' Lettre de motiv'),( 4, 34, 'CV', ' Lettre de motiv'),( 15, 35, 'CV', ' Lettre de motiv'),( 2, 15, 'CV', ' Lettre de motiv'),
 ( 7, 14, 'CV', ' Lettre de motiv'),( 7, 20, 'CV', ' Lettre de motiv'),( 1, 25, 'CV', ' Lettre de motiv');
@@ -216,9 +256,11 @@ CREATE TABLE Evaluer(
    FOREIGN KEY(id_utilisateur) REFERENCES Utilisateur(id_utilisateur),
    FOREIGN KEY(id_entreprise) REFERENCES Entreprise(id_entreprise)
 );
+
 INSERT INTO Evaluer (id_utilisateur, id_entreprise, note_de_lentreprise) VALUES
 ( 4, 9, 15),( 1, 1, 14),( 6, 20, 19),( 2, 5, 10),( 3, 7, 15),( 4, 16, 5),( 19, 17, 20),( 35, 17, 17),( 28, 18, 9),
 ( 9, 11, 11),( 25, 2, 16),( 34, 18, 20),( 20, 12, 15);
+
 
 CREATE TABLE Assigner(
    id_utilisateur INT,
@@ -226,7 +268,9 @@ CREATE TABLE Assigner(
    PRIMARY KEY(id_utilisateur, id_promotion),
    FOREIGN KEY(id_utilisateur) REFERENCES Utilisateur(id_utilisateur),
    FOREIGN KEY(id_promotion) REFERENCES Promotions(id_promotion)
-);INSERT INTO Assigner (id_utilisateur, id_promotion) VALUES
+);
+
+INSERT INTO Assigner (id_utilisateur, id_promotion) VALUES
 (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (1, 12), (1, 13), (1, 14), (1, 15), (1, 16), (1, 17), (1, 18), (1, 19), 
 (1, 20), (1, 21), (1, 22), (1, 23), (1, 24), (1, 25), (1, 26), (1, 27), (1, 28), (1, 29), (1, 30), (1, 31), (1, 32), (1, 33),
 (2, 1), (2, 2), (2, 3), (2, 4),(3, 1), (3, 2), (3, 3), (3, 4),(4, 1), (4, 2), (4, 3), (4, 4),(5, 1), (5, 2), (5, 3), (5, 4),(6, 1), (6, 2), (6, 3), (6, 4),
@@ -242,7 +286,9 @@ CREATE TABLE Destiner(
    PRIMARY KEY(id_Offre_stage, id_promotion),
    FOREIGN KEY(id_Offre_stage) REFERENCES Offre_stage(id_Offre_stage),
    FOREIGN KEY(id_promotion) REFERENCES Promotions(id_promotion)
-);INSERT INTO Destiner (id_Offre_stage, id_promotion) VALUES
+);
+
+INSERT INTO Destiner (id_Offre_stage, id_promotion) VALUES
 (1, 1), (1, 2),(2, 3), (2, 4),(3, 5), (3, 6), (3, 7),(4, 8), (4, 9), (4, 10),(5, 11),(6, 12), (6, 13),(7, 14), (7, 15), (7, 16),(8, 17), (8, 18),(9, 19), (9, 20), (9, 21),
 (10, 22), (10, 23),(11, 24), (11, 25), (11, 26),(12, 27), (12, 28),(13, 29), (13, 30), (13, 31),(14, 32),(15, 33), (15, 1),(16, 28), (16, 5),(17, 7), (17, 25), (17, 24),
 (18, 18), (18, 20), (18, 2),(19, 32), (19, 33), (19, 24),(20, 1), (20, 2), (20, 3),(21, 4), (21, 5),(22, 6), (22, 7), (22, 8),(23, 9), (23, 10), (23, 11),(24, 12),
@@ -257,15 +303,11 @@ CREATE TABLE mettre_en_favori(
    PRIMARY KEY(id_utilisateur, id_Offre_stage),
    FOREIGN KEY(id_utilisateur) REFERENCES Utilisateur(id_utilisateur),
    FOREIGN KEY(id_Offre_stage) REFERENCES Offre_stage(id_Offre_stage)
-);INSERT INTO mettre_en_favori (id_utilisateur, id_Offre_stage) VALUES
-(1, 1), (1, 2),(2, 3), (2, 4),(3, 5), (3, 6),(4, 7), (4, 8),(5, 9), (5, 10), (5, 11),(6, 12), (6, 13),(7, 14), (7, 15), (7, 16),(8, 17), (8, 18),
+);
+
+INSERT INTO mettre_en_favori (id_utilisateur, id_Offre_stage) VALUES
+(1, 1), (1, 2), (2, 4),(3, 5), (3, 6),(4, 7), (4, 8),(5, 9), (6, 13),(7, 14), (7, 15), (7, 16),(8, 17), (8, 18),
 (9, 19), (9, 20), (9, 21),(10, 22), (10, 23),(11, 24), (11, 25),(12, 26), (12, 27),(13, 28), (13, 29), (13, 30),(14, 31), (14, 32),(15, 33), (15, 34), (15, 35),
-(16, 36), (16, 37),(17, 38), (17, 39), (18, 40), (18, 41),(19, 42), (19, 43),(20, 44), (20, 45),(21, 1), (21, 2),(22, 3), (22, 4),(23, 5), (23, 6),
-(24, 7), (24, 8),(25, 9), (25, 10), (25, 11),(26, 12), (26, 13),(27, 14), (27, 15), (27, 16),(28, 17), (28, 18),
-(29, 19), (29, 20), (29, 21),(30, 22), (30, 23),(31, 24), (31, 25),(32, 26), (32, 27),(33, 28), (33, 29), (33, 30),
-(34, 31), (34, 32),(35, 33), (35, 34), (35, 35),(36, 36), (36, 37),(37, 38), (37, 39), (38, 40), (38, 41),
-(39, 42), (39, 43),(40, 44), (40, 45),(41, 1), (41, 2),(42, 3), (42, 4),(43, 5), (43, 6),(44, 7), (44, 8),(45, 9), (45, 10), (45, 11),(46, 12), (46, 13),
+(16, 36), (16, 37), (30, 23),(31, 24), (31, 25),(32, 26), (32, 27),(33, 28), (33, 29), (33, 30),
+(34, 31), (34, 32),(35, 33), (35, 34), (35, 35),(36, 36), (42, 4),(43, 5), (43, 6),(44, 7), (44, 8),(45, 9), (45, 10), (45, 11),(46, 12), (46, 13),
 (47, 14), (47, 15), (47, 16),(48, 17), (48, 18),(49, 19), (49, 20), (49, 21),(50, 22), (50, 23);
-
-
-

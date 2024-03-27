@@ -1,7 +1,5 @@
 <?php
 
-    
-
 class Utilisateur_fonctions {
     private $BDD;
 
@@ -54,4 +52,3 @@ class Utilisateur {
     public function getPlace() {        return $this->Place;    }
     public function getPtObt() {        return $this->PtObt;    }
 }
-?>
