@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-27 10:39:25
-  from 'C:\xampp\htdocs\Livrable4_WEB\Accueil\Accueil.tpl' */
+/* Smarty version 4.3.2, created on 2024-03-27 11:03:05
+  from 'C:\xampp\htdocs\Livrable4_WEB\Template\Accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6603e94d1948b0_87940480',
+  'unifunc' => 'content_6603eed951b540_49403678',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '8395a90711b6c160a523c1a8f14c52df9cb9d078' => 
+    '5fe8d93a936ec1cec15243286d209764d6ee17bf' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Livrable4_WEB\\Accueil\\Accueil.tpl',
-      1 => 1711532361,
+      0 => 'C:\\xampp\\htdocs\\Livrable4_WEB\\Template\\Accueil.tpl',
+      1 => 1711533705,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6603e94d1948b0_87940480 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6603eed951b540_49403678 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>
@@ -36,45 +36,45 @@ function content_6603e94d1948b0_87940480 (Smarty_Internal_Template $_smarty_tpl)
 			<hr>
 			<nav class="navbar">
 				<div class="dropdown">
-					<a href="index.php?page=/Accueil/Accueil.tpl">Accueil </a>
+					<a href="index.php?page=Accueil">Accueil </a>
 				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 				<div class="dropdown">
 					<a href="#">Entreprises </a>
 				<div class="dropdown-content">
 					<a href="#">Entreprises</a>
-					<a href="index.php?page=/Entreprises/Créer_entreprise.tpl">Inscrire mon Entreprise</a>
+					<a href="index.php?page=Créer_entreprise">Inscrire mon Entreprise</a>
 					<a href="#">Dashboard Entreprise</a>
 				</div>
 				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 				<div class="dropdown">
 					<a href="#">Offres </a>
 					<div class="dropdown-content">
-						<a href="index.php?page=/Offres/Créer_offre.tpl">Créer mon offre </a>
+						<a href="index.php?page=Créer_offre">Créer mon offre </a>
 						<a href="#">Dashboard offre</a>
 					</div>
 				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 				<div class="dropdown">
 					<a href="#">Pilotes / Etudiants </a>
 					<div class="dropdown-content">
-						<a href="index.php?page=/Pilotes/Rechercher_un_compte.tpl">Rechercher un compte Pilote</a>
-						<a href="index.php?page=/Etudiants/Rechercher_un_compte_etudiant.tpl">Rechercher un compte Etudiant</a>
-						<a href="index.php?page=/Etudiants/Statistiques_etudiant.tpl">Dashboard Etudiant</a>
+						<a href="index.php?page=Rechercher_un_compte">Rechercher un compte Pilote</a>
+						<a href="index.php?page=Rechercher_un_compte_etudiant">Rechercher un compte Etudiant</a>
+						<a href="index.php?page=Statistiques_etudiant">Dashboard Etudiant</a>
 					</div>
 				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="#">Liste de Souhait </a>
+				<a href="index.php?page=Wishlist">Liste de Souhait </a>
 			</nav>
 			<nav class="moncompte">
 				<div class="dropdown">
 					<a href="#">&nbsp;Mon&nbsp;Compte</a>
 					<div class="dropdown-content">
-						<a href="index.php?page=/Mon_compte/Connexion.tpl">S'identifier</a>
-						<a href="index.php?page=/Mon_compte/Creer_un_compte.tpl">Créer un compte</a>
+						<a href="index.php?page=Connexion">S'identifier</a>
+						<a href="index.php?page=Creer_un_compte">Créer un compte</a>
 						<a href="#">Mon compte</a>
 					</div>
 				</div>
 			</nav>
 			<hr>
-		</header>
+		</header><br><br>
 		
 		<main>
 			<div class="bloc-gauche">

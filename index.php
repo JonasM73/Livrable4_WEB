@@ -13,8 +13,8 @@ $action1 = isset($_GET['page']) ? $_GET['page'] : '';
 
 // Boucle principale
 if ($action1 !== '') {
-    $smarty->display(MAIN_PATH . '$page');
+    $smarty->display(MAIN_PATH . "/Template/$action1.tpl");
 } else {
     // Afficher la page d'accueil par défaut
-    $smarty->display(MAIN_PATH . '\Accueil\Accueil.tpl');
+    $smarty->display(MAIN_PATH . "/Template/Accueil.tpl");
 }

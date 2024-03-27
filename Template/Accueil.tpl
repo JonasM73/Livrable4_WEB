@@ -13,45 +13,45 @@
 			<hr>
 			<nav class="navbar">
 				<div class="dropdown">
-					<a href="index.php?page=/Accueil/Accueil.tpl">Accueil </a>
+					<a href="index.php?page=Accueil">Accueil </a>
 				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 				<div class="dropdown">
 					<a href="#">Entreprises </a>
 				<div class="dropdown-content">
 					<a href="#">Entreprises</a>
-					<a href="index.php?page=/Entreprises/Créer_entreprise.tpl">Inscrire mon Entreprise</a>
+					<a href="index.php?page=Créer_entreprise">Inscrire mon Entreprise</a>
 					<a href="#">Dashboard Entreprise</a>
 				</div>
 				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 				<div class="dropdown">
 					<a href="#">Offres </a>
 					<div class="dropdown-content">
-						<a href="index.php?page=/Offres/Créer_offre.tpl">Créer mon offre </a>
+						<a href="index.php?page=Créer_offre">Créer mon offre </a>
 						<a href="#">Dashboard offre</a>
 					</div>
 				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 				<div class="dropdown">
 					<a href="#">Pilotes / Etudiants </a>
 					<div class="dropdown-content">
-						<a href="index.php?page=/Pilotes/Rechercher_un_compte.tpl">Rechercher un compte Pilote</a>
-						<a href="index.php?page=/Etudiants/Rechercher_un_compte_etudiant.tpl">Rechercher un compte Etudiant</a>
-						<a href="index.php?page=/Etudiants/Statistiques_etudiant.tpl">Dashboard Etudiant</a>
+						<a href="index.php?page=Rechercher_un_compte">Rechercher un compte Pilote</a>
+						<a href="index.php?page=Rechercher_un_compte_etudiant">Rechercher un compte Etudiant</a>
+						<a href="index.php?page=Statistiques_etudiant">Dashboard Etudiant</a>
 					</div>
 				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="#">Liste de Souhait </a>
+				<a href="index.php?page=Wishlist">Liste de Souhait </a>
 			</nav>
 			<nav class="moncompte">
 				<div class="dropdown">
 					<a href="#">&nbsp;Mon&nbsp;Compte</a>
 					<div class="dropdown-content">
-						<a href="index.php?page=/Mon_compte/Connexion.tpl">S'identifier</a>
-						<a href="index.php?page=/Mon_compte/Creer_un_compte.tpl">Créer un compte</a>
+						<a href="index.php?page=Connexion">S'identifier</a>
+						<a href="index.php?page=Creer_un_compte">Créer un compte</a>
 						<a href="#">Mon compte</a>
 					</div>
 				</div>
 			</nav>
 			<hr>
-		</header>
+		</header><br><br>
 		
 		<main>
 			<div class="bloc-gauche">
