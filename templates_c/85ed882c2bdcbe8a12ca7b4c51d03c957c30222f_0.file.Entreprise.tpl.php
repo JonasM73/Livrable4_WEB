@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.3.2, created on 2024-03-27 14:45:54
+  from 'C:\xampp\htdocs\Livrable4_WEB\Template\Entreprise.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_66042312bb2292_23130630',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '85ed882c2bdcbe8a12ca7b4c51d03c957c30222f' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Livrable4_WEB\\Template\\Entreprise.tpl',
+      1 => 1711546182,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_66042312bb2292_23130630 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
@@ -59,7 +82,7 @@
         			<div class="menu">
             			<div class="option">
                 			<input type="checkbox" id="interest" name="category">
-                			<label for="interest" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Compétences :</label>
+                			<label for="interest" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Secteur d'activités :</label>
                 			&nbsp;
                 			<div class="submenu">
                     			<div>
@@ -68,15 +91,11 @@
 								</div>
                     			<div>
 									<input type="radio" id="ingenieur_informatique" name="interest">
-									<label for="ingenieur_informatique">Ingénieur Informatique</label>
+									<label for="informatique">Informatique</label>
 								</div>
                     			<div>
 									<input type="radio" id="marketing_et_publicite" name="interest">
 									<label for="marketing_et_publicite">Marketing et publicité</label>
-								</div>
-                    			<div>
-									<input type="radio" id="ressources_humaines" name="interest">
-									<label for="ressources_humaines">Ressources Humaines</label>
 								</div>
                     			<div>
 									<input type="radio" id="agriculture" name="interest">
@@ -94,23 +113,23 @@
             			</div>
             			<div class="option">
                 			<input type="checkbox" id="city" name="category">
-                			<label for="city"style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Durée du Stage :</label>
+                			<label for="city"style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Nombre de stagiaires ayant postulé :</label>
                 			<div class="submenu">
                     			<div>
-									<input type="radio" id="moins_d_un_mois" name="duration">
-									<label for="moins_d_un_mois">Moins d'un mois</label>
+									<input type="radio" id="un" name="duration">
+									<label for="un">1</label>
 								</div>
                     			<div>
-									<input type="radio" id="entre_1_et_3_mois" name="duration">
-									<label for="entre_1_et_3_mois">Entre 1 et 3 mois</label>
+									<input type="radio" id="entre_1_et_5" name="duration">
+									<label for="entre_1_et_5">Entre 1 et 5</label>
 								</div>
                    				<div>
-									<input type="radio" id="entre_3_et_6_mois" name="duration">
-									<label for="entre_3_et_6_mois">Entre 3 et 6 mois</label>
+									<input type="radio" id="entre_5_et_10" name="duration">
+									<label for="entre_5_et_10">Entre 5 et 10</label>
 								</div>
                     			<div>
-									<input type="radio" id="entre_6_et_9_mois" name="duration">
-									<label for="entre_6_et_9_mois">Entre 6 et 9 mois</label>
+									<input type="radio" id="entre_10_et_15" name="duration">
+									<label for="entre_10_et_15">Entre 10 et 15</label>
 								</div>
                     			<div>
 									<input type="radio" id="entre_9_et_12_mois" name="duration">
@@ -383,7 +402,9 @@
 			</div>
 		</main>
 
-		<script src="Assets/JS/Accueil.js"></script>
+		<?php echo '<script'; ?>
+ src="Assets/JS/Accueil.js"><?php echo '</script'; ?>
+>
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
@@ -433,4 +454,5 @@
     		</footer>
 		</footer>
 	</body>
-</html>
+</html><?php }
+}

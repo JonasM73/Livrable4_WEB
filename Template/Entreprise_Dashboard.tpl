@@ -1,27 +1,4 @@
-<?php
-/* Smarty version 4.3.2, created on 2024-03-27 16:09:32
-  from 'C:\xampp\htdocs\Livrable4_WEB\Template\Créer_entreprise.tpl' */
-
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '4.3.2',
-  'unifunc' => 'content_660436aca40e06_01046316',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    'a77073458c953e0d7a2d99c176a32811fc3040e2' => 
-    array (
-      0 => 'C:\\xampp\\htdocs\\Livrable4_WEB\\Template\\Créer_entreprise.tpl',
-      1 => 1711552109,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-  ),
-),false)) {
-function content_660436aca40e06_01046316 (Smarty_Internal_Template $_smarty_tpl) {
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
@@ -87,7 +64,6 @@ function content_660436aca40e06_01046316 (Smarty_Internal_Template $_smarty_tpl)
 					<input type="text" id="sector" name="sector" placeholder="Entrez un secteur d'activité" required><br><br><br>
 					<label>Nombre de centre de l'entreprise</label><br><br>
 					<input type="number" name="number" placeholder="Entrez le nombre de centres" id="num_add" oninput="generateAddressFields(this.value)" required min="1"><br><br>
-					<div id="addresses"></div>
 					<table>
 						<td>
 							<input type="submit" value="Créer"><br>
@@ -98,11 +74,10 @@ function content_660436aca40e06_01046316 (Smarty_Internal_Template $_smarty_tpl)
 					</table>
 					<span id="soumission" class="TextRed"></span><br><br>
 				</fieldset><br><br>
+				<div id="addresses"></div>
 			</form>
 		</main>
-		<?php echo '<script'; ?>
- src="Assets/JS/Creer_entreprise.js"><?php echo '</script'; ?>
->
+		<script src="Assets/JS/Creer_entreprise.js"></script>
 	</body>
 	
 	<div class="footer-container">
@@ -142,5 +117,4 @@ function content_660436aca40e06_01046316 (Smarty_Internal_Template $_smarty_tpl)
 			<label for="contacter" id="bas-label">&copy; 2024 - Stage Link Cesi</label>
 		</div>
 	</footer>
-</html><?php }
-}
+</html>

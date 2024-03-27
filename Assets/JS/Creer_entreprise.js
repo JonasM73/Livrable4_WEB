@@ -43,7 +43,7 @@ function generateAddressFields(num) {
     addressesDiv.innerHTML = ""; // Clear previous content
     
     if (num > 0){
-        addressesDiv.innerHTML = "<fieldset><h1>Adresse(s) de l'entreprise</h1><br><div id='ADD'></div></fieldset><br><br>";
+        addressesDiv.innerHTML = "<br><div id='ADD'></div><br><br>";
         var addresses = document.getElementById("ADD");
     }
 

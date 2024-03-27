@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-27 11:49:49
+/* Smarty version 4.3.2, created on 2024-03-27 14:54:10
   from 'C:\xampp\htdocs\Livrable4_WEB\Template\Accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6603f9cdb50b54_56399212',
+  'unifunc' => 'content_66042502c70fe9_39743116',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5fe8d93a936ec1cec15243286d209764d6ee17bf' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Livrable4_WEB\\Template\\Accueil.tpl',
-      1 => 1711536574,
+      1 => 1711545613,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6603f9cdb50b54_56399212 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66042502c70fe9_39743116 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>
@@ -39,7 +39,7 @@ function content_6603f9cdb50b54_56399212 (Smarty_Internal_Template $_smarty_tpl)
 					<a href="index.php?page=Accueil">Accueil </a>
 				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 				<div class="dropdown">
-					<a href="#">Entreprises </a>
+					<a href="index.php?page=Entreprise">Entreprises </a>
 				<div class="dropdown-content">
 					<a href="#">Entreprises</a>
 					<a href="index.php?page=Créer_entreprise">Inscrire mon Entreprise</a>

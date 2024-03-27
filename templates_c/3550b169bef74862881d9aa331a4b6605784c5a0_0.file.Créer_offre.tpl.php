@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-27 11:03:25
+/* Smarty version 4.3.2, created on 2024-03-27 15:31:53
   from 'C:\xampp\htdocs\Livrable4_WEB\Template\Créer_offre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6603eeed6ef219_32133969',
+  'unifunc' => 'content_66042dd9dc5fa7_44349830',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3550b169bef74862881d9aa331a4b6605784c5a0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Livrable4_WEB\\Template\\Créer_offre.tpl',
-      1 => 1711533729,
+      1 => 1711542623,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6603eeed6ef219_32133969 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66042dd9dc5fa7_44349830 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
-		<title>StageLinkCesi - Inscrire mon entreprise</title>
+		<title>StageLinkCesi - Créer une offre</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
 		<link rel="stylesheet" href="Assets/CSS/style_creer_compte.css">
 		<link rel="stylesheet" href="Assets/CSS/style_creer_entreprise.css">

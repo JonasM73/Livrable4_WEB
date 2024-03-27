@@ -64,6 +64,7 @@
 					<input type="text" id="sector" name="sector" placeholder="Entrez un secteur d'activité" required><br><br><br>
 					<label>Nombre de centre de l'entreprise</label><br><br>
 					<input type="number" name="number" placeholder="Entrez le nombre de centres" id="num_add" oninput="generateAddressFields(this.value)" required min="1"><br><br>
+					<div id="addresses"></div>
 					<table>
 						<td>
 							<input type="submit" value="Créer"><br>
@@ -74,7 +75,6 @@
 					</table>
 					<span id="soumission" class="TextRed"></span><br><br>
 				</fieldset><br><br>
-				<div id="addresses"></div>
 			</form>
 		</main>
 		<script src="Assets/JS/Creer_entreprise.js"></script>

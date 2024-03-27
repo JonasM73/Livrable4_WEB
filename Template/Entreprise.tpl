@@ -2,7 +2,7 @@
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
-		<title>StageLinkCesi - Entreprise</title>
+		<title>StageLinkCesi - Accueil</title>
 		<link rel="stylesheet" type="text/css" href="Assets\CSS\style_site.css">
 		<link rel="stylesheet" type="text/css" href="Assets\CSS\Accueil.css">
 	</head>
@@ -16,7 +16,7 @@
 					<a href="index.php?page=Accueil">Accueil </a>
 				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
 				<div class="dropdown">
-					<a href="#">Entreprises </a>
+					<a href="index.php?page=Entreprise">Entreprises </a>
 				<div class="dropdown-content">
 					<a href="#">Entreprises</a>
 					<a href="index.php?page=Créer_entreprise">Inscrire mon Entreprise</a>
@@ -59,7 +59,7 @@
         			<div class="menu">
             			<div class="option">
                 			<input type="checkbox" id="interest" name="category">
-                			<label for="interest" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Compétences :</label>
+                			<label for="interest" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Secteur d'activités :</label>
                 			&nbsp;
                 			<div class="submenu">
                     			<div>
@@ -68,15 +68,11 @@
 								</div>
                     			<div>
 									<input type="radio" id="ingenieur_informatique" name="interest">
-									<label for="ingenieur_informatique">Ingénieur Informatique</label>
+									<label for="informatique">Informatique</label>
 								</div>
                     			<div>
 									<input type="radio" id="marketing_et_publicite" name="interest">
 									<label for="marketing_et_publicite">Marketing et publicité</label>
-								</div>
-                    			<div>
-									<input type="radio" id="ressources_humaines" name="interest">
-									<label for="ressources_humaines">Ressources Humaines</label>
 								</div>
                     			<div>
 									<input type="radio" id="agriculture" name="interest">
@@ -94,23 +90,23 @@
             			</div>
             			<div class="option">
                 			<input type="checkbox" id="city" name="category">
-                			<label for="city"style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Durée du Stage :</label>
+                			<label for="city"style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Nombre de stagiaires ayant postulé :</label>
                 			<div class="submenu">
                     			<div>
-									<input type="radio" id="moins_d_un_mois" name="duration">
-									<label for="moins_d_un_mois">Moins d'un mois</label>
+									<input type="radio" id="un" name="duration">
+									<label for="un">1</label>
 								</div>
                     			<div>
-									<input type="radio" id="entre_1_et_3_mois" name="duration">
-									<label for="entre_1_et_3_mois">Entre 1 et 3 mois</label>
+									<input type="radio" id="entre_1_et_5" name="duration">
+									<label for="entre_1_et_5">Entre 1 et 5</label>
 								</div>
                    				<div>
-									<input type="radio" id="entre_3_et_6_mois" name="duration">
-									<label for="entre_3_et_6_mois">Entre 3 et 6 mois</label>
+									<input type="radio" id="entre_5_et_10" name="duration">
+									<label for="entre_5_et_10">Entre 5 et 10</label>
 								</div>
                     			<div>
-									<input type="radio" id="entre_6_et_9_mois" name="duration">
-									<label for="entre_6_et_9_mois">Entre 6 et 9 mois</label>
+									<input type="radio" id="entre_10_et_15" name="duration">
+									<label for="entre_10_et_15">Entre 10 et 15</label>
 								</div>
                     			<div>
 									<input type="radio" id="entre_9_et_12_mois" name="duration">
