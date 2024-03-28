@@ -8,6 +8,8 @@
 	</head>
 	
 	<body>
+	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
+
 		<header>
 			<img src="Images/logo.png" alt="logo Stage Cesi Link" class="logo">
 			<hr>

@@ -8,7 +8,7 @@
 	</head>
 
 	<body action='Accueil.tpl' method='POST'>
-	<img src="Images/B.png" alt="logo Stage Cesi Link" class="banière_1">
+	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 
 		<header>
 		<img src="Images/logo.png" alt="logo Stage Cesi Link" class="logo">
@@ -60,7 +60,7 @@
     			<div class="menu-container">
         			<div class="menu">
             			<div class="option">
-                			<input type="checkbox" id="Compétence" name="category">
+                			<input type="checkbox" id="Compétence" name="Compétence">
                 			<label for="Compétence" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Compétences :</label>
                 			&nbsp;
                 			<div class="submenu">
@@ -97,7 +97,7 @@
 						<p id="catValue"></p>
 
             			<div class="option">
-                			<input type="checkbox" id="city" name="Time">
+                			<input type="checkbox" id="durée_stage" name="durée_stage">
                 			<label for="city"style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Durée du Stage :</label>
                 			<div class="submenu">
                     			<div>

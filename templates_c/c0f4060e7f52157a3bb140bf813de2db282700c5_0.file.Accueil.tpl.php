@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-27 15:45:17
+/* Smarty version 4.3.2, created on 2024-03-28 09:41:57
   from 'C:\www\Livrable4_WEB\Template\Accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_660430fdd88760_95149403',
+  'unifunc' => 'content_66052d55893258_86391259',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c0f4060e7f52157a3bb140bf813de2db282700c5' => 
     array (
       0 => 'C:\\www\\Livrable4_WEB\\Template\\Accueil.tpl',
-      1 => 1711550713,
+      1 => 1711615298,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660430fdd88760_95149403 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66052d55893258_86391259 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>
@@ -31,7 +31,7 @@ function content_660430fdd88760_95149403 (Smarty_Internal_Template $_smarty_tpl)
 	</head>
 
 	<body action='Accueil.tpl' method='POST'>
-	<img src="Images/B.png" alt="logo Stage Cesi Link" class="banière_1">
+	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 
 		<header>
 		<img src="Images/logo.png" alt="logo Stage Cesi Link" class="logo">
@@ -83,7 +83,7 @@ function content_660430fdd88760_95149403 (Smarty_Internal_Template $_smarty_tpl)
     			<div class="menu-container">
         			<div class="menu">
             			<div class="option">
-                			<input type="checkbox" id="Compétence" name="category">
+                			<input type="checkbox" id="Compétence" name="Compétence">
                 			<label for="Compétence" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Compétences :</label>
                 			&nbsp;
                 			<div class="submenu">
@@ -120,7 +120,7 @@ function content_660430fdd88760_95149403 (Smarty_Internal_Template $_smarty_tpl)
 						<p id="catValue"></p>
 
             			<div class="option">
-                			<input type="checkbox" id="city" name="Time">
+                			<input type="checkbox" id="durée_stage" name="durée_stage">
                 			<label for="city"style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Durée du Stage :</label>
                 			<div class="submenu">
                     			<div>

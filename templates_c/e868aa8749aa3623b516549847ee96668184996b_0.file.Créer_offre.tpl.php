@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-27 15:08:04
+/* Smarty version 4.3.2, created on 2024-03-28 09:44:04
   from 'C:\www\Livrable4_WEB\Template\Créer_offre.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_660428449a78c4_87784988',
+  'unifunc' => 'content_66052dd45b6f73_76008299',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e868aa8749aa3623b516549847ee96668184996b' => 
     array (
       0 => 'C:\\www\\Livrable4_WEB\\Template\\Créer_offre.tpl',
-      1 => 1711541563,
+      1 => 1711615411,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660428449a78c4_87784988 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66052dd45b6f73_76008299 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>
@@ -32,6 +32,8 @@ function content_660428449a78c4_87784988 (Smarty_Internal_Template $_smarty_tpl)
 	</head>
 
 	<body>
+	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
+
 		<header>
 			<img src="Images/logo.png" alt="logo Stage Cesi Link" class="logo">
 			<hr>
