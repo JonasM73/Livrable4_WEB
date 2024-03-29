@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.3.2, created on 2024-03-29 23:37:55
+  from 'C:\www\Livrable4_WEB\Template\Creer_un_compte.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_660742c3632351_95666044',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'eefc43192eafe51dc9d0e41048eb950ef32f15a6' => 
+    array (
+      0 => 'C:\\www\\Livrable4_WEB\\Template\\Creer_un_compte.tpl',
+      1 => 1711751869,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_660742c3632351_95666044 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
@@ -11,7 +34,8 @@
 	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 
 		<header>
-		{$header}
+		<?php echo $_smarty_tpl->tpl_vars['header']->value;?>
+
 		</header><br><br>
 		
 		<main>
@@ -76,8 +100,14 @@
 			</fieldset>
 		</main>
 
-		<script src="Assets/JS/Connexion.js"></script>
-		<script src="Assets/JS/Creer_compte.js"></script>
-		{$content_footer}
+		<?php echo '<script'; ?>
+ src="Assets/JS/Connexion.js"><?php echo '</script'; ?>
+>
+		<?php echo '<script'; ?>
+ src="Assets/JS/Creer_compte.js"><?php echo '</script'; ?>
+>
+		<?php echo $_smarty_tpl->tpl_vars['content_footer']->value;?>
+
 	</body>
-</html>
+</html><?php }
+}
