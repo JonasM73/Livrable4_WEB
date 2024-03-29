@@ -3,8 +3,8 @@ body {
 	font-family: "Century Gothic", sans-serif; /* Utilisation de la police "Century Gothic" ou une police sans empattement par défaut */
 	margin: 0; /*Définition de la marge de tous les côtés de l'élément*/
 	padding: 0;
-	background-color: rgb(0, 88, 220);}
-
+    background-color:rgb(208 220 238);
+}
     header {
         position: relative; /* Position relative pour permettre le positionnement du z-index */
         z-index: 1; /* Assure que le header est au-dessus de l'image */
@@ -24,7 +24,6 @@ body {
         height: 350px; /* Définir la hauteur souhaitée */
         object-fit: cover; /* Réduire la taille de l'image tout en conservant ses proportions et en la faisant remplir l'espace défini */
         z-index: 0;
-        opacity: 50%; /* Valeur de transparence entre 0 (complètement transparent) et 1 (complètement opaque) */
 
     }
     
