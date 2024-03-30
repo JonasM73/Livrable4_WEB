@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.3.2, created on 2024-03-30 12:56:29
+  from 'C:\www\Livrable4_WEB\Template\Mon_Compte.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_6607fdedeba990_64582021',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '7ac71b71ac40ebbce15be1c62e7b7641d1f839b5' => 
+    array (
+      0 => 'C:\\www\\Livrable4_WEB\\Template\\Mon_Compte.tpl',
+      1 => 1711799787,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6607fdedeba990_64582021 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
@@ -11,7 +34,8 @@
 	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 
 		<header>
-		{$header}
+		<?php echo $_smarty_tpl->tpl_vars['header']->value;?>
+
 		</header><br><br>
 		
 		<main>
@@ -45,6 +69,8 @@
 				</fieldset>	
 			</form>
 		</main>
-		{$content_footer}
+		<?php echo $_smarty_tpl->tpl_vars['content_footer']->value;?>
+
 	</body>
-</html>
+</html><?php }
+}

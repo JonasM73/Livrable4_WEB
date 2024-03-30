@@ -5,19 +5,23 @@ define('MAIN_PATH', getcwd());
 require(MAIN_PATH . "/smarty-4.3.2/libs/Smarty.class.php");
 
 $smarty = new Smarty();
-$action1 = isset($_GET['page']) ? $_GET['page'] : '';
+$page = isset($_GET['page']) ? $_GET['page'] : '';
 HEADER_FOOTER();
 
 
 function DISPLAY($content, $content_footer){
-    global $smarty, $action1;
+    global $smarty, $page;
     $smarty->assign('header', $content);
     $smarty->assign('content_footer', $content_footer);
-    if ($action1 !== '') {
-        $smarty->display(MAIN_PATH . "/Template/$action1.tpl");
-    } else {
-        $smarty->display(MAIN_PATH . "/Template/Accueil.tpl");
-    }
+    if ($page == 'Acceuil') {                                                                   require_once 'Assets\PHP\Gestion_Accueil\controller_Accueil.php';} 
+    elseif($page == 'Créer_entreprise' || $page == 'Dashboard_E'){                              require_once 'Assets\PHP\Gestion_entreprises\controller_GE.php';    }
+    elseif($page == 'Connexion'){                                                               require_once 'Assets\PHP\Gestion_Acces\controller_Acces.php';    }
+    elseif($page == 'Créer_offre' || $page == 'Dashboard_O'){                                   require_once 'Assets\PHP\Gestion_Offres\controller_offre.php';    }
+    elseif($page == 'Rechercher_un_compte_etudiant' ||$page == 'Rechercher_un_compte'|| $page == 'Statistiques_etudiant'|| $page == 'Creer_un_compte' || $page == 'Mon_Compte')
+    {       require_once 'Assets\PHP\Gestion_Compte\controller_Compte.php';    }
+    elseif($page == 'Wishlist' ){                                                               require_once 'Assets\PHP\Gestion_Candidature\controller_Candidature.php';    }
+    else {                                                                                      require_once 'Assets\PHP\Gestion_Accueil\controller_Accueil.php';    }
+
 }
 
 function HEADER_FOOTER(){

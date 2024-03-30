@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-29 16:56:23
+/* Smarty version 4.3.2, created on 2024-03-29 23:42:01
   from 'C:\www\Livrable4_WEB\Template\Rechercher_un_compte.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6606e4a7120ab7_47541174',
+  'unifunc' => 'content_660743b9093778_95788745',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a1cb2fbd049287ac7ded6bd08e2845b5afe6b0d8' => 
     array (
       0 => 'C:\\www\\Livrable4_WEB\\Template\\Rechercher_un_compte.tpl',
-      1 => 1711615433,
+      1 => 1711752022,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6606e4a7120ab7_47541174 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660743b9093778_95788745 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>
@@ -34,48 +34,8 @@ function content_6606e4a7120ab7_47541174 (Smarty_Internal_Template $_smarty_tpl)
 	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 
 		<header>
-			<img src="Images/logo.png" alt="logo Stage Cesi Link" class="logo">
-			<hr>
-			<nav class="navbar">
-				<div class="dropdown">
-					<a href="index.php?page=Accueil">Accueil </a>
-				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-				<div class="dropdown">
-					<a href="#">Entreprises </a>
-				<div class="dropdown-content">
-					<a href="#">Entreprises</a>
-					<a href="index.php?page=Créer_entreprise">Inscrire mon Entreprise</a>
-					<a href="#">Dashboard Entreprise</a>
-				</div>
-				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-				<div class="dropdown">
-					<a href="#">Offres </a>
-					<div class="dropdown-content">
-						<a href="index.php?page=Créer_offre">Créer mon offre </a>
-						<a href="#">Dashboard offre</a>
-					</div>
-				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-				<div class="dropdown">
-					<a href="#">Pilotes / Etudiants </a>
-					<div class="dropdown-content">
-						<a href="index.php?page=Rechercher_un_compte">Rechercher un compte Pilote</a>
-						<a href="index.php?page=Rechercher_un_compte_etudiant">Rechercher un compte Etudiant</a>
-						<a href="index.php?page=Statistiques_etudiant">Dashboard Etudiant</a>
-					</div>
-				</div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="index.php?page=Wishlist">Liste de Souhait </a>
-			</nav>
-			<nav class="moncompte">
-				<div class="dropdown">
-					<a href="#">&nbsp;Mon&nbsp;Compte</a>
-					<div class="dropdown-content">
-						<a href="index.php?page=Connexion">S'identifier</a>
-						<a href="index.php?page=Creer_un_compte">Créer un compte</a>
-						<a href="#">Mon compte</a>
-					</div>
-				</div>
-			</nav>
-			<hr>
+		<?php echo $_smarty_tpl->tpl_vars['header']->value;?>
+
 		</header><br><br>
 		
 		<main>
@@ -115,48 +75,8 @@ function content_6606e4a7120ab7_47541174 (Smarty_Internal_Template $_smarty_tpl)
 			</form>
 		</main>
 		
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        
-		<div class="footer-container">
-    		<footer class="leftfooter">
-       			<label for="Navigation" id="navigation-label">Navigation :</label>
-        		<p>&nbsp;&nbsp;~&nbsp;&nbsp;</p>
-        		<nav class="navbarfooter">
-         		    <a href="#">Accueil </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-       				<a href="#">Entreprises </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        		    <a href="#">Offres </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-         		   	<a href="#">Pilotes / Etudiants </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-         		   	<a href="#">Liste de Souhait </a>  
-       			</nav>
-        		<p>&nbsp;&nbsp;~&nbsp;&nbsp;</p>
-    		</footer>
-			<footer class="rightfooter">
-    			<label for="contacter" id="reseaux-label">Suivez-nous ! </label>
-        		<div class="social-media">
-            		<img src="Images/insta.png" alt="logo insta" class="logoinsta">
-            		<p>@StageLink_Cesi</p>
-            		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            		<img src="Images/ytb.png" alt="logo ytb" class="logoinsta">
-           	 		<p>StageLinkCesi_yt</p>
-        		</div>
-        		<div class="social-media">
-            		<img src="Images/gmail.png" alt="logo gmail" class="logoinsta">
-            		<p>@StageLinkCesi  </p>&nbsp;&nbsp;
-            		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            		<img src="Images/linkedin1.png" alt="logo linkedin" class="logoinsta">
-            		<p>StageCesi@link.com</p>
-        		</div>
-			</footer>
-		</div>
-		<footer class="basfooter">
-    		<div class="social-media">
-        		<img src="Images/logo.png" alt="logo Stage Cesi Link" class="logoCesi">
-        		<label for="contacter" id="bas-label">&copy; 2024 - Stage Link Cesi</label>
-    		</div>
-    	</footer>
+		<?php echo $_smarty_tpl->tpl_vars['content_footer']->value;?>
+
 	</body>
 </html><?php }
 }

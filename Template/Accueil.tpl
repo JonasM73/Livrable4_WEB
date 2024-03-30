@@ -274,14 +274,14 @@
         						<label for="Nom" id="Nom">Nom ?</label>
         						<textarea id="Entreprises" placeholder="Entreprises ?" name="Nom"></textarea>
     						</div>
-   	 						<button type="submit">Aller !</button>
+   	 						<button type="submit"  onclick="validation()">Aller !</button>
 						</div>
     					<div class="input-group">
     						<div class="text-area-container">
         						<label for="Ou" id="ou">📍Où ?</label>
         						<textarea id="textarea_O" placeholder="Ville, Adresse, CP ?" name="Ou"></textarea>
     						</div>
-   	 						<button type="submit">Aller !</button>
+   	 						<button type="submit"  onclick="validation()">Aller !</button>
 						</div>
 					</div>
 				</div>

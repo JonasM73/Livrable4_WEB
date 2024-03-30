@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-29 22:02:05
+/* Smarty version 4.3.2, created on 2024-03-30 13:21:20
   from 'C:\www\Livrable4_WEB\Template\Accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_66072c4d5006b5_80040106',
+  'unifunc' => 'content_660803c07fed05_05885430',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c0f4060e7f52157a3bb140bf813de2db282700c5' => 
     array (
       0 => 'C:\\www\\Livrable4_WEB\\Template\\Accueil.tpl',
-      1 => 1711746098,
+      1 => 1711801277,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66072c4d5006b5_80040106 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660803c07fed05_05885430 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>
@@ -298,14 +298,14 @@ function content_66072c4d5006b5_80040106 (Smarty_Internal_Template $_smarty_tpl)
         						<label for="Nom" id="Nom">Nom ?</label>
         						<textarea id="Entreprises" placeholder="Entreprises ?" name="Nom"></textarea>
     						</div>
-   	 						<button type="submit">Aller !</button>
+   	 						<button type="submit"  onclick="validation()">Aller !</button>
 						</div>
     					<div class="input-group">
     						<div class="text-area-container">
         						<label for="Ou" id="ou">📍Où ?</label>
         						<textarea id="textarea_O" placeholder="Ville, Adresse, CP ?" name="Ou"></textarea>
     						</div>
-   	 						<button type="submit">Aller !</button>
+   	 						<button type="submit"  onclick="validation()">Aller !</button>
 						</div>
 					</div>
 				</div>
