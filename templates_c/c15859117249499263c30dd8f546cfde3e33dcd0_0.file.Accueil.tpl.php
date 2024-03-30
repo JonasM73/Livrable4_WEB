@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.3.2, created on 2024-03-30 20:07:55
+  from 'C:\www\Livrable4_WEB\Template\Accueil.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_6608630bd97ec2_14134669',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'c15859117249499263c30dd8f546cfde3e33dcd0' => 
+    array (
+      0 => 'C:\\www\\Livrable4_WEB\\Template\\Accueil.tpl',
+      1 => 1711825674,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6608630bd97ec2_14134669 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
@@ -13,7 +36,8 @@
 	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 
 		<header>
-			{$header}
+			<?php echo $_smarty_tpl->tpl_vars['header']->value;?>
+
 		</header>
 		
 		<main>
@@ -290,30 +314,43 @@
 				</div>
 			</div>
 			<div class="divclasse">
-				{if $offres}
-					{foreach $offres as $key => $offre}
+				<?php if ($_smarty_tpl->tpl_vars['offres']->value) {?>
+					<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['offres']->value, 'offre', false, 'key');
+$_smarty_tpl->tpl_vars['offre']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['offre']->value) {
+$_smarty_tpl->tpl_vars['offre']->do_else = false;
+?>
 						<div class="affichage">
 							<div class="affichage1">
 								<div class="logostage">
 								</div>
 							</div>
 							<div class="conteneur-droite">
-								<div class="texte_affichage1">{$offre->gettitre_offre_stage()}</div>
+								<div class="texte_affichage1"><?php echo $_smarty_tpl->tpl_vars['offre']->value->gettitre_offre_stage();?>
+</div>
 								<div class="presentation_affichage1">
 									<div class="texte-presentation">
-										<p>{$offres_descriptif[$key]->getdescriptif_offres_stage()}</p>
+										<p><?php echo $_smarty_tpl->tpl_vars['offres_descriptif']->value[$_smarty_tpl->tpl_vars['key']->value]->getdescriptif_offres_stage();?>
+</p>
 									</div>	
 								</div>
 							</div>
 						</div>
-					{/foreach}
-				{/if}
+					<?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+				<?php }?>
 			</div>
 			
 			
 
 		</main>
-		<script src='Assets/JS/Accueil.js'></script>
-		{$content_footer}
+		<?php echo '<script'; ?>
+ src='Assets/JS/Accueil.js'><?php echo '</script'; ?>
+>
+		<?php echo $_smarty_tpl->tpl_vars['content_footer']->value;?>
+
 	</body>
-</html>
+</html><?php }
+}

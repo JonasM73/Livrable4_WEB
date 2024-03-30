@@ -5,6 +5,8 @@ define('MAIN_PATH', getcwd());
 require(MAIN_PATH . "/smarty-4.3.2/libs/Smarty.class.php");
 
 $smarty = new Smarty();
+
+$smarty->setTemplateDir(MAIN_PATH . '/Template');
 $page = isset($_GET['page']) ? $_GET['page'] : '';
 HEADER_FOOTER();
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-30 13:21:20
+/* Smarty version 4.3.2, created on 2024-03-30 19:08:01
   from 'C:\www\Livrable4_WEB\Template\Accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_660803c07fed05_05885430',
+  'unifunc' => 'content_66085501e14121_38059253',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c0f4060e7f52157a3bb140bf813de2db282700c5' => 
     array (
       0 => 'C:\\www\\Livrable4_WEB\\Template\\Accueil.tpl',
-      1 => 1711801277,
+      1 => 1711822030,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_660803c07fed05_05885430 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66085501e14121_38059253 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>
@@ -313,63 +313,41 @@ function content_660803c07fed05_05885430 (Smarty_Internal_Template $_smarty_tpl)
     				<button type="submit" class="btn-rechercher" onclick="validation()">Rechercher</button>
 				</div>
 			</div>
-			<div class="affichage">
-    			<div class="affichage1">
-        			<div class="logostage">
-					</div>
-    			</div>
-    			<div class="conteneur-droite">
-        			<div class="texte_affichage1">Nom de l'offre de stage 1</div>
-        			<div class="presentation_affichage1">
-   						<div class="texte-presentation">
-							<p>Bienvenue sur notre plateforme de stage!</p>
-							<p>Chez [Nom de votre entreprise], nous croyons au pouvoir de l'apprentissage pratique. C'est pourquoi nous offrons des opportunités de stage passionnantes pour les étudiants désireux d'acquérir une expérience précieuse dans leur domaine d'études.</p>
-							<p>À propos de nous :</p>
-							<p>[Nom de votre entreprise] est une entreprise innovante dans le domaine [industrie/domaine]. Nous nous engageons à fournir un environnement de travail dynamique où chaque membre de notre équipe a la possibilité de développer ses compétences et de contribuer à des projets stimulants.</p>
-							<p>Pourquoi nous rejoindre en tant que stagiaire :</p>
-							<p>En tant que stagiaire chez [Nom de votre entreprise], vous aurez l'opportunité de travailler aux côtés de professionnels expérimentés, d'acquérir une expérience pratique dans votre domaine d'intérêt et de participer à des projets impactants. Nous croyons en l'importance de l'apprentissage continu et nous nous engageons à vous fournir les ressources et le soutien nécessaires pour que vous puissiez réussir et développer votre carrière.</p>
+			
+			<?php echo '<?php'; ?>
+ if (!empty($offres)): <?php echo '?>'; ?>
+
+				<?php echo '<?php'; ?>
+ foreach ($offres as $offre): <?php echo '?>'; ?>
+
+					<div class="affichage">
+						<div class="affichage1">
+							<div class="logostage">
+							</div>
+						</div>
+						<div class="conteneur-droite">
+							<div class="texte_affichage1"><?php echo '<?php'; ?>
+ echo $offre->gettitre_offre_stage(); <?php echo '?>'; ?>
+</div>
+							<div class="presentation_affichage1">
+								<div class="texte-presentation">
+									<p>Bienvenue sur notre plateforme de stage!</p>
+									<p>Chez [Nom de votre entreprise], nous croyons au pouvoir de l'apprentissage pratique. C'est pourquoi nous offrons des opportunités de stage passionnantes pour les étudiants désireux d'acquérir une expérience précieuse dans leur domaine d'études.</p>
+									<p>À propos de nous :</p>
+									<p>[Nom de votre entreprise] est une entreprise innovante dans le domaine [industrie/domaine]. Nous nous engageons à fournir un environnement de travail dynamique où chaque membre de notre équipe a la possibilité de développer ses compétences et de contribuer à des projets stimulants.</p>
+									<p>Pourquoi nous rejoindre en tant que stagiaire :</p>
+									<p>En tant que stagiaire chez [Nom de votre entreprise], vous aurez l'opportunité de travailler aux côtés de professionnels expérimentés, d'acquérir une expérience pratique dans votre domaine d'intérêt et de participer à des projets impactants. Nous croyons en l'importance de l'apprentissage continu et nous nous engageons à vous fournir les ressources et le soutien nécessaires pour que vous puissiez réussir et développer votre carrière.</p>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="affichage">
-    			<div class="affichage1">
-        			<div class="logostage">
-					</div>
-    			</div>
-    			<div class="conteneur-droite">
-        			<div class="texte_affichage1">Nom de l'offre de stage 2</div>
-        			<div class="presentation_affichage1">
-   						<div class="texte-presentation">
-							<p>Bienvenue sur notre plateforme de stage!</p>
-							<p>Chez [Nom de votre entreprise], nous croyons au pouvoir de l'apprentissage pratique. C'est pourquoi nous offrons des opportunités de stage passionnantes pour les étudiants désireux d'acquérir une expérience précieuse dans leur domaine d'études.</p>
-							<p>À propos de nous :</p>
-							<p>[Nom de votre entreprise] est une entreprise innovante dans le domaine [industrie/domaine]. Nous nous engageons à fournir un environnement de travail dynamique où chaque membre de notre équipe a la possibilité de développer ses compétences et de contribuer à des projets stimulants.</p>
-							<p>Pourquoi nous rejoindre en tant que stagiaire :</p>
-							<p>En tant que stagiaire chez [Nom de votre entreprise], vous aurez l'opportunité de travailler aux côtés de professionnels expérimentés, d'acquérir une expérience pratique dans votre domaine d'intérêt et de participer à des projets impactants. Nous croyons en l'importance de l'apprentissage continu et nous nous engageons à vous fournir les ressources et le soutien nécessaires pour que vous puissiez réussir et développer votre carrière.</p>
-						</div>
-					</div>
-    			</div>
-			</div>
-			<div class="affichage">
-    			<div class="affichage1">
-        			<div class="logostage">
-					</div>
-    			</div>
-    			<div class="conteneur-droite">
-        			<div class="texte_affichage1">Nom de l'offre de stage 3</div>
-        			<div class="presentation_affichage1">
-   						<div class="texte-presentation">
-							<p>Bienvenue sur notre plateforme de stage!</p>
-							<p>Chez [Nom de votre entreprise], nous croyons au pouvoir de l'apprentissage pratique. C'est pourquoi nous offrons des opportunités de stage passionnantes pour les étudiants désireux d'acquérir une expérience précieuse dans leur domaine d'études.</p>
-							<p>À propos de nous :</p>
-							<p>[Nom de votre entreprise] est une entreprise innovante dans le domaine [industrie/domaine]. Nous nous engageons à fournir un environnement de travail dynamique où chaque membre de notre équipe a la possibilité de développer ses compétences et de contribuer à des projets stimulants.</p>
-							<p>Pourquoi nous rejoindre en tant que stagiaire :</p>
-							<p>En tant que stagiaire chez [Nom de votre entreprise], vous aurez l'opportunité de travailler aux côtés de professionnels expérimentés, d'acquérir une expérience pratique dans votre domaine d'intérêt et de participer à des projets impactants. Nous croyons en l'importance de l'apprentissage continu et nous nous engageons à vous fournir les ressources et le soutien nécessaires pour que vous puissiez réussir et développer votre carrière.</p>
-						</div>
-					</div>
-    			</div>
-			</div>
+				<?php echo '<?php'; ?>
+ endforeach; <?php echo '?>'; ?>
+
+			<?php echo '<?php'; ?>
+ endif; <?php echo '?>'; ?>
+
+
 		</main>
 		<?php echo '<script'; ?>
  src='Assets/JS/Accueil.js'><?php echo '</script'; ?>
