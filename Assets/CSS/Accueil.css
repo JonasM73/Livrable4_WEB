@@ -143,56 +143,68 @@ textarea {
 }
 
 .affichage { 
-    border: 2px solid black; 
     height: 290px; 
-    margin-left: 30%; 
-    margin-right: 15px; 
     margin-top: 25px; 
     overflow: auto; 
-    display: grid; 
+    display: flex; 
     grid-template-columns: 250px auto;
     border-radius: 15px; 
     background-color: white;
     box-shadow: 5px 5px 10px rgba(215, 216, 219, 0.5); /* Ombre */
+    border: 2px solid black;
+    
 }
-
-.affichage1 { 
-    border: 2px solid black; 
-    height: 250px; width: 250px; 
-    margin-top: 15px; 
-    margin-left: 15px; 
+.affichage1 {
+    border: 2px solid black;
+    height: 200px;
+    width: 300px;
+    margin-top: 40px;
+    margin-left: 15px;
     border-radius: 15px;
     background-color: #ABABAB;
+    display: flex; /* Utilisation de flexbox */
+    justify-content: center; /* Alignement horizontal au centre */
+    align-items: center; /* Alignement vertical au centre */
+    overflow: hidden; /* Masquer le débordement de l'image */
 }
 
-.logostage { 
-    height: 250px;
+.affichage1 img {
+    width: 100%; /* Définir la largeur de l'image sur 100% */
+    height: auto; /* Ajuster automatiquement la hauteur de l'image */
 }
+
+
+
 
 .conteneur-droite { 
     margin-left: 30px; 
     display: flex; 
     flex-direction: column; 
     height: 250px; 
-    margin-top: 15px; 
+    margin-top: 30px; 
     margin-right: 25px;
 }
 
 .texte_affichage1 { 
     height: 35px; 
-    width: 200px;
+    width: 400px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .presentation_affichage1 { 
     margin-top: 15px; 
+    display: flex;
     border: 1px solid black; 
     height: 170px; 
-    width: 500px; 
-    margin-left: 15px;    
+    width: 600px; 
+    margin-left: 0px;    
     overflow: auto; 
     border-top-left-radius: 15px; /* Coin supérieur gauche arrondi */
     border-bottom-left-radius: 15px; /* Coin inférieur gauche arrondi */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Ombre */
+    
 }
 
 .texte-presentation { 
@@ -202,6 +214,44 @@ textarea {
 
 
 .divclasse{
-    border : 2px solid black;
+    margin-left: 500px;
 }
 
+
+
+
+.lolo {
+    display: flex;
+    flex-direction: column; /* Pour empiler les éléments verticalement */
+    align-items: center; /* Pour centrer les boutons horizontalement */
+    width: fit-content; /* Ajuster la largeur du conteneur à la largeur des boutons */
+    padding: 10px; /* Ajouter un peu d'espace intérieur pour une meilleure apparence */
+}
+
+/* Les styles des boutons */
+.btn-modifier,
+.btn-supprimer,
+.btn-invisible {
+    background-color: white; 
+    color: black;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+    width: 150px;
+    height: 50px;
+    font-family: "Century Gothic", sans-serif;
+    margin: 20px 0; /* Ajouter de l'espace entre les boutons */
+    box-shadow: 9px 9px 12px rgba(0, 0, 0, 0.6); /* Ombre à droite et en bas */
+}
+
+/* Styles hover pour tous les boutons */
+.btn-modifier:hover,
+.btn-supprimer:hover,
+.btn-invisible:hover {
+    background-color: black; 
+    color: white;
+    transform: scale(1.08);
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.6); /* Ombre plus prononcée au survol */
+}

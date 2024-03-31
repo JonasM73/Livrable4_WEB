@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-03-30 20:07:55
+/* Smarty version 4.3.2, created on 2024-03-31 15:41:02
   from 'C:\www\Livrable4_WEB\Template\Accueil.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6608630bd97ec2_14134669',
+  'unifunc' => 'content_660967eebbef34_77169488',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c15859117249499263c30dd8f546cfde3e33dcd0' => 
     array (
       0 => 'C:\\www\\Livrable4_WEB\\Template\\Accueil.tpl',
-      1 => 1711825674,
+      1 => 1711892457,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6608630bd97ec2_14134669 (Smarty_Internal_Template $_smarty_tpl) {
+function content_660967eebbef34_77169488 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang=fr>
 	<head>
@@ -321,20 +321,34 @@ $_smarty_tpl->tpl_vars['offre']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['offre']->value) {
 $_smarty_tpl->tpl_vars['offre']->do_else = false;
 ?>
-						<div class="affichage">
+						<div class="affichage" id_offre="<?php echo $_smarty_tpl->tpl_vars['offre']->value->getid_offre();?>
+">
 							<div class="affichage1">
-								<div class="logostage">
-								</div>
+							 	<img src="Images/img_entreprise/images(1).png" alt="logo <?php echo $_smarty_tpl->tpl_vars['offre']->value->getnom_entreprise();?>
+">
 							</div>
 							<div class="conteneur-droite">
 								<div class="texte_affichage1"><?php echo $_smarty_tpl->tpl_vars['offre']->value->gettitre_offre_stage();?>
+&nbsp;-&nbsp;<?php echo $_smarty_tpl->tpl_vars['offre']->value->getnom_entreprise();?>
 </div>
 								<div class="presentation_affichage1">
 									<div class="texte-presentation">
 										<p><?php echo $_smarty_tpl->tpl_vars['offres_descriptif']->value[$_smarty_tpl->tpl_vars['key']->value]->getdescriptif_offres_stage();?>
 </p>
-									</div>	
+									</div>  
 								</div>
+								<p><strong>Durée :</strong> <?php echo $_smarty_tpl->tpl_vars['offres_Date']->value[$_smarty_tpl->tpl_vars['key']->value]->getStage_Date();?>
+ Semaines &nbsp;&nbsp;&nbsp; <strong>Rémunération : </strong><?php echo $_smarty_tpl->tpl_vars['offres_remuneration']->value[$_smarty_tpl->tpl_vars['key']->value]->getRemuneration();?>
+ €/mois &nbsp;&nbsp;&nbsp; 
+								<strong>Places restantes : </strong><?php echo $_smarty_tpl->tpl_vars['offres_place']->value[$_smarty_tpl->tpl_vars['key']->value]->getNB_places_restantes();?>
+</p>
+
+							</div>
+							<div class="lolo">
+								<button type="submit" class="btn-modifier" id="btnModifier" onclick="allert()">Modifier</button>
+								<button type="button" class="btn-supprimer" onclick="supp(<?php echo $_smarty_tpl->tpl_vars['offre']->value->getid_offre();?>
+)">Supprimer</button>
+								<button type="submit" class="btn-invisible" id="btnInvisibilité" onclick="allert()">Invisibilité</button>
 							</div>
 						</div>
 					<?php

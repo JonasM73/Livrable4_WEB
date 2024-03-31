@@ -94,4 +94,28 @@ function validation() {
     });
 }
 
+function supp(idOffre) {
+    var confirmation = confirm("Vous allez supprimer une offre, êtes-vous sûr ?");
+    
+    if (confirmation) {
+        //  requête AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "Assets/PHP/Gestion_Accueil/controller_Accueil.php", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) { // === 4 requête AJAX terminée et réponse prête à être traitée. === 200 requête HTTP traitée avec succès par serveur.
+                location.reload();//rechargement de page
+            }
+        };
+        xhr.send("id_offre=" + encodeURIComponent(idOffre));
+    } else {    }
+}
+
+
+
+
+
+
+
+
 
