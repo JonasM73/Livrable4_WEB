@@ -289,33 +289,35 @@
     				<button type="submit" class="btn-rechercher" onclick="validation()">Rechercher</button>
 				</div>
 			</div>
-			<div class="divclasse">
-				{if $offres}
-					{foreach $offres as $key => $offre}
-						<div class="affichage" id_offre="{$offre->getid_offre()}">
-							<div class="affichage1">
-							 	<img src="Images/img_entreprise/images(1).png" alt="logo {$offre->getnom_entreprise()}">
-							</div>
-							<div class="conteneur-droite">
-								<div class="texte_affichage1">{$offre->gettitre_offre_stage()}&nbsp;-&nbsp;{$offre->getnom_entreprise()}</div>
-								<div class="presentation_affichage1">
-									<div class="texte-presentation">
-										<p>{$offres_descriptif[$key]->getdescriptif_offres_stage()}</p>
-									</div>  
+			<form method="post">
+				<div class="divclasse">
+					{if $offres}
+						{foreach $offres as $offre}
+							<div class="affichage" id_offre="{$offre->getid_offre()}">
+								<div class="affichage1">
+									<img src="Images/img_entreprise/images(1).png" alt="logo {$offre->getnom_entreprise()}">
 								</div>
-								<p><strong>Durée :</strong> {$offres_Date[$key]->getStage_Date()} Semaines &nbsp;&nbsp;&nbsp; <strong>Rémunération : </strong>{$offres_remuneration[$key]->getRemuneration()} €/mois &nbsp;&nbsp;&nbsp; 
-								<strong>Places restantes : </strong>{$offres_place[$key]->getNB_places_restantes()}</p>
+								<div class="conteneur-droite">
+									<div class="texte_affichage1">{$offre->gettitre_offre_stage()}&nbsp;-&nbsp;{$offre->getnom_entreprise()}</div>
+									<div class="presentation_affichage1">
+										<div class="texte-presentation">
+											<p>{$offre->getdescriptif_offres_stage()}</p>
+										</div>  
+									</div>
+									<p><strong>Durée :</strong> {$offre->getStage_Date()} Semaines &nbsp;&nbsp;&nbsp; <strong>Rémunération : </strong>{$offre->getRemuneration()} €/mois &nbsp;&nbsp;&nbsp; 
+									<strong>Places restantes : </strong>{$offre->getNB_places_restantes()}</p>
+								</div>
+								<div class="lolo">
+									<button type="submit" class="btn-modifier" id="btnModifier" >Modifier</button>
+									<button type="submit" name="supprimer_offre_{$offre->getid_offre()}" class="btn-supprimer">Supprimer</button>
+									<button type="submit" class="btn-invisible" id="btnInvisibilité" >Invisibilité</button>
+								</div>
+							</div>
+						{/foreach}
+					{/if}
+				</div>
+			</form>
 
-							</div>
-							<div class="lolo">
-								<button type="submit" class="btn-modifier" id="btnModifier" onclick="allert()">Modifier</button>
-								<button type="button" class="btn-supprimer" onclick="supp({$offre->getid_offre()})">Supprimer</button>
-								<button type="submit" class="btn-invisible" id="btnInvisibilité" onclick="allert()">Invisibilité</button>
-							</div>
-						</div>
-					{/foreach}
-				{/if}
-			</div>
 			
 			
 

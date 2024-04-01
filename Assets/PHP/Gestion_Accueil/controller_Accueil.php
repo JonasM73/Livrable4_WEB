@@ -1,30 +1,28 @@
 <?php
-
-#initialisation
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 require_once 'Méthodes_Accueil.php';
+
 $Accueil_offre = new Accueil_offre();
 
-if (isset($_POST['id_offre'])) {
-    $id_offre = $_POST['id_offre'];
-    $Accueil_offre->Supprimer_Offre($id_offre);
+// Vérifie si un bouton de suppression a été soumis
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    foreach ($_POST as $key => $value) {
+        if (strpos($key, 'supprimer_offre_') === 0) {
+            $id_offre = substr($key, strlen('supprimer_offre_'));
+            $Accueil_offre->Supprimer_Offre($id_offre);
+            header("Location: index.php");
+            exit;
+        }
+    }
 }
 
+// Récupère les offres à afficher
+$offres = $Accueil_offre->Afficher_Offres();
 
-$offres = $Accueil_offre->Afficher_Nom_Offre(); 
-$offres_descriptif = $Accueil_offre->Afficher_descriptif_Offre(); 
-$offres_Date = $Accueil_offre->Afficher_Date();
-$offres_remuneration = $Accueil_offre->Afficher_remuneration();
-$offres_place = $Accueil_offre->Afficher_Place();
-
+// Assigne les offres à Smarty pour affichage
 $smarty->assign('offres', $offres);
-$smarty->assign('offres_descriptif', $offres_descriptif); 
-$smarty->assign('offres_Date', $offres_Date); 
-$smarty->assign('offres_remuneration', $offres_remuneration); 
-$smarty->assign('offres_place', $offres_place); 
 
+// Affiche le template Accueil.tpl
 $smarty->display(MAIN_PATH . "/Template/Accueil.tpl");
-
-
-
-
 ?>

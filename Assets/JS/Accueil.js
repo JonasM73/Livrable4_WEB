@@ -33,7 +33,43 @@ document.addEventListener("DOMContentLoaded", function() {
             firstmenu.style.fontWeight = 'bold';
         }
     });
+
+    const textarea = document.getElementById('singleLineTextarea');
+    if (textarea) {
+        textarea.addEventListener('input', function() {
+            const lines = this.value.split('\n');
+            if (lines.length > 1) {
+                this.value = lines.slice(0, 1).join('\n');
+            }
+        });
+    }
 });
+
+function validation() {
+    // Sélectionne toutes les cases à cocher dans les options
+    var checkboxes = document.querySelectorAll('.option input[type="checkbox"]');
+    checkboxes.forEach(function(checkbox, index) {
+        // Masque tous les sous-menus
+        var submenu = checkbox.parentNode.querySelector('.submenu');
+        if (submenu) {
+            submenu.style.display = 'none';
+            // Réinitialise le style des étiquettes
+            var label = checkbox.parentNode.querySelector('label');
+            if (label) {
+                label.style.fontWeight = 'normal';
+            }
+
+            // Ouvre le premier sous-menu
+            if (index === 0) {
+                submenu.style.display = 'block';
+                if (label) {
+                    label.style.fontWeight = 'bold';
+                }
+            }
+        }
+    });
+}
+
 
 function updateCate(radio) {
     if (radio.checked) {
@@ -42,6 +78,7 @@ function updateCate(radio) {
         document.getElementById('catValue').textContent = "Catégorie sélectionnée : " + cate.value;
     }
 }
+
 function updateCate2(radio) {
     if (radio.checked) {
         var cate2 = document.getElementById('durée_stage');
@@ -49,6 +86,7 @@ function updateCate2(radio) {
         document.getElementById('catValue').textContent = "durée_stage sélectionnée : " + cate2.value;
     }
 }
+
 function updateCate3(radio) {
     if (radio.checked) {
         var cate3 = document.getElementById('remuneration');
@@ -56,6 +94,7 @@ function updateCate3(radio) {
         document.getElementById('catValue').textContent = "remuneration sélectionnée : " + cate3.value;
     }
 }
+
 function updateCate4(radio) {
     if (radio.checked) {
         var cate4 = document.getElementById('Promo');
@@ -63,59 +102,3 @@ function updateCate4(radio) {
         document.getElementById('catValue').textContent = "Promo sélectionnée : " + cate4.value;
     }
 }
-
-
-
-const textarea = document.getElementById('singleLineTextarea');
-
-textarea.addEventListener('input', function() {
-    const lines = this.value.split('\n');
-    if (lines.length > 1) {
-        this.value = lines.slice(0, 1).join('\n');
-    }
-});
-
-function validation() {
-// Sélectionne toutes les cases à cocher dans les options
-    var checkboxes = document.querySelectorAll('.option input[type="checkbox"]');
-    checkboxes.forEach(function(checkbox, index) {
-        // Masque tous les sous-menus
-        var submenu = checkbox.parentNode.querySelector('.submenu');
-        submenu.style.display = 'none';
-        // Réinitialise le style des étiquettes
-        var label = checkbox.parentNode.querySelector('label');
-        label.style.fontWeight = 'normal';
-
-        // Ouvre le premier sous-menu
-        if (index === 0) {
-            submenu.style.display = 'block';
-            label.style.fontWeight = 'bold';
-        }
-    });
-}
-
-function supp(idOffre) {
-    var confirmation = confirm("Vous allez supprimer une offre, êtes-vous sûr ?");
-    
-    if (confirmation) {
-        //  requête AJAX
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "Assets/PHP/Gestion_Accueil/controller_Accueil.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) { // === 4 requête AJAX terminée et réponse prête à être traitée. === 200 requête HTTP traitée avec succès par serveur.
-                location.reload();//rechargement de page
-            }
-        };
-        xhr.send("id_offre=" + encodeURIComponent(idOffre));
-    } else {    }
-}
-
-
-
-
-
-
-
-
-
