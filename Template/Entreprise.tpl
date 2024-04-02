@@ -18,38 +18,86 @@
     			<div class="menu-container">
         			<div class="menu">
             			<div class="option">
-                			<input type="checkbox" id="Compétence" name="Compétence">
-                			<label for="Compétence" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Compétences :</label>
+                			<input type="checkbox" id="Secteur_activite" name="Secteur_activite">
+                			<label for="Compétence" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Secteur d'activité :</label>
                 			&nbsp;
                 			<div class="submenu">
                     			<div>
-									<input type="radio" id="finance_et_banque" name="Compétence" onchange="updateCate(this)">
-									<label for="finance_et_banque">Finance et banque</label>
+									<input type="radio" id="Technologie" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Technologie">Technologie</label>
+								</div>
+								<div>
+									<input type="radio" id="Finance" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Finance">Finance</label>
 								</div>	
-                    			<div>
-									<input type="radio" id="ingenieur_informatique" name="Compétence" onchange="updateCate(this)">
-									<label for="ingenieur_informatique">Ingénieur Informatique</label>
+								<div>
+									<input type="radio" id="Industrie" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Industrie">Industrie</label>
+								</div>	
+								<div>
+									<input type="radio" id="Santé" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Santé">Santé</label>
+								</div>	
+								<div>
+									<input type="radio" id="Éducation" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Éducation">Éducation</label>
+								</div>	
+								<div>
+									<input type="radio" id="Commerce" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Commerce">Commerce</label>
+								</div>	
+								<div>
+									<input type="radio" id="Immobilier" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Immobilier">Immobilier</label>
+								</div>	
+								<div>
+									<input type="radio" id="Services" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Services">Services</label>
+								</div>	
+								<div>
+									<input type="radio" id="Marketing" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Marketing">Marketing</label>
+								</div>	
+								<div>
+									<input type="radio" id="Transport" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Transport">Transport</label>
 								</div>
-                    			<div>
-									<input type="radio" id="marketing_et_publicite" name="Compétence" onchange="updateCate(this)">
-									<label for="marketing_et_publicite">Marketing et publicité</label>
+								<div>
+									<input type="radio" id="Tourisme" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Tourisme">Tourisme</label>
 								</div>
-                    			<div>
-									<input type="radio" id="ressources_humaines" name="Compétence" onchange="updateCate(this)">
-									<label for="ressources_humaines">Ressources Humaines</label>
-								</div>
-                    			<div>
-									<input type="radio" id="agriculture" name="Compétence" onchange="updateCate(this)">
-									<label for="agriculture">Agriculture</label>
-								</div>
-                    			<div>
-									<input type="radio" id="immobilier" name="Compétence" onchange="updateCate(this)">
-									<label for="immobilier">Immobilier</label>
-								</div>
-                    			<div>
-									<input type="radio" id="aucune_selection" name="Compétence" onchange="updateCate(this)" >
-									<label for="aucune_selection">Aucune sélection</label>
-								</div>
+								<div>
+									<input type="radio" id="Énergie" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Énergie">Énergie</label>
+								</div>	
+								<div>
+									<input type="radio" id="Agroalimentaire" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Agroalimentaire">Agroalimentaire</label>
+								</div>	
+								<div>
+									<input type="radio" id="Consulting" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Consulting">Consulting</label>
+								</div>	
+								<div>
+									<input type="radio" id="Assurance" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Assurance">Assurance</label>
+								</div>	
+								<div>
+									<input type="radio" id="Mode" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Mode">Mode</label>
+								</div>	
+								<div>
+									<input type="radio" id="Artisanat" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Artisanat">Artisanat</label>
+								</div>	
+								<div>
+									<input type="radio" id="Pharmaceutique" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Pharmaceutique">Pharmaceutique</label>
+								</div>	
+								<div>
+									<input type="radio" id="Événementiel" name="Secteur_activite" onchange="updateCate(this)">
+									<label for="Événementiel">Événementiel</label>
+								</div>	
                 			</div>
             			</div>
 						<p id="catValue"></p>

@@ -26,7 +26,8 @@ function DISPLAY($content, $content_footer){
     elseif($page == 'Créer_offre' || $page == 'Dashboard_O'){                                   
         require_once 'Assets\PHP\Gestion_Offres\controller_offre.php';    
     }
-    elseif($page == 'Rechercher_un_compte_etudiant' ||$page == 'Rechercher_un_compte'|| $page == 'Statistiques_etudiant'|| $page == 'Creer_un_compte' || $page == 'Mon_Compte'){
+    elseif($page == 'Rechercher_un_compte_etudiant' ||$page == 'Rechercher_un_compte'|| $page == 'Statistiques_etudiant'
+        || $page == 'Creer_un_compte' || $page == 'Mon_Compte'){
         require_once 'Assets\PHP\Gestion_Compte\controller_Compte.php';    
     }
     elseif($page == 'Wishlist' ){

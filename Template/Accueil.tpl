@@ -5,8 +5,6 @@
 		<title>StageLinkCesi - Accueil</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
 		<link rel="stylesheet" href="Assets/CSS/Accueil.css">
-
-
 	</head>
 
 	<body action='Accueil.tpl' method='POST'>
