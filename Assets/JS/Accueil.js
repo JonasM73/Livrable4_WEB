@@ -46,7 +46,22 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function validation() {
-    // Sélectionne toutes les cases à cocher dans les options
+    var competence = document.querySelector('input[name="Compétence"]:checked');
+    var duree_stage = document.querySelector('input[name="durée_stage"]:checked');
+    var remuneration = document.querySelector('input[name="remuneration"]:checked');
+    var promo = document.querySelector('input[name="Promo"]:checked');
+    var entreprise = document.getElementById("Entreprises").value;
+    var ou = document.getElementById("textarea_O").value;
+
+    // Vérifier si au moins un champ est rempli
+    if (!competence && !duree_stage && !remuneration && !promo && !entreprise && !ou) {
+        alert("Veuillez remplir au moins un champ de recherche.");
+        return false;
+    }
+
+    // Si au moins un champ est rempli, exécuter la requête de recherche
+    // Vous pouvez remplacer cette partie du code par l'appel à une fonction AJAX pour exécuter la requête en arrière-plan
+    alert("Requête de recherche exécutée !");
     var checkboxes = document.querySelectorAll('.option input[type="checkbox"]');
     checkboxes.forEach(function(checkbox, index) {
         // Masque tous les sous-menus
@@ -73,9 +88,10 @@ function validation() {
 
 function updateCate(radio) {
     if (radio.checked) {
-        var cate = document.getElementById('Compétence');
-        cate.value = radio.id;
-        document.getElementById('catValue').textContent = "Catégorie sélectionnée : " + cate.value;
+        var cate = document.getElementById('Compétence_titre');
+        cate.value = radio.value;
+        cate.name = 'Comp';
+        document.getElementById('catValue').textContent = "Catégorie sélectionnée : " + cate.value ;
     }
 }
 

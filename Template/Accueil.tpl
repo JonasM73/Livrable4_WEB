@@ -9,7 +9,7 @@
 
 	</head>
 
-	<body action='Accueil.tpl' method='POST'>
+	<body>
 	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 
 		<header>
@@ -17,45 +17,49 @@
 		</header>
 		
 		<main>
+		<form method="POST" >
 			<div class="bloc-gauche">
     			<div class="menu-container">
         			<div class="menu">
-            			<div class="option">
-                			<input type="checkbox" id="Compétence" name="Compétence">
-                			<label for="Compétence" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Compétences :</label>
-                			&nbsp;
-                			<div class="submenu">
-                    			<div>
-									<input type="radio" id="finance_et_banque" name="Compétence" onchange="updateCate(this)">
+					<form method="POST">
+						<div class="option">
+							<input type="checkbox" id="Compétence" name="Compétence">
+							<label for="Compétence" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Compétences :</label>
+							&nbsp;
+							<div class="submenu">
+								<div>
+									<input type="radio" id="finance_et_banque" name="Compétence" value="Finance et banque" onchange="updateCate(this)">
 									<label for="finance_et_banque">Finance et banque</label>
 								</div>	
-                    			<div>
-									<input type="radio" id="ingenieur_informatique" name="Compétence" onchange="updateCate(this)">
+								<div>
+									<input type="radio" id="ingenieur_informatique" name="Compétence" value="Ingénieur Informatique" onchange="updateCate(this)">
 									<label for="ingenieur_informatique">Ingénieur Informatique</label>
 								</div>
-                    			<div>
-									<input type="radio" id="marketing_et_publicite" name="Compétence" onchange="updateCate(this)">
+								<div>
+									<input type="radio" id="marketing_et_publicite" name="Compétence" value="Marketing et publicité" onchange="updateCate(this)">
 									<label for="marketing_et_publicite">Marketing et publicité</label>
 								</div>
-                    			<div>
-									<input type="radio" id="ressources_humaines" name="Compétence" onchange="updateCate(this)">
+								<div>
+									<input type="radio" id="ressources_humaines" name="Compétence" value="Ressources Humaines" onchange="updateCate(this)">
 									<label for="ressources_humaines">Ressources Humaines</label>
 								</div>
-                    			<div>
-									<input type="radio" id="agriculture" name="Compétence" onchange="updateCate(this)">
+								<div>
+									<input type="radio" id="agriculture" name="Compétence" value="Agriculture" onchange="updateCate(this)">
 									<label for="agriculture">Agriculture</label>
 								</div>
-                    			<div>
-									<input type="radio" id="immobilier" name="Compétence" onchange="updateCate(this)">
+								<div>
+									<input type="radio" id="immobilier" name="Compétence" value="Immobilier" onchange="updateCate(this)">
 									<label for="immobilier">Immobilier</label>
 								</div>
-                    			<div>
-									<input type="radio" id="aucune_selection" name="Compétence" onchange="updateCate(this)" >
+								<div>
+									<input type="radio" id="aucune_selection" name="Compétence" value="Aucune sélection" onchange="updateCate(this)" >
 									<label for="aucune_selection">Aucune sélection</label>
 								</div>
-                			</div>
-            			</div>
-						<p id="catValue"></p>
+							</div>
+						</div>
+						<input type="hidden" id="Compétence_titre" name="Compétence_titre" value="">
+						<p id="catValue" ></p>
+					</form>
 
             			<div class="option">
                 			<input type="checkbox" id="durée_stage" name="durée_stage">
@@ -266,6 +270,8 @@
         			</div>      
     			</div>
 			</div>
+		</form>
+		<form method="POST">
 			<div class="bloc-droite-container">
 				<div class="bloc-droite-high">
         			<div class="Nom_E">
@@ -274,21 +280,22 @@
         						<label for="Nom" id="Nom">Nom ?</label>
         						<textarea id="Entreprises" placeholder="Entreprises ?" name="Nom"></textarea>
     						</div>
-   	 						<button type="submit"  onclick="validation()">Aller !</button>
+   	 						<button type="submit" name="Rechercher_offre" onclick="validation()">Aller !</button>
 						</div>
     					<div class="input-group">
     						<div class="text-area-container">
         						<label for="Ou" id="ou">📍Où ?</label>
         						<textarea id="textarea_O" placeholder="Ville, Adresse, CP ?" name="Ou"></textarea>
     						</div>
-   	 						<button type="submit"  onclick="validation()">Aller !</button>
+   	 						<button type="submit" name="Rechercher_offre" onclick="validation()">Aller !</button>
 						</div>
 					</div>
 				</div>
 				<div class="bloc-droitedroite-high">
-    				<button type="submit" class="btn-rechercher" onclick="validation()">Rechercher</button>
+    				<button type="submit" class="btn-rechercher" name="Rechercher_offre" onclick="validation()">Rechercher</button>
 				</div>
 			</div>
+		</form>
 			<form method="post">
 				<div class="divclasse">
 					{if $offres}

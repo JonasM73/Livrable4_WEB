@@ -306,6 +306,7 @@ CREATE TABLE Offre_stage(
    titre_offre_stage VARCHAR(100),
    Stage_Date_depart DATE NOT NULL,
    Stage_Date_fin DATE NOT NULL,
+	Descriptif_offres_stage TEXT NOT NULL,
    Remuneration DECIMAL(15,2) NOT NULL,
    Date_publication DATE NOT NULL,
    NB_places_restantes INT NOT NULL,
@@ -316,52 +317,50 @@ CREATE TABLE Offre_stage(
    FOREIGN KEY(id_entreprise) REFERENCES Entreprise(id_entreprise)
 );
 
-INSERT INTO Offre_stage (titre_offre_stage, Stage_Date_depart, Stage_Date_fin, Remuneration, Date_publication, NB_places_restantes, id_Ville, id_entreprise) VALUES
-('Développeur Web', '2024-03-01', '2024-06-01', 1500.00, '2024-02-13', 5, 1, 1),
-('Analyste financier', '2024-03-15', '2024-05-15', 2000.00, '2024-02-13', 3, 2, 2),
-('Ingénieur mécanique', '2024-03-10', '2024-06-30', 2500.00, '2024-02-13', 7, 3, 3),
-('Infirmier stagiaire', '2024-04-01', '2024-07-01', 1200.00, '2024-02-13', 4, 4, 4),
-('Enseignant assistant', '2024-05-01', '2024-07-31', 1800.00, '2024-02-13', 6, 5, 5),
-('Assistant commercial', '2024-04-15', '2024-08-15', 1600.00, '2024-02-13', 2, 6, 6),
-('Agent immobilier', '2024-04-01', '2024-06-30', 1900.00, '2024-02-13', 5, 7, 7),
-('Assistant administratif', '2024-03-20', '2024-05-20', 1400.00, '2024-02-13', 4, 8, 8),
-('Spécialiste marketing', '2024-04-10', '2024-07-10', 2200.00, '2024-02-13', 3, 9, 9),
-('Rédacteur publicitaire', '2024-03-25', '2024-06-25', 1700.00, '2024-02-13', 5, 10, 10),
-('Logisticien', '2024-04-01', '2024-07-01', 2000.00, '2024-02-13', 6, 11, 11),
-('Guide touristique', '2024-05-15', '2024-09-15', 1500.00, '2024-02-13', 3, 12, 12),
-('Ingénieur électricien', '2024-05-01', '2024-08-31', 2500.00, '2024-02-13', 7, 13, 13),
-('Chef de produit', '2024-04-10', '2024-07-10', 2100.00, '2024-02-13', 4, 14, 14),
-('Technicien de laboratoire', '2024-04-01', '2024-07-01', 1800.00, '2024-02-13', 6, 15, 15),
-('Développeur d\'applications mobiles', '2024-03-20', '2024-06-20', 2300.00, '2024-02-13', 5, 16, 16),
-('Analyste des données', '2024-05-10', '2024-08-10', 1900.00, '2024-02-13', 2, 17, 17),
-('Designer graphique', '2024-04-05', '2024-07-05', 1600.00, '2024-02-13', 3, 18, 18),
-('Technicien de maintenance', '2024-03-25', '2024-06-25', 2000.00, '2024-02-13', 4, 19, 19),
-('Chef de projet', '2024-04-15', '2024-07-15', 2200.00, '2024-02-13', 6, 20, 20),
-('Consultant en gestion', '2024-03-30', '2024-06-30', 1800.00, '2024-02-13', 5, 21, 21),
-('Styliste', '2024-04-20', '2024-07-20', 1700.00, '2024-02-13', 4, 22, 22),
-('Artisan', '2024-05-01', '2024-08-31', 2000.00, '2024-02-13', 7, 23, 23),
-('Pharmacien assistant', '2024-05-15', '2024-09-15', 1500.00, '2024-02-13', 3, 24, 24),
-('Organisateur d\'événements', '2024-05-10', '2024-08-10', 2100.00, '2024-02-13', 5, 25, 25),
-('Développeur de logiciels', '2024-04-01', '2024-07-01', 2400.00, '2024-02-13', 6, 26, 26),
-('Responsable des ventes', '2024-03-20', '2024-06-20', 1900.00, '2024-02-13', 2, 27, 27),
-('Spécialiste en ressources humaines', '2024-04-10', '2024-07-10', 1700.00, '2024-02-13', 4, 28, 28),
-('Gestionnaire de projet', '2024-04-01', '2024-07-01', 2200.00, '2024-02-13', 5, 29, 29),
-('Consultant en stratégie', '2024-05-01', '2024-08-31', 2000.00, '2024-02-13', 7, 30, 30),
-('Concepteur multimédia', '2024-05-15', '2024-09-15', 1600.00, '2024-02-13', 3, 2, 1),
-('Développeur Web', '2024-03-01', '2024-06-01', 1700.00, '2024-02-13', 4, 2, 2),
-('Analyste financier', '2024-03-15', '2024-05-15', 2100.00, '2024-02-13', 6, 3, 3),
-('Ingénieur mécanique', '2024-03-10', '2024-06-30', 2600.00, '2024-02-13', 2, 4, 4),
-('Infirmier stagiaire', '2024-04-01', '2024-07-01', 1300.00, '2024-02-13', 3, 9, 5),
-('Enseignant assistant', '2024-05-01', '2024-07-31', 1900.00, '2024-02-13', 5, 6, 6),
-('Assistant commercial', '2024-04-15', '2024-08-15', 1500.00, '2024-02-13', 7, 12, 7),
-('Agent immobilier', '2024-04-01', '2024-06-30', 2000.00, '2024-02-13', 4, 8, 8),
-('Assistant administratif', '2024-03-20', '2024-05-20', 1600.00, '2024-02-13', 6, 9, 9),
-('Spécialiste marketing', '2024-04-10', '2024-07-10', 2300.00, '2024-02-13', 2, 10, 10),
-('Rédacteur publicitaire', '2024-03-25', '2024-06-25', 1800.00, '2024-02-13', 3, 11, 11),
-('Logisticien', '2024-04-01', '2024-07-01', 2100.00, '2024-02-13', 4, 12, 12),
-('Guide touristique', '2024-05-15', '2024-09-15', 1600.00, '2024-02-13', 5, 13, 13),
-('Ingénieur électricien', '2024-05-01', '2024-08-31', 2400.00, '2024-02-13', 6, 14, 14),
-('Chef de produit', '2024-04-10', '2024-07-10', 2200.00, '2024-02-13', 7, 15, 15);
+INSERT INTO Offre_stage (titre_offre_stage, Stage_Date_depart, Stage_Date_fin,Descriptif_offres_stage, Remuneration, Date_publication, NB_places_restantes, id_Ville, id_entreprise) VALUES
+('Développeur Web', '2024-03-01', '2024-06-01', 'Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web..Description de l\'offre de développeur Web...', 1500.00, '2024-02-13', 5, 1, 1),
+('Analyste financier', '2024-03-15', '2024-05-15', 'Description de l\'entreprise :\nNotre entreprise est une start-up dynamique spécialisée dans le développement de solutions web innovantes. Nous sommes axés sur la création de produits qui simplifient la vie quotidienne des utilisateurs à travers des applications web conviviales et efficaces.\nMission :\nEn tant que stagiaire développeur web junior, vous serez intégré(e) à notre équipe de développement et participerez activement à la conception, au développement et à la maintenance de nos applications web. Vos principales missions incluront :\n\nParticiper à la conception et à la réalisation de nouvelles fonctionnalités pour nos applications web.\nCollaborer avec les membres de l\'équipe pour résoudre les problèmes techniques et optimiser les performances des applications.\nEffectuer des tests unitaires et participer à l\'assurance qualité pour garantir la stabilité et la fiabilité des produits.\nContribuer à la documentation technique et aux rapports de suivi des projets.\nProfil recherché :\nNous recherchons un(e) candidat(e) motivé(e) et passionné(e) par le développement web, avec les qualifications suivantes :\n\nÉtudiant(e) en informatique, génie logiciel ou domaine connexe, en cours de formation niveau Bac+3 minimum.\nSolides compétences en programmation web (HTML, CSS, JavaScript) et expérience avec au moins un framework JavaScript (React, Angular, Vue.js, etc.).\nConnaissance des principes de développement back-end (Node.js, PHP, Python, etc.) serait un plus.\nCapacité à travailler en équipe, excellentes compétences en communication et capacité à s\'adapter rapidement à de nouveaux environnements et technologies.\nAvantages :\nEn rejoignant notre équipe, vous aurez l\'opportunité de travailler sur des projets stimulants, d\'apprendre aux côtés de professionnels expérimentés et de contribuer à des solutions innovantes qui auront un impact réel sur les utilisateurs. De plus, nous offrons une ambiance de travail conviviale, des possibilités de formation continue et des perspectives d\'évolution au sein de l\'entreprise.\nModalités de candidature :\nSi vous êtes intéressé(e) par cette opportunité de stage et que vous correspondez au profil recherché, veuillez envoyer votre CV et une lettre de motivation à [adresse email] avant [date limite de candidature].', 2000.00, '2024-02-13',  3,  2,  2),
+('Ingénieur mécanique', '2024-03-10', '2024-06-30', 'Description de l\'entreprise :\n
+Notre entreprise est une start-up dynamique spécialisée dans le développement de solutions web innovantes. Nous sommes axés sur la création de produits qui simplifient la vie quotidienne des utilisateurs à travers des applications web conviviales et efficaces.Mission :
+En tant que stagiaire développeur web junior, vous serez intégré(e) à notre équipe de développement et participerez activement à la conception, au développement et à la maintenance de nos applications web. Vos principales missions incluront :
+
+Participer à la conception et à la réalisation de nouvelles fonctionnalités pour nos applications web.
+Collaborer avec les membres de l\'équipe pour résoudre les problèmes techniques et optimiser les performances des applications.
+Effectuer des tests unitaires et participer à l\'assurance qualité pour garantir la stabilité et la fiabilité des produits.
+Contribuer à la documentation technique et aux rapports de suivi des projets.
+Profil recherché :
+Nous recherchons un(e) candidat(e) motivé(e) et passionné(e) par le développement web, avec les qualifications suivantes :
+
+Étudiant(e) en informatique, génie logiciel ou domaine connexe, en cours de formation niveau Bac+3 minimum.
+Solides compétences en programmation web (HTML, CSS, JavaScript) et expérience avec au moins un framework JavaScript (React, Angular, Vue.js, etc.).
+Connaissance des principes de développement back-end (Node.js, PHP, Python, etc.) serait un plus.
+Capacité à travailler en équipe, excellentes compétences en communication et capacité à s\'adapter rapidement à de nouveaux environnements et technologies.
+Avantages :
+En rejoignant notre équipe, vous aurez l\'opportunité de travailler sur des projets stimulants, d\'apprendre aux côtés de professionnels expérimentés et de contribuer à des solutions innovantes qui auront un impact réel sur les utilisateurs. De plus, nous offrons une ambiance de travail conviviale, des possibilités de formation continue et des perspectives d\'évolution au sein de l\'entreprise.
+
+Modalités de candidature :
+Si vous êtes intéressé(e) par cette opportunité de stage et que vous correspondez au profil recherché, veuillez envoyer votre CV et une lettre de motivation à [adresse email] avant [date limite de candidature].', 2500.00, '2024-02-13', 7, 3, 3),('Infirmier stagiaire', '2024-04-01', '2024-07-01', 'Description de l\'offre d\'infirmier stagiaire...', 1200.00, '2024-02-13', 4, 4, 4),
+('Enseignant assistant', '2024-05-01', '2024-07-31', 'Description de l\'offre d\'enseignant assistant...', 1800.00, '2024-02-13', 6, 5, 5),('Assistant commercial', '2024-04-15', '2024-08-15', 'Description de l\'offre d\'assistant commercial...', 1600.00, '2024-02-13', 2, 6, 6),
+('Agent immobilier', '2024-04-01', '2024-06-30', 'Description de l\'offre d\'agent immobilier...', 1900.00, '2024-02-13', 5, 7, 7),('Assistant administratif', '2024-03-20', '2024-05-20', 'Description de l\'offre d\'assistant administratif...', 1400.00, '2024-02-13', 4, 8, 8),
+('Spécialiste marketing', '2024-04-10', '2024-07-10', 'Description de l\'offre de spécialiste marketing...', 2200.00, '2024-02-13', 3, 9, 9),('Rédacteur publicitaire', '2024-03-25', '2024-06-25', 'Description de l\'offre de rédacteur publicitaire...', 1700.00, '2024-02-13', 5, 10, 10),
+('Logisticien', '2024-04-01', '2024-07-01', 'Description de l\'offre de logisticien...', 2000.00, '2024-02-13', 6, 11, 11),('Guide touristique', '2024-05-15', '2024-09-15', 'Description de l\'offre de guide touristique...', 1500.00, '2024-02-13', 3, 12, 12),
+('Ingénieur électricien', '2024-05-01', '2024-08-31', 'Description de l\'offre d\'ingénieur électricien...', 2500.00, '2024-02-13', 7, 13, 13),('Chef de produit', '2024-04-10', '2024-07-10', 'Description de l\'offre de chef de produit...', 2100.00, '2024-02-13', 4, 14, 14),
+('Technicien de laboratoire', '2024-04-01', '2024-07-01', 'Description de l\'offre de technicien de laboratoire...', 1800.00, '2024-02-13', 6, 15, 15),('Développeur d\'applications mobiles', '2024-03-20', '2024-06-20', 'Description de l\'offre de développeur d\'applications mobiles...', 2300.00, '2024-02-13', 5, 16, 16),
+('Analyste des données', '2024-05-10', '2024-08-10', 'Description de l\'offre d\'analyste des données...', 1900.00, '2024-02-13', 2, 17, 17),('Designer graphique', '2024-04-05', '2024-07-05', 'Description de l\'offre de designer graphique...', 1600.00, '2024-02-13', 3, 18, 18),
+('Technicien de maintenance', '2024-03-25', '2024-06-25', 'Description de l\'offre de technicien de maintenance...', 2000.00, '2024-02-13', 4, 19, 19),('Chef de projet', '2024-04-15', '2024-07-15', 'Description de l\'offre de chef de projet...', 2200.00, '2024-02-13', 6, 20, 20),
+('Consultant en gestion', '2024-03-30', '2024-06-30', 'Description de l\'offre de consultant en gestion...', 1800.00, '2024-02-13', 5, 21, 21),('Styliste', '2024-04-20', '2024-07-20', 'Description de l\'offre de styliste...', 1700.00, '2024-02-13', 4, 22, 22),
+('Artisan', '2024-05-01', '2024-08-31', 'Description de l\'offre d\'artisan...', 2000.00, '2024-02-13', 7, 23, 23),('Pharmacien assistant', '2024-05-15', '2024-09-15', 'Description de l\'offre de pharmacien assistant...', 1500.00, '2024-02-13', 3, 24, 24),
+('Organisateur d\'événements', '2024-05-10', '2024-08-10', 'Description de l\'offre d\'organisateur d\'événements...', 2100.00, '2024-02-13', 5, 25, 25),('Développeur de logiciels', '2024-04-01', '2024-07-01', 'Description de l\'offre de développeur de logiciels...', 2400.00, '2024-02-13', 6, 26, 26),
+('Responsable des ventes', '2024-03-20', '2024-06-20', 'Description de l\'offre de responsable des ventes...', 1900.00, '2024-02-13', 2, 27, 27),('Spécialiste en ressources humaines', '2024-04-10', '2024-07-10', 'Description de l\'offre de spécialiste en ressources humaines...', 1700.00, '2024-02-13', 4, 28, 28),
+('Gestionnaire de projet', '2024-04-01', '2024-07-01', 'Description de l\'offre de gestionnaire de projet...', 2200.00, '2024-02-13', 5, 29, 29),('Consultant en stratégie', '2024-05-01', '2024-08-31', 'Description de l\'offre de consultant en stratégie...', 2000.00, '2024-02-13', 7, 30, 30),
+('Concepteur multimédia', '2024-05-15', '2024-09-15', 'Description de l\'offre de concepteur multimédia...', 1600.00, '2024-02-13', 3, 2, 1),('Développeur Web', '2024-03-01', '2024-06-01', 'Description de l\'offre de développeur Web...', 1700.00, '2024-02-13', 4, 2, 2),
+('Analyste financier', '2024-03-15', '2024-05-15', 'Description de l\'offre d\'analyste financier...', 2100.00, '2024-02-13', 6, 3, 3),('Ingénieur mécanique', '2024-03-10', '2024-06-30', 'Description de l\'offre d\'ingénieur mécanique...', 2600.00, '2024-02-13', 2, 4, 4),
+('Infirmier stagiaire', '2024-04-01', '2024-07-01', 'Description de l\'offre d\'infirmier stagiaire...', 1300.00, '2024-02-13', 3, 9, 5),('Enseignant assistant', '2024-05-01', '2024-07-31', 'Description de l\'offre d\'enseignant assistant...', 1900.00, '2024-02-13', 5, 6, 6),
+('Assistant commercial', '2024-04-15', '2024-08-15', 'Description de l\'offre d\'assistant commercial...', 1500.00, '2024-02-13', 7, 12, 7),('Agent immobilier', '2024-04-01', '2024-06-30', 'Description de l\'offre d\'agent immobilier...', 2000.00, '2024-02-13', 4, 8, 8),
+('Assistant administratif', '2024-03-20', '2024-05-20', 'Description de l\'offre d\'assistant administratif...', 1600.00, '2024-02-13', 6, 9, 9),('Spécialiste marketing', '2024-04-10', '2024-07-10', 'Description de l\'offre de spécialiste marketing...', 2300.00, '2024-02-13', 2, 10, 10),
+('Rédacteur publicitaire', '2024-03-25', '2024-06-25', 'Description de l\'offre de rédacteur publicitaire...', 1800.00, '2024-02-13', 3, 11, 11),('Logisticien', '2024-04-01', '2024-07-01', 'Description de l\'offre de logisticien...', 2100.00, '2024-02-13', 4, 12, 12),
+('Guide touristique', '2024-05-15', '2024-09-15', 'Description de l\'offre de guide touristique...', 1600.00, '2024-02-13', 5, 13, 13),('Ingénieur électricien', '2024-05-01', '2024-08-31', 'Description de l\'offre d\'ingénieur électricien...', 2400.00, '2024-02-13', 6, 14, 14),
+('Chef de produit', '2024-04-10', '2024-07-10','Description de l\'offre d\'ingénieur Chef de produit...', 2200.00, '2024-02-13', 7, 15, 15);
  
 CREATE TABLE requérir(
    id_Offre_stage INT NOT NULL,
