@@ -12,7 +12,7 @@
 	</header><br><br>
 
 	<body>
-		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
+		<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
 		<main>
 		    <br><br>
 		    <form id="stats_etudiant" action="Statistiques_etudiant.tpl" method="POST">

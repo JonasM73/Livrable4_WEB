@@ -13,7 +13,7 @@
 	</header><br><br>
 
 	<body>
-		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
+		<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
 		<main>
 			<form id="créer_entreprise">
 				<fieldset>

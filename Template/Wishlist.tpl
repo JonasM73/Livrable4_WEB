@@ -12,7 +12,7 @@
 	</header><br><br>
 	
 	<body>
-		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
+		<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
 		<main>
 			<form action="/search" method="get">
 				<label for="search">Rechercher :</label><br>

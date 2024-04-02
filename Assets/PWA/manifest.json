@@ -9,14 +9,14 @@
     "background_color": "#f3f3f3",
     "icons":[
     {
-      "src":"Images/icon-1024x1024.png",
-      "type":"image/png",
+      "src":"/Livrable4_WEB/Images/icon-1024x1024.webp",
+      "type":"image/webp",
       "sizes":"1024x1024",
       "purpose":"any"
     },
     {
-      "src":"Images/icon-1024x1024.png",
-      "type":"image/png",
+      "src":"/Livrable4_WEB/Images/icon-1024x1024.webp",
+      "type":"image/webp",
       "sizes":"1024x1024",
       "purpose":"maskable"
     }

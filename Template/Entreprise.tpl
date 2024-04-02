@@ -12,7 +12,7 @@
 	</header>
 
 	<body action='Entreprise.tpl' method='POST'>
-		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
+		<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
 		<main>
 			<div class="bloc-gauche">
     			<div class="menu-container">
@@ -340,7 +340,7 @@
 						{foreach $offres as $offre}
 							<div class="affichage" id_offre="{$offre->getid_offre()}">
 								<div class="affichage1">
-									<img src="Images/img_entreprise/images(1).png" alt="logo {$offre->getnom_entreprise()}">
+									<img src="Images/img_entreprise/images(1).webp" alt="logo {$offre->getnom_entreprise()}">
 								</div>
 								<div class="conteneur-droite">
 									<div class="texte_affichage1">{$offre->gettitre_offre_stage()}&nbsp;-&nbsp;{$offre->getnom_entreprise()}</div>

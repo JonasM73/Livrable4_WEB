@@ -5,17 +5,20 @@
 		<title>StageLinkCesi - Accueil</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
 		<link rel="stylesheet" href="Assets/CSS/Accueil.css">
+		<link rel='manifest' href='Assets/PWA/manifest.json'/>
+		<link rel='apple-touch-icon' sizes='180x180' href='Images/icon-180x180.webp'/>
+		<meta name='theme-color' content='#f3f3f3'>
 	</head>
 
 	<body>
-	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
+	<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
 
 	<header>
 		{$header}
 	</header>
 
 	<body >
-		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">	
+		<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">	
 		<main>
 		<form method="POST" >
 			<div class="bloc-gauche">
@@ -302,7 +305,7 @@
 						{foreach $offres as $offre}
 							<div class="affichage" id_offre="{$offre->getid_offre()}">
 								<div class="affichage1">
-									<img src="Images/img_entreprise/images(1).png" alt="logo {$offre->getnom_entreprise()}">
+									<img src="Images/images.webp" alt="logo {$offre->getnom_entreprise()}">
 								</div>
 								<div class="conteneur-droite">
 									<div class="texte_affichage1">{$offre->gettitre_offre_stage()}&nbsp;-&nbsp;{$offre->getnom_entreprise()}</div>
@@ -326,7 +329,7 @@
 			</form>
 		</main>
 		<script src='Assets/JS/Accueil.js'></script>
-		<script src="PWA/script.js"></script>
+		<script src="Assets/PWA/script.js"></script>
 	</body>
 	
 	<br><br>

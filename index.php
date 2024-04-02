@@ -41,10 +41,7 @@ function DISPLAY($content, $content_footer){
 function HEADER_FOOTER(){
     global $smarty, $action1;
     $header = "
-    <img src='Images/logo.png' alt='logo Stage Cesi Link' class='logo'>
-    <link rel='manifest' href='PWA/manifest.json'/>
-	<link rel='apple-touch-icon' sizes='180x180' href='Images/icon-180x180.png'/>
-	<meta name='theme-color' content='#f3f3f3'>
+    <img src='Images/logo.webp' alt='logo Stage Cesi Link' class='logo'>
     <hr>
     <nav class='navbar'>
         <div class='dropdown'>
@@ -113,24 +110,24 @@ function HEADER_FOOTER(){
             <footer class='rightfooter'>
                 <label for='contacter' id='reseaux-label'>Suivez-nous ! </label>
                 <div class='social-media'>
-                    <img src='Images/insta.png' alt='logo insta' class='logoinsta'>
+                    <img src='Images/insta.webp' alt='logo insta' class='logoinsta'>
                     <p>@StageLink_Cesi</p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                    <img src='Images/ytb.png' alt='logo ytb' class='logoinsta'>
+                    <img src='Images/ytb.webp' alt='logo ytb' class='logoinsta'>
                     <p>StageLinkCesi_yt</p>
                 </div>
                 <div class='social-media'>
-                    <img src='Images/gmail.png' alt='logo gmail' class='logoinsta'>
+                    <img src='Images/gmail.webp' alt='logo gmail' class='logoinsta'>
                     <a href='https://www.instagram.com/'>@StageLinkCesi </a>&nbsp;&nbsp;
                         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                    <img src='Images/linkedin1.png' alt='logo linkedin' class='logoinsta'>
+                    <img src='Images/linkedin1.webp' alt='logo linkedin' class='logoinsta'>
                     <p>StageCesi@link.com</p>
                 </div>
             </footer>
         </div>
         <footer class='basfooter'>
             <div class='social-media'>
-                <img src='Images/logo.png' alt='logo Stage Cesi Link' class='logoCesi'>
+                <img src='Images/logo.webp' alt='logo Stage Cesi Link' class='logoCesi'>
                 <label for='contacter' id='bas-label'>&copy; 2024 - Stage Link Cesi</label>
             </div>
         </footer>
