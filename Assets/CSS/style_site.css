@@ -5,29 +5,27 @@ body {
 	padding: 0;
     background-color:rgb(208 220 238);
 }
-    header {
-        position: relative; /* Position relative pour permettre le positionnement du z-index */
-        z-index: 1; /* Assure que le header est au-dessus de l'image */
-        display: flex;
-        align-items: center; /* aligner verticalement */
-        background-color: rgb(255, 255, 255, 0.6);
-        font-size: 20px; /* Taille de police de 12 pixels */
-        text-align: left;
-        margin-bottom: 250px;
-    }
-    
-    .banière_1 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; /* Conserver la largeur de l'image à 100% */
-        height: 350px; /* Définir la hauteur souhaitée */
-        object-fit: cover; /* Réduire la taille de l'image tout en conservant ses proportions et en la faisant remplir l'espace défini */
-        z-index: 0;
 
-    }
+header {
+    position: relative; /* Position relative pour permettre le positionnement du z-index */
+    z-index: 1; /* Assure que le header est au-dessus de l'image */
+    display: flex;
+    align-items: center; /* aligner verticalement */
+    background-color: rgb(255, 255, 255, 0.6);
+    font-size: 20px; /* Taille de police de 12 pixels */
+    text-align: left;
+    margin-bottom: 250px;
+}
     
-    
+.banière_1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Conserver la largeur de l'image à 100% */
+    height: 350px; /* Définir la hauteur souhaitée */
+    object-fit: cover; /* Réduire la taille de l'image tout en conservant ses proportions et en la faisant remplir l'espace défini */
+    z-index: 0;
+}    
 
 /* Styles pour les ensembles de champs de formulaire */
 fieldset {

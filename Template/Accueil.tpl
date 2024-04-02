@@ -5,17 +5,17 @@
 		<title>StageLinkCesi - Accueil</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
 		<link rel="stylesheet" href="Assets/CSS/Accueil.css">
-
-
 	</head>
 
 	<body>
 	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 
-		<header>
-			{$header}
-		</header>
-		
+	<header>
+		{$header}
+	</header>
+
+	<body action='Accueil.tpl' method='POST'>
+		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">	
 		<main>
 		<form method="POST" >
 			<div class="bloc-gauche">
@@ -324,12 +324,13 @@
 					{/if}
 				</div>
 			</form>
-
-			
-			
-
 		</main>
 		<script src='Assets/JS/Accueil.js'></script>
-		{$content_footer}
+		<script src="PWA/script.js"></script>
 	</body>
+	
+	<br><br>
+	<footer>
+		{$content_footer}
+	</footer>
 </html>

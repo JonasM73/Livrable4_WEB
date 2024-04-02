@@ -7,14 +7,13 @@
 		<link rel="stylesheet" href="Assets/CSS/style_creer_compte.css">
 		<link rel="stylesheet" href="Assets/CSS/style_creer_entreprise.css">
 	</head>
+	
+	<header>
+		{$header}
+	</header><br><br>
 
 	<body>
-	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
-
-		<header>
-		{$header}
-		</header><br><br>
-		
+		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 		<main>
 			<form id="creer_offre">
 				<fieldset>
@@ -69,5 +68,8 @@
 		<script src="Assets/JS/Creer_offre.js"></script>
 	</body>
 
-	{$content_footer}
+	<br><br>
+	<footer>
+		{$content_footer}
+	</footer>
 </html>

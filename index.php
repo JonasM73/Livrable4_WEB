@@ -10,25 +10,41 @@ $smarty->setTemplateDir(MAIN_PATH . '/Template');
 $page = isset($_GET['page']) ? $_GET['page'] : '';
 HEADER_FOOTER();
 
-
 function DISPLAY($content, $content_footer){
     global $smarty, $page;
     $smarty->assign('header', $content);
     $smarty->assign('content_footer', $content_footer);
-    if ($page == 'Acceuil') {                                                                   require_once 'Assets\PHP\Gestion_Accueil\controller_Accueil.php';} 
-    elseif($page == 'Créer_entreprise' || $page == 'Dashboard_E'){                              require_once 'Assets\PHP\Gestion_entreprises\controller_GE.php';    }
-    elseif($page == 'Connexion'){                                                               require_once 'Assets\PHP\Gestion_Acces\controller_Acces.php';    }
-    elseif($page == 'Créer_offre' || $page == 'Dashboard_O'){                                   require_once 'Assets\PHP\Gestion_Offres\controller_offre.php';    }
-    elseif($page == 'Rechercher_un_compte_etudiant' ||$page == 'Rechercher_un_compte'|| $page == 'Statistiques_etudiant'|| $page == 'Creer_un_compte' || $page == 'Mon_Compte')
-    {       require_once 'Assets\PHP\Gestion_Compte\controller_Compte.php';    }
-    elseif($page == 'Wishlist' ){                                                               require_once 'Assets\PHP\Gestion_Candidature\controller_Candidature.php';    }
-    else {                                                                                      require_once 'Assets\PHP\Gestion_Accueil\controller_Accueil.php';    }
-
+    if ($page == 'Acceuil') {
+        require_once 'Assets\PHP\Gestion_Accueil\controller_Accueil.php';
+    } 
+    elseif($page == 'Créer_entreprise' || $page =="Entreprise" || $page == 'Dashboard_E'){
+        require_once 'Assets\PHP\Gestion_entreprises\controller_GE.php';
+    }
+    elseif($page == 'Connexion'){
+        require_once 'Assets\PHP\Gestion_Acces\controller_Acces.php';    
+    }
+    elseif($page == 'Créer_offre' || $page == 'Dashboard_O'){                                   
+        require_once 'Assets\PHP\Gestion_Offres\controller_offre.php';    
+    }
+    elseif($page == 'Rechercher_un_compte_etudiant' ||$page == 'Rechercher_un_compte'|| $page == 'Statistiques_etudiant'
+        || $page == 'Creer_un_compte' || $page == 'Mon_Compte'){
+        require_once 'Assets\PHP\Gestion_Compte\controller_Compte.php';    
+    }
+    elseif($page == 'Wishlist' ){
+        require_once 'Assets\PHP\Gestion_Candidature\controller_Candidature.php';    
+    }
+    else {
+        require_once 'Assets\PHP\Gestion_Accueil\controller_Accueil.php';    
+    }
 }
 
 function HEADER_FOOTER(){
     global $smarty, $action1;
-    $header = "<img src='Images/logo.png' alt='logo Stage Cesi Link' class='logo'>
+    $header = "
+    <img src='Images/logo.png' alt='logo Stage Cesi Link' class='logo'>
+    <link rel='manifest' href='PWA/manifest.json'/>
+	<link rel='apple-touch-icon' sizes='180x180' href='Images/icon-180x180.png'/>
+	<meta name='theme-color' content='#f3f3f3'>
     <hr>
     <nav class='navbar'>
         <div class='dropdown'>
@@ -121,6 +137,3 @@ function HEADER_FOOTER(){
     </footer>" ;
     DISPLAY($header, $footer);
 }
-
-
-?>

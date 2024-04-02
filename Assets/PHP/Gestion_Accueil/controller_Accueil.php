@@ -30,4 +30,3 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 $offres = $Accueil_offre->Afficher_Offres();
 $smarty->assign('offres', $offres);
 $smarty->display(MAIN_PATH . "/Template/Accueil.tpl");
-?>

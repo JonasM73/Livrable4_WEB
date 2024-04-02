@@ -6,14 +6,13 @@
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
 		<link rel="stylesheet" href="Assets/CSS/style_creer_compte.css">
 	</head>
-
+	
+	<header>
+		{$header}
+	</header><br><br>
+	
 	<body>
 	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
-
-		<header>
-		{$header}
-		</header><br><br>
-		
 		<main>
 			<form id="créer_compte">
 				<fieldset>
@@ -75,9 +74,12 @@
 				<p>Voici un exemple de mot de passe qui satisfait ces critères : <strong>Passw0rd!</strong></p>
 			</fieldset>
 		</main>
-
 		<script src="Assets/JS/Connexion.js"></script>
 		<script src="Assets/JS/Creer_compte.js"></script>
-		{$content_footer}
 	</body>
+
+	<br><br>
+	<footer>
+		{$content_footer}
+	</footer>
 </html>
