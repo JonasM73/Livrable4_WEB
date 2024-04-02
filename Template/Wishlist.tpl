@@ -6,14 +6,13 @@
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
 		<link rel="stylesheet" href="Assets/CSS/style_creer_compte.css">
 	</head>
+
+	<header>
+		{$header}
+	</header><br><br>
 	
 	<body>
-	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
-
-		<header>
-		{$header}
-		</header><br><br>
-		
+		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 		<main>
 			<form action="/search" method="get">
 				<label for="search">Rechercher :</label><br>
@@ -21,6 +20,10 @@
 			</form>
 		</main>
 		<script src="Assets/JS/Connexion.js"></script>
-		{$content_footer}
 	</body>
+
+	<br><br>
+	<footer>
+		{$content_footer}
+	</footer>
 </html>

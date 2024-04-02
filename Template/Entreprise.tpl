@@ -7,12 +7,12 @@
 		<link rel="stylesheet" href="Assets/CSS/Accueil.css">
 	</head>
 
-	<body action='Entreprise.tpl' method='POST'>
-	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 	<header>
 	    {$header}
 	</header>
-		
+
+	<body action='Entreprise.tpl' method='POST'>
+		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 		<main>
 			<div class="bloc-gauche">
     			<div class="menu-container">
@@ -362,12 +362,12 @@
 					{/if}
 				</div>
 			</form>
-
-			
-			
-
 		</main>
 		<script src='Assets/JS/Accueil.js'></script>
-		{$content_footer}
 	</body>
+	
+	<br><br>
+	<footer>
+		{$content_footer}
+	</footer>
 </html>

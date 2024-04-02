@@ -7,12 +7,16 @@
 		<link rel="stylesheet" type="text/css" href="Assets\CSS\Accueil.css">
 	</head>
 
-	<body>
-	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
-
-		<header>
+	<header>
 		{$header}
-		</header><br><br>
-		{$content_footer}
+	</header><br><br>
+
+	<body>
+		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
     </body>
+
+	<br><br>
+	<footer>
+		{$content_footer}
+	</footer>
 </html>

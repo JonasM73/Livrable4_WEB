@@ -7,13 +7,12 @@
 		<link rel="stylesheet" href="Assets/CSS/style_creer_compte.css">
 	</head>
 
-	<body>
-	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
-
-		<header>
+	<header>
 		{$header}
-		</header><br><br>
-		
+	</header><br><br>
+
+	<body>
+		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 		<main>
 		     <br><br>
 		     <form id="recherche_pilote" action="Rechercher_un_compte.tpl" method="POST">
@@ -51,7 +50,10 @@
 				</fieldset>
 			</form>
 		</main>
-		
-		{$content_footer}
 	</body>
+
+	<br><br>
+	<footer>
+		{$content_footer}
+	</footer>
 </html>

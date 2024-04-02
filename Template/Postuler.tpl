@@ -33,6 +33,10 @@
 			</form>
 		</main>
 		<script src="Assets/JS/Postuler.js"></script>
-		{$content_footer}
 	</body>
+
+	<br><br>
+	<footer>
+		{$content_footer}
+	</footer>
 </html>

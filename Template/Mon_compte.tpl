@@ -45,6 +45,10 @@
 				</fieldset>	
 			</form>
 		</main>
-		{$content_footer}
 	</body>
+
+	<br><br>
+	<footer>
+		{$content_footer}
+	</footer>
 </html>

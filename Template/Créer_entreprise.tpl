@@ -8,13 +8,12 @@
 		<link rel="stylesheet" href="Assets/CSS/style_creer_entreprise.css">
 	</head>
 
-	<body>
-	<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
-
-		<header>
+	<header>
 		{$header}
-		</header><br><br>
-		
+	</header><br><br>
+
+	<body>
+		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 		<main>
 			<form id="créer_entreprise">
 				<fieldset>
@@ -40,6 +39,9 @@
 		</main>
 		<script src="Assets/JS/Creer_entreprise.js"></script>
 	</body>
-	
-	{$content_footer}
+
+	<br><br>
+	<footer>
+		{$content_footer}
+	</footer>
 </html>

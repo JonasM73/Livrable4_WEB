@@ -40,7 +40,11 @@ function DISPLAY($content, $content_footer){
 
 function HEADER_FOOTER(){
     global $smarty, $action1;
-    $header = "<img src='Images/logo.png' alt='logo Stage Cesi Link' class='logo'>
+    $header = "
+    <img src='Images/logo.png' alt='logo Stage Cesi Link' class='logo'>
+    <link rel='manifest' href='PWA/manifest.json'/>
+	<link rel='apple-touch-icon' sizes='180x180' href='Images/icon-180x180.png'/>
+	<meta name='theme-color' content='#f3f3f3'>
     <hr>
     <nav class='navbar'>
         <div class='dropdown'>
