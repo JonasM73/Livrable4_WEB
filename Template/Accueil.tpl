@@ -14,7 +14,7 @@
 		{$header}
 	</header>
 
-	<body action='Accueil.tpl' method='POST'>
+	<body >
 		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">	
 		<main>
 		<form method="POST" >
