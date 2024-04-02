@@ -32,7 +32,7 @@ input[type="button"] {
     border: none; /* Supprime la bordure */
     padding: 10px 20px; /* Ajoute un espace intérieur de 10px en haut/bas et 20px à gauche/droite */
     text-align: center; /* Centre le texte horizontalement */
-    text-decoration: none; /* Supprime la décoration du texte (soulignement par défaut) */
+    text-decoration: none; /* Supprime la décoration du texte */
     font-size: 16px; /* Définit la taille de la police à 16 pixels */
     margin: 0 10px; /* Ajoute une marge de 5 pixels en haut et en bas */
     width: 150px; /* Définit une largeur fixe de 100 pixels */
