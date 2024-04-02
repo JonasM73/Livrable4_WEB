@@ -54,24 +54,25 @@
 		</header><br><br>
 		
 		<main>
-			<form id="créer_compte">
+		     <br><br>
+		     <form id="recherche_pilote" action="Rechercher_un_compte.tpl" method="POST">
 				<fieldset>
 					<h1>Rechercher un compte pilote</h1>
 					<label>Nom</label><br><br>
-					<input type="name" id="name" name="name" placeholder="Entrez votre nom" oninput="MAJ(this)" required><br><br>
+					<input type="texte" id="nom" name="nom" placeholder="Entrez votre nom" oninput="MAJ(this)" required><br><br>
 					<label>Prénom</label><br><br>
-					<input type="surname" id="surname" name="surname" placeholder="Entrez votre prénom" oninput="firstMAJ(this)" required><br><br>
+					<input type="texte" id="prénom" name="prénom" placeholder="Entrez votre prénom" oninput="firstMAJ(this)" required><br><br>
 					<label>Centre</label><br>
-					<select name="Centre" id="center">
-						<option value="def">Centre 1</option>
+					<select name="Centre" id="centre">
+						<option value="1">Centre 1</option>
 						<option value="2">Centre 2</option>
 						<option value="3">Centre 3</option>
 						<option value="4">Centre 4</option>
 						<option value="5">Centre 5</option>
 					</select><br><br>
 					<label>Promotion(s)</label><br>
-					<select name="Centre" id="center">
-						<option value="def">Promotion 1</option>
+					<select name="Centre" id="centre">
+						<option value="1">Promotion 1</option>
 						<option value="2">Promotion 2</option>
 						<option value="3">Promotion 3</option>
 						<option value="4">Promotion 4</option>
@@ -79,10 +80,10 @@
 					</select><br><br>
 					<table>
 						<td>
-							<input type="submit" value="Rechercher"><br><br>
+							<input type="envoyer" name="action" value="recherche_pilote"><br><br>
 						</td>
 						<td>
-							<input type="button" value="Réinitialiser" onclick="resetForm()"><br><br>
+							<input type="bouton" value="Réinitialiser" onclick="resetForm()"><br><br>
 						</td>
 					</table>
 					<span id="soumission" class="TextRed"></span><br><br>
