@@ -68,4 +68,3 @@ class Offre {
     public function getNB_places_restantes() { return $this->NB_places_restantes; }
     public function getnom_entreprise() { return $this->nom_entreprise; }
 }
-?>

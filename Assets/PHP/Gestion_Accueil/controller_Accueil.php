@@ -25,4 +25,3 @@ $smarty->assign('offres', $offres);
 
 // Affiche le template Accueil.tpl
 $smarty->display(MAIN_PATH . "/Template/Accueil.tpl");
-?>

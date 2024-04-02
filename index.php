@@ -17,8 +17,8 @@ function DISPLAY($content, $content_footer){
     if ($page == 'Acceuil') {
         require_once 'Assets\PHP\Gestion_Accueil\controller_Accueil.php';
     } 
-    elseif($page == 'Créer_entreprise' || $page == 'Dashboard_E'){
-        require_once 'Assets\PHP\Gestion_entreprises\controller_GE.php';    
+    elseif($page == 'Créer_entreprise' || $page =="Entreprise" || $page == 'Dashboard_E'){
+        require_once 'Assets\PHP\Gestion_entreprises\controller_GE.php';
     }
     elseif($page == 'Connexion'){
         require_once 'Assets\PHP\Gestion_Acces\controller_Acces.php';    
