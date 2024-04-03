@@ -14,7 +14,8 @@ CREATE TABLE Utilisateur(
 INSERT INTO Utilisateur (nom_utilisateur, prenom_utilisateur, utilisateur_type, utilisateur_login, utilisateur_MDP) VALUES
 ('Dupont', 'Jean', 'Admin', 'jdupont@viacesi.com', 'Jojojo73!'), 
 ('Martin', 'Pierre', 'Pilote', 'pmartin@viacesi.com', 'Jojojo74!'), 
-('Dubois', 'Sophie', 'Étudiant', 'sdubois@viacesi.com', 'Jojojo75!'), 
+('Dubois', 'Sophie', 'Étudiant', 'sdubois@viacesi.com', 'Jojojo75!'),
+('Greg', 'FilsdeGreg', 'Pilote', 'Greg@viacesi.fr','Passw0rd!'),
 ('Lefevre', 'Luc', 'Pilote', 'llefevre@viacesi.com', 'mot_de_passe'), 
 ('Moreau', 'Marie', 'Pilote', 'mmoreau@viacesi.com', 'mot_de_passe'), 
 ('Roux', 'Julie', 'Pilote', 'jroux@viacesi.com', 'mot_de_passe'), 
