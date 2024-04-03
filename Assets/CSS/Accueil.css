@@ -112,8 +112,7 @@ td {
     margin-top: 30px; 
     width: 200px; 
     height: 55px; 
-    font-family: "Century Gothic", sans-serif;  
-    margin-right: 200px;
+    font-family: "Century Gothic", sans-serif;
 }
 
 .btn-rechercher:hover { 
@@ -263,5 +262,28 @@ td {
 
     .stylabel{
         font-size: 90%;
+    }
+
+    .affichage1{
+        display:none;
+    }
+
+    .divclasse{
+        margin-left: 0;
+    }
+
+    .presentation_affichage1 {
+        width: 130%;
+        height: 1500px;
+    }
+
+    strong{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .lolo {
+        align-items: left;
+        margin-left: 15%;
     }
 }

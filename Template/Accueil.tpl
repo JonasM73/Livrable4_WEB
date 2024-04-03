@@ -327,7 +327,6 @@
 									{/if}
 									{if $compte_type == 'Étudiant'}
 										<button type="submit" class="btn-modifier" id="btnPostuler" >Postuler</button>
-
 									{/if}
 
 								</div>
