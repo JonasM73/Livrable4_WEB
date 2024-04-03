@@ -20,6 +20,27 @@
 	<body >
 		<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">	
 		<main>
+		<form method="POST">
+			<table>
+				<td>
+    				<div class="text-area-container">
+        				<label for="Nom" id="Nom">Nom ?</label>
+        				<textarea id="Entreprises" placeholder="Entreprises ?" name="Nom"></textarea>
+    				</div>
+				</td>
+				<td>
+    				<div class="text-area-container">
+        				<label for="Ou" id="ou">Où ?</label>
+        				<textarea id="textarea_O" placeholder="Ville, Adresse, CP ?" name="Ou"></textarea>
+    				</div>
+				</td>
+				<td>
+					<div class="bloc-droite-high">
+    					<button type="submit" class="btn-rechercher" name="Rechercher_offre" onclick="validation()">Rechercher</button>
+					</div>
+				</td>
+			</table>
+		</form>
 		<form method="POST" >
 			<div class="bloc-gauche">
     			<div class="menu-container">
@@ -27,7 +48,7 @@
 					<form method="POST">
 						<div class="option">
 							<input type="checkbox" id="Compétence" name="Compétence">
-							<label for="Compétence" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Compétences :</label>
+							<label for="Compétence" class="stylabel">&nbsp;&nbsp;&nbsp;&nbsp;Compétences :</label>
 							&nbsp;
 							<div class="submenu">
 								<div>
@@ -66,7 +87,7 @@
 
             			<div class="option">
                 			<input type="checkbox" id="durée_stage" name="durée_stage">
-                			<label for="durée_stage"style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Durée du Stage :</label>
+                			<label for="durée_stage" class="stylabel">&nbsp;&nbsp;&nbsp;&nbsp;Durée du Stage :</label>
                 			<div class="submenu">
                     			<div>
 									<input type="radio" id="moins d'un mois" name="durée_stage" onchange="updateCate2(this)">
@@ -100,7 +121,7 @@
             			</div>
             			<div class="option">
                 			<input type="checkbox" id="remuneration" name="remuneration">
-                			<label for="remuneration"style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Rémunération :</label>
+                			<label for="remuneration" class="stylabel">&nbsp;&nbsp;&nbsp;&nbsp;Rémunération :</label>
                 			<div class="submenu">
                     			<div>
 									<input type="radio" id="sans remuneration" name="remuneration" onchange="updateCate3(this)">
@@ -130,7 +151,7 @@
             			</div>
             			<div class="option">
     						<input type="checkbox" id="Promo" name="Promo">
-                			<label for="Promo" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Promotions assignées :</label>
+                			<label for="Promo" class="stylabel">&nbsp;&nbsp;&nbsp;&nbsp;Promotions assignées :</label>
     						<div class="submenu">
         						<div>
 									<input type="radio" id="CPI_A1" name="Promo" onchange="updateCate4(this)">
@@ -273,27 +294,6 @@
         			</div>      
     			</div>
 			</div>
-		</form>
-		<form method="POST">
-			<table>
-				<td>
-    				<div class="text-area-container">
-        				<label for="Nom" id="Nom">Nom ?</label>
-        				<textarea id="Entreprises" placeholder="Entreprises ?" name="Nom"></textarea>
-    				</div>
-				</td>
-				<td>
-    				<div class="text-area-container">
-        				<label for="Ou" id="ou">Où ?</label>
-        				<textarea id="textarea_O" placeholder="Ville, Adresse, CP ?" name="Ou"></textarea>
-    				</div>
-				</td>
-				<td>
-					<div class="bloc-droite-high">
-    					<button type="submit" class="btn-rechercher" name="Rechercher_offre" onclick="validation()">Rechercher</button>
-					</div>
-				</td>
-			</table>
 		</form>
 		<form method="post">
 			<div class="divclasse">
