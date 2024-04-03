@@ -23,12 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     if (isset($_POST['Rechercher_offre'])) {
-        $ou_content = $_POST['Ou'];
-        $nom_content = $_POST['Nom'];
-        $Compétence_value = $_POST['Comp'];
+        $ou_content = $_POST['Ou'].'%';
+        $nom_content = $_POST['Nom'].'%';
+        $Compétence_value = $_POST['Comp'].'%';
         $durée_stage = $_POST['durée'];
         $remuneration = $_POST['remun'];
-        $promotion = $_POST['promotion_value'];
+        $promotion = $_POST['promotion_value'].'%';
         //echo "Contenu de Compétence_value : " . $ou_content . "<br>";
         //echo "Contenu de Compétence_value : " . $nom_content . "<br>";
         //echo "Contenu de Compétence_value : " . $Compétence_value . "<br>";

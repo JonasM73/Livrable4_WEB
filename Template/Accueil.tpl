@@ -104,7 +104,7 @@
                 			<label for="remuneration"style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Rémunération :</label>
                 			<div class="submenu">
                     			<div>
-									<input type="radio" id="sans remuneration" name="remuneration" value="Sans rémunération" onchange="updateCate3(this)">
+									<input type="radio" id="sans remuneration" name="remuneration" value="0" onchange="updateCate3(this)">
 									<label for="sans remuneration">Sans rémunération</label>
 								</div>
                     			<div>
@@ -269,7 +269,7 @@
 									<label for="Diplome_ING_S3E">Diplômé ING S3E</label>
 								</div>
         						<div>
-									<input type="radio" id="aucune_selectionpromo" name="Promo" value="Aucune sélection" onchange="updateCate4(this)">
+									<input type="radio" id="aucune_selectionpromo" name="Promo" value="" onchange="updateCate4(this)">
 									<label for="aucune_selectionpromo">Aucune sélection</label>
 								</div>
     						</div>

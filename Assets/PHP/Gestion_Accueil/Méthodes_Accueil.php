@@ -54,12 +54,13 @@ class Accueil_offre extends SQLconnection {
                     JOIN ville v ON v.id_Ville = os.id_Ville
                     JOIN entreprise e ON e.id_entreprise = os.id_entreprise
                 WHERE 
-                    nom_entreprise = :nom 
-                    AND nom_Ville = :ou 
-                    AND nom_competence = :competence
+                    nom_entreprise LIKE :nom 
+                    AND nom_Ville LIKE :ou 
+                    AND nom_competence LIKE :competence
                     AND Remuneration >= :remuneration 
-                    AND nom_promotion = :promotion
-                    AND DATEDIFF(Stage_Date_fin, Stage_Date_depart) >= :duree";
+                    AND nom_promotion LIKE :promotion
+                    AND DATEDIFF(Stage_Date_fin, Stage_Date_depart) >= :duree
+                    GROUP BY id_Offre_stage";
     
         $requete = $this->getBDD()->prepare($sql);
         $requete->bindParam(':nom', $nom, PDO::PARAM_STR);
