@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<title>StageLinkCesi - Connexion</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
+		<link rel="stylesheet" href="Assets/CSS/Connexion.css">
+
 	</head>
 
 	<header>
@@ -11,10 +13,9 @@
 	</header><br><br>
 
 	<body>
-		<img class="banière_1" src="Images/B.png" alt="logo Stage Cesi Link">
 		<main>
 			<br><br>
-			<form id="connexion" action="Connexion.php" method="POST">
+			<form method="POST">
 				<fieldset>
 					<h1>LOGIN</h1>
 					<label>Identifiant</label><br><br>

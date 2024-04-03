@@ -1,54 +1,47 @@
-<?php
+<?php 
+require_once "Assets/PHP/SQLConnection.php";
 
-class Utilisateur_fonctions {
-    private $BDD;
+class Acces extends SQLconnection {
+    public function __construct() {        parent::__construct();    }
 
-    public function __construct() {
-    try{
-        $dns = 'mysql:host=localhost;dbname=wk';
-        $this->BDD = new PDO($dns, 'root', 'cesi');
-        $this->BDD->exec("SET NAMES utf8");
-        $this->BDD->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    }catch(Exception $e){$e->getMessage();}
+    public function Connexion($email, $password) {
+        $query = "SELECT * FROM utilisateur WHERE utilisateur_login = :email";
+        $stmt = $this->getBDD()->prepare($query);
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+        // Vérifier si l'utilisateur existe
+        if ($stmt->rowCount() > 0) {
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            if (password_verify($password, $user['utilisateur_MDP'])) {
+                return $user;
+            } else {  return false;   }
+        } else {  return false;        }
+    }
+
+
 }
 
-    public function getUtilisateurs() {}
-
-    public function ajouterUtilisateur() {}
-
-    public function supprimerUtilisateur() {}
-    
-}
-
-class Utilisateur {
-    private $NomPil;
-    private $NatPil;
-    private $NomTV;
-    private $NomGP;
-    private $LieuCirc;
-    private $DateGP;
-    private $RecTour;
-    private $Place;
-    private $PtObt;
+class Utilisateur_Connexion {
+    private $id_Utilisateur;
+    private $nom_utilisateur;
+    private $prenom_utilisateur;
+    private $utilisateur_type;
+    private $utilisateur_login;
+    private $utilisateur_MDP;
 
     // Setters
-    public function setNomPil($NomPil) {        $this->NomPil = $NomPil;    }
-    public function setNatPil($NatPil) {        $this->NatPil = $NatPil;    }
-    public function setNomTV($NomTV) {        $this->NomTV = $NomTV;    }
-    public function setNomGP($NomGP) {        $this->NomGP = $NomGP;    }
-    public function setLieuCirc($LieuCirc) {        $this->LieuCirc = $LieuCirc;    }
-    public function setDateGP($DateGP) {        $this->DateGP = $DateGP;    }
-    public function setRecTour($RecTour) {        $this->RecTour = $RecTour;    }    
-    public function setPlace($Place) {        $this->Place = $Place;    }
-    public function setPtObt($PtObt) {        $this->PtObt = $PtObt;    }
+    public function setid_Utilisateur($id_Utilisateur) {                        $this->id_Utilisateur = $id_Utilisateur; }
+    public function setnom_utilisateur($nom_utilisateur) {                  $this->nom_utilisateur = $nom_utilisateur; }
+    public function setprenom_utilisateur($prenom_utilisateur) {      $this->prenom_utilisateur = $prenom_utilisateur; }
+    public function setutilisateur_type($utilisateur_type) {                            $this->utilisateur_type = $utilisateur_type; }
+    public function setutilisateur_login($utilisateur_login) {                    $this->utilisateur_login = $utilisateur_login; }
+    public function setutilisateur_MDP($utilisateur_MDP) {              $this->utilisateur_MDP = $utilisateur_MDP; }
+
     // Getters
-     public function getNomPil() {        return $this->NomPil;    }
-    public function getNatPil() {        return $this->NatPil;    }
-    public function getNomTV() {        return $this->NomTV;    }
-    public function getNomGP() {        return $this->NomGP;    }
-    public function getLieuCirc() {        return $this->LieuCirc;    }
-    public function getDateGP() {        return $this->DateGP;    }
-    public function getRecTour() {        return $this->RecTour;    }
-    public function getPlace() {        return $this->Place;    }
-    public function getPtObt() {        return $this->PtObt;    }
+    public function getid_Utilisateur() {           return $this->id_Utilisateur; }
+    public function getnom_utilisateur() {          return $this->nom_utilisateur; }
+    public function getprenom_utilisateur() {       return $this->prenom_utilisateur; }
+    public function getutilisateur_type() {         return $this->utilisateur_type; }
+    public function getutilisateur_login() {        return $this->utilisateur_login; }
+    public function getutilisateur_MDP() {          return $this->utilisateur_MDP; }
 }

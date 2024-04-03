@@ -61,7 +61,6 @@ function validation() {
 
     // Si au moins un champ est rempli, exécuter la requête de recherche
     // Vous pouvez remplacer cette partie du code par l'appel à une fonction AJAX pour exécuter la requête en arrière-plan
-    alert("Requête de recherche exécutée !");
     var checkboxes = document.querySelectorAll('.option input[type="checkbox"]');
     checkboxes.forEach(function(checkbox, index) {
         // Masque tous les sous-menus
@@ -85,36 +84,30 @@ function validation() {
     });
 }
 
-
 function updateCate(radio) {
     if (radio.checked) {
         var cate = document.getElementById('Compétence_titre');
         cate.value = radio.value;
-        cate.name = 'Comp';
-        document.getElementById('catValue').textContent = "Catégorie sélectionnée : " + cate.value ;
     }
 }
 
 function updateCate2(radio) {
     if (radio.checked) {
-        var cate2 = document.getElementById('durée_stage');
-        cate2.value = radio.id;
-        document.getElementById('catValue').textContent = "durée_stage sélectionnée : " + cate2.value;
+        var cate2 = document.getElementById('durée_stage_titre');
+        cate2.value = radio.value;
     }
 }
 
 function updateCate3(radio) {
     if (radio.checked) {
-        var cate3 = document.getElementById('remuneration');
-        cate3.value = radio.id;
-        document.getElementById('catValue').textContent = "remuneration sélectionnée : " + cate3.value;
+        var cate3 = document.getElementById('remuneration_titre');
+        cate3.value = radio.value;
     }
 }
 
 function updateCate4(radio) {
     if (radio.checked) {
-        var cate4 = document.getElementById('Promo');
-        cate4.value = radio.id;
-        document.getElementById('catValue').textContent = "Promo sélectionnée : " + cate4.value;
+        var cate3 = document.getElementById('promotion_titre');
+        cate3.value = radio.value;
     }
 }
