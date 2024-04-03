@@ -275,61 +275,57 @@
 			</div>
 		</form>
 		<form method="POST">
-			<div class="bloc-droite-container">
-				<div class="bloc-droite-high">
-        			<div class="Nom_E">
-    					<div class="input-group">
-    						<div class="text-area-container">
-        						<label for="Nom" id="Nom">Nom ?</label>
-        						<textarea id="Entreprises" placeholder="Entreprises ?" name="Nom"></textarea>
-    						</div>
-   	 						<button type="submit" name="Rechercher_offre" onclick="validation()">Aller !</button>
-						</div>
-    					<div class="input-group">
-    						<div class="text-area-container">
-        						<label for="Ou" id="ou">📍Où ?</label>
-        						<textarea id="textarea_O" placeholder="Ville, Adresse, CP ?" name="Ou"></textarea>
-    						</div>
-   	 						<button type="submit" name="Rechercher_offre" onclick="validation()">Aller !</button>
-						</div>
+			<table>
+				<td>
+    				<div class="text-area-container">
+        				<label for="Nom" id="Nom">Nom ?</label>
+        				<textarea id="Entreprises" placeholder="Entreprises ?" name="Nom"></textarea>
+    				</div>
+				</td>
+				<td>
+    				<div class="text-area-container">
+        				<label for="Ou" id="ou">Où ?</label>
+        				<textarea id="textarea_O" placeholder="Ville, Adresse, CP ?" name="Ou"></textarea>
+    				</div>
+				</td>
+				<td>
+					<div class="bloc-droite-high">
+    					<button type="submit" class="btn-rechercher" name="Rechercher_offre" onclick="validation()">Rechercher</button>
 					</div>
-				</div>
-				<div class="bloc-droitedroite-high">
-    				<button type="submit" class="btn-rechercher" name="Rechercher_offre" onclick="validation()">Rechercher</button>
-				</div>
+				</td>
+			</table>
+		</form>
+		<form method="post">
+			<div class="divclasse">
+				{if $offres}
+					{foreach $offres as $offre}
+						<div class="affichage" id_offre="{$offre->getid_offre()}">
+							<div class="affichage1">
+								<img src="Images/images.webp" alt="logo {$offre->getnom_entreprise()}">
+							</div>
+							<div class="conteneur-droite">
+								<div class="texte_affichage1">{$offre->gettitre_offre_stage()}&nbsp;-&nbsp;{$offre->getnom_entreprise()}</div>
+								<div class="presentation_affichage1">
+									<div class="texte-presentation">
+										<p>{$offre->getdescriptif_offres_stage()}</p>
+									</div>  
+								</div>
+								<p><strong>Durée :</strong> {$offre->getStage_Date()} Semaines &nbsp;&nbsp;&nbsp; <strong>Rémunération : </strong>{$offre->getRemuneration()} €/mois &nbsp;&nbsp;&nbsp; 
+								<strong>Places restantes : </strong>{$offre->getNB_places_restantes()}</p>
+							</div>
+							<div class="lolo">
+								<button type="submit" class="btn-modifier" id="btnModifier" >Modifier</button>
+								<button type="submit" name="supprimer_offre_{$offre->getid_offre()}" class="btn-supprimer">Supprimer</button>
+								<button type="submit" class="btn-invisible" id="btnInvisibilité" >Invisibilité</button>
+							</div>
+						</div>
+					{/foreach}
+				{/if}
 			</div>
 		</form>
-			<form method="post">
-				<div class="divclasse">
-					{if $offres}
-						{foreach $offres as $offre}
-							<div class="affichage" id_offre="{$offre->getid_offre()}">
-								<div class="affichage1">
-									<img src="Images/images.webp" alt="logo {$offre->getnom_entreprise()}">
-								</div>
-								<div class="conteneur-droite">
-									<div class="texte_affichage1">{$offre->gettitre_offre_stage()}&nbsp;-&nbsp;{$offre->getnom_entreprise()}</div>
-									<div class="presentation_affichage1">
-										<div class="texte-presentation">
-											<p>{$offre->getdescriptif_offres_stage()}</p>
-										</div>  
-									</div>
-									<p><strong>Durée :</strong> {$offre->getStage_Date()} Semaines &nbsp;&nbsp;&nbsp; <strong>Rémunération : </strong>{$offre->getRemuneration()} €/mois &nbsp;&nbsp;&nbsp; 
-									<strong>Places restantes : </strong>{$offre->getNB_places_restantes()}</p>
-								</div>
-								<div class="lolo">
-									<button type="submit" class="btn-modifier" id="btnModifier" >Modifier</button>
-									<button type="submit" name="supprimer_offre_{$offre->getid_offre()}" class="btn-supprimer">Supprimer</button>
-									<button type="submit" class="btn-invisible" id="btnInvisibilité" >Invisibilité</button>
-								</div>
-							</div>
-						{/foreach}
-					{/if}
-				</div>
-			</form>
-		</main>
-		<script src='Assets/JS/Accueil.js'></script>
-		<script src="Assets/PWA/script.js"></script>
+	</main>
+	<script src='Assets/JS/Accueil.js'></script>
+	<script src="Assets/PWA/script.js"></script>
 	</body>
 	
 	<br><br>

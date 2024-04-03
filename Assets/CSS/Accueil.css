@@ -40,19 +40,6 @@
     display: block;
 }
 
-.Nom_E { 
-    display: flex; 
-    flex-wrap: wrap;
-}
-
-.input-group { 
-    display: flex; 
-    flex-direction: row; 
-    align-items: center; 
-    margin-right: 100px; 
-    margin-bottom: 10px;
-}
-
 .text-area-container { 
     display: flex; 
     flex-direction: column;
@@ -70,11 +57,6 @@ textarea {
     margin-top: 5px;
 }
 
-.input-group button[type="submit"] {
-    margin-top: 45.5px; 
-    height: 42px;
-}
-
 #Nom,#ou { 
     font-family: "Century Gothic", sans-serif; 
     font-size: 24px; 
@@ -90,15 +72,7 @@ textarea {
     margin-left: 25px;
 }
 
-#buttonO{
-    margin-top: 47px;
-}
-
-#buttonE{
-    margin-top: 45px;
-}
-
-.bloc-droite-high, .bloc-gauche, .bloc-droitedroite-high{ 
+.bloc-droite-high, .bloc-gauche{ 
     float: left; 
     margin-top: 10px; 
     background-color:rgb(208 220 238);
@@ -108,9 +82,21 @@ textarea {
     width: 500px;
 }
 
-.bloc-droite-high { 
-    width:750px; 
+.bloc-droite-high {
+    width:50%;
     height:100px;
+}
+
+table {
+    border-collapse: collapse; /* Fusionne les bordures des cellules */
+}
+
+tr {
+    text-align: center; /* Centre horizontalement le contenu des cellules */
+}
+
+td {
+    padding: 10px; /* Ajoute un peu d'espace à l'intérieur des cellules */
 }
 
 .btn-rechercher { 
@@ -137,9 +123,9 @@ textarea {
 }
 
 .bloc-droite-container{ 
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-between;
+    display: flex;
+    box-flex: row;
+    width:100%;
 }
 
 .affichage { 
@@ -152,8 +138,8 @@ textarea {
     background-color: white;
     box-shadow: 5px 5px 10px rgba(215, 216, 219, 0.5); /* Ombre */
     border: 2px solid black;
-    
 }
+
 .affichage1 {
     border: 2px solid black;
     height: 200px;
@@ -172,9 +158,6 @@ textarea {
     width: 100%; /* Définir la largeur de l'image sur 100% */
     height: auto; /* Ajuster automatiquement la hauteur de l'image */
 }
-
-
-
 
 .conteneur-droite { 
     margin-left: 30px; 
@@ -204,7 +187,6 @@ textarea {
     border-top-left-radius: 15px; /* Coin supérieur gauche arrondi */
     border-bottom-left-radius: 15px; /* Coin inférieur gauche arrondi */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Ombre */
-    
 }
 
 .texte-presentation { 
@@ -212,13 +194,9 @@ textarea {
     text-align: justify;
 }
 
-
 .divclasse{
     margin-left: 500px;
 }
-
-
-
 
 .lolo {
     display: flex;
@@ -229,9 +207,7 @@ textarea {
 }
 
 /* Les styles des boutons */
-.btn-modifier,
-.btn-supprimer,
-.btn-invisible {
+.btn-modifier, .btn-supprimer, .btn-invisible {
     background-color: white; 
     color: black;
     cursor: pointer;
@@ -247,11 +223,31 @@ textarea {
 }
 
 /* Styles hover pour tous les boutons */
-.btn-modifier:hover,
-.btn-supprimer:hover,
-.btn-invisible:hover {
+.btn-modifier:hover, .btn-supprimer:hover, .btn-invisible:hover {
     background-color: black; 
     color: white;
     transform: scale(1.08);
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.6); /* Ombre plus prononcée au survol */
+}
+
+@media (max-width: 1025px) {
+    .menu-container{
+        display:inline-block;
+        width:50%;
+    }
+
+    .bloc-gauche{
+        display: inline-block;
+        width:50%;
+    }
+
+    .divclasse{
+        display:inline-table;
+        margin-left: 0;
+    }
+
+    .bloc-droite-container{
+        display: flex;
+        flex-direction: column;
+    }
 }
