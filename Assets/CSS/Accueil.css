@@ -230,6 +230,14 @@ td {
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.6); /* Ombre plus prononcée au survol */
 }
 
+
+.Utilisateur {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px; /* Vous pouvez ajuster cette valeur selon vos besoins */
+}
+
+
 .stylabel{
     font-size:20px;
 }

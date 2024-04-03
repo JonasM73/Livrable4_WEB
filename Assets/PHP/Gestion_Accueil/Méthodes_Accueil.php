@@ -36,6 +36,57 @@ class Accueil_offre extends SQLconnection {
         $requete->bindParam(':id', $id_offre, PDO::PARAM_INT);
         $requete->execute();
     }
+    public function rechercher_offre($ou, $nom, $competence, $duree, $remuneration, $promotion) {
+        $sql = "SELECT 
+                    os.id_Offre_stage, 
+                    os.titre_offre_stage, 
+                    os.Descriptif_offres_stage, 
+                    CEILING(DATEDIFF(os.Stage_Date_fin, os.Stage_Date_depart) / 7) as Diff, 
+                    os.Remuneration, 
+                    os.NB_places_restantes, 
+                    e.nom_entreprise 
+                FROM 
+                    projet_web.destiner d 
+                    JOIN offre_stage os ON os.id_Offre_stage = d.id_Offre_stage
+                    JOIN promotions p ON p.id_promotion = d.id_promotion
+                    JOIN requérir r ON os.id_Offre_stage = r.id_Offre_stage
+                    JOIN compétence c ON c.id_Compétence = r.id_Compétence
+                    JOIN ville v ON v.id_Ville = os.id_Ville
+                    JOIN entreprise e ON e.id_entreprise = os.id_entreprise
+                WHERE 
+                    nom_entreprise LIKE :nom 
+                    AND nom_Ville LIKE :ou 
+                    AND nom_competence LIKE :competence
+                    AND Remuneration >= :remuneration 
+                    AND nom_promotion LIKE :promotion
+                    AND DATEDIFF(Stage_Date_fin, Stage_Date_depart) >= :duree
+                    GROUP BY id_Offre_stage";
+    
+        $requete = $this->getBDD()->prepare($sql);
+        $requete->bindParam(':nom', $nom, PDO::PARAM_STR);
+        $requete->bindParam(':ou', $ou, PDO::PARAM_STR);
+        $requete->bindParam(':competence', $competence, PDO::PARAM_STR);
+        $requete->bindParam(':remuneration', $remuneration, PDO::PARAM_INT);
+        $requete->bindParam(':promotion', $promotion, PDO::PARAM_STR);
+        $requete->bindParam(':duree', $duree, PDO::PARAM_INT);
+    
+        $requete->execute();
+    
+        $offres = array();
+        while ($row = $requete->fetch()) {
+            $offre = new Offre();
+            $offre->setid_offre($row['id_Offre_stage']);
+            $offre->settitre_offre_stage($row['titre_offre_stage']);
+            $offre->setdescriptif_offres_stage($row['Descriptif_offres_stage']);
+            $offre->setStage_Date($row['Diff']);
+            $offre->setRemuneration($row['Remuneration']);
+            $offre->setNB_places_restantes($row['NB_places_restantes']);
+            $offre->setnom_entreprise($row['nom_entreprise']);
+            $offres[] = $offre;
+        }
+        return $offres;
+    }
+    
 
 }
 

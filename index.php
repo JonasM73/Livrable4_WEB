@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Définition du chemin du répertoire principal
 define('MAIN_PATH', getcwd());
 // Fichier à importer
@@ -8,12 +9,17 @@ $smarty = new Smarty();
 
 $smarty->setTemplateDir(MAIN_PATH . '/Template');
 $page = isset($_GET['page']) ? $_GET['page'] : '';
-HEADER_FOOTER();
 
-function DISPLAY($content, $content_footer){
+$header_footer = HEADER_FOOTER(); // Appel de la fonction HEADER_FOOTER pour récupérer le header et le footer
+
+function DISPLAY($header, $footer, $compte, $compte_id, $compte_type){
     global $smarty, $page;
-    $smarty->assign('header', $content);
-    $smarty->assign('content_footer', $content_footer);
+    $smarty->assign('header', $header);
+    $smarty->assign('compte', $compte);
+    $smarty->assign('compte_id', $compte_id);
+    $smarty->assign('compte_type', $compte_type);
+    $smarty->assign('content_footer', $footer);
+
     if ($page == 'Acceuil') {
         require_once 'Assets\PHP\Gestion_Accueil\controller_Accueil.php';
     } 
@@ -40,6 +46,23 @@ function DISPLAY($content, $content_footer){
 
 function HEADER_FOOTER(){
     global $smarty, $action1;
+    if (isset($_SESSION['id_utilisateur']) && $_SESSION['id_utilisateur'] != 0) {
+        $compte_type = $_SESSION['type_utilisateur'];
+    } else {
+        $compte_type = "";
+    }
+    if (isset($_SESSION['id_utilisateur']) && $_SESSION['id_utilisateur'] != 0) {
+        $compte_id = $_SESSION['id_utilisateur'];
+    } else {
+        $compte_id = "";
+    }
+    if (isset($_SESSION['id_utilisateur']) && $_SESSION['id_utilisateur'] != 0) {
+        $compte = $_SESSION['prenom_utilisateur'];
+    } else {
+        $compte = "";
+    }
+        
+    
     $header = "
     <img src='Images/logo.webp' alt='logo Stage Cesi Link' class='logo'>
     <hr>
@@ -74,7 +97,7 @@ function HEADER_FOOTER(){
     </nav>
     <nav class='moncompte'>
         <div class='dropdown'>
-            <a href='#'>&nbsp;Mon&nbsp;Compte</a>
+            <a href='#'>&nbsp;Mon&nbsp;Espace</a>
             <div class='dropdown-content'>
                 <a href='index.php?page=Connexion'>S'identifier</a>
                 <a href='index.php?page=Creer_un_compte'>Créer un compte</a>
@@ -132,5 +155,9 @@ function HEADER_FOOTER(){
             </div>
         </footer>
     </footer>" ;
-    DISPLAY($header, $footer);
+    return array($header, $footer, $compte, $compte_id, $compte_type); // retourner le header, le footer et le compte
 }
+
+list($header, $footer, $compte, $compte_id, $compte_type) = $header_footer; // récupérer les valeurs retournées par la fonction HEADER_FOOTER
+
+DISPLAY($header, $footer, $compte, $compte_id, $compte_type); // appeler la fonction DISPLAY avec les valeurs récupérées
