@@ -19,7 +19,6 @@
 	</header>
 
 	<body >
-		<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">	
 		<main>
 		<br>
 		{if $compte}
@@ -45,8 +44,6 @@
 					</div>
 				</td>
 			</table>
-		</form>
-		<form method="POST" >
 			<div class="bloc-gauche">
     			<div class="menu-container">
         			<div class="menu">
@@ -303,8 +300,6 @@
         			</div>      
     			</div>
 			</div>
-		</form>
-			<form method="post">
 				<div class="divclasse">
 					{if $offres}
 						{foreach $offres as $offre}
@@ -340,6 +335,7 @@
 				</div>
 			</form>
 		</main>
+
 		<script src='Assets/JS/Accueil.js'></script>
 		<script src="Assets/PWA/script.js"></script>
 	</body>
