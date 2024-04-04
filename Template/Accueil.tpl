@@ -340,6 +340,7 @@
 							{/if}
 							{if $compte_type == 'Étudiant'}
 								<button type="button" class="btn-modifier" id="btnPostuler" onclick="window.location.href='index.php?page=Créer_Offre'">Postuler</button>
+								<button type="button" class="btn-modifier" id="btnAjouter">Ajouter à la Wishlist</button>
 							{/if}
 						</div>
 					</div>

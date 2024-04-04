@@ -182,7 +182,7 @@
 							<div class="presentation_affichage1">
 								<div class="texte-presentation">
 									<p>{$offre->getdescriptif_offres_stage()}</p>
-								</div>  
+								</div>
 							</div>
 							<p><strong>Durée :</strong> {$offre->getStage_Date()} Semaines &nbsp;&nbsp;&nbsp; <strong>Rémunération : </strong>{$offre->getRemuneration()} €/mois &nbsp;&nbsp;&nbsp; 
 							<strong>Places restantes : </strong>{$offre->getNB_places_restantes()}</p>
@@ -194,6 +194,7 @@
 							{/if}
 							{if $compte_type == 'Étudiant'}
 								<button type="button" class="btn-modifier" id="btnPostuler" onclick="window.location.href='index.php?page=Créer_Offre'">Postuler</button>
+								<button type="submit" name="Supprimmer{$offre->getid_offre()}" id="btnSupprimer" class="btn-modifier">Supprimer de la Wishlist</button>
 							{/if}
 						</div>
 					</div>
