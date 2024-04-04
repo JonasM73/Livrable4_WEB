@@ -170,6 +170,31 @@ input[type="submit"]:hover {
     top :45px;
 }
 
+.deconnexion-container {
+    text-align: center; /* Aligner le contenu au centre */
+    margin-top: 50px; /* Marge en haut pour l'espace vertical */
+}
+
+.deconnexion-button, .connexion-button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.connexion-button{    background-color: #368ff4;}
+.deconnexion-button:hover {
+    background-color: #d32f2f;
+}
+.connexion-button:hover {
+    background-color: #2f63d3;
+}
+
+
+
 .dropdown-content a {    
     color: black; 
     padding: 20px 16px; 

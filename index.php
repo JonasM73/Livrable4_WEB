@@ -19,14 +19,14 @@ function DISPLAY($header, $footer, $compte, $compte_id, $compte_type){
     $smarty->assign('compte_id', $compte_id);
     $smarty->assign('compte_type', $compte_type);
     $smarty->assign('content_footer', $footer);
-
+    
     if ($page == 'Acceuil') {
         require_once 'Assets\PHP\Gestion_Accueil\controller_Accueil.php';
     } 
     elseif($page == 'Créer_entreprise' || $page =="Entreprise" || $page == 'Dashboard_E'){
         require_once 'Assets\PHP\Gestion_entreprises\controller_GE.php';
     }
-    elseif($page == 'Connexion'){
+    elseif($page == 'Connexion'|| $page == 'Deconnexion'){
         require_once 'Assets\PHP\Gestion_Acces\controller_Acces.php';    
     }
     elseif($page == 'Créer_offre' || $page == 'Dashboard_O'){                                   
@@ -35,9 +35,6 @@ function DISPLAY($header, $footer, $compte, $compte_id, $compte_type){
     elseif($page == 'Rechercher_un_compte_etudiant' ||$page == 'Rechercher_un_compte'|| $page == 'Statistiques_etudiant'
         || $page == 'Creer_un_compte' || $page == 'Mon_Compte'){
         require_once 'Assets\PHP\Gestion_Compte\controller_Compte.php';    
-    }
-    elseif($page == 'Wishlist' ){
-        require_once 'Assets\PHP\Gestion_Candidature\controller_Candidature.php';    
     }
     elseif($page == 'Wishlist' ){
         require_once 'Assets\PHP\Gestion_Candidature\controller_Candidature.php';    
@@ -105,6 +102,7 @@ function HEADER_FOOTER(){
                 <a href='index.php?page=Connexion'>S'identifier</a>
                 <a href='index.php?page=Creer_un_compte'>Créer un compte</a>
                 <a href='index.php?page=Mon_Compte'>Mon compte</a>
+                <a href='index.php?page=Deconnexion'>Se déconnecter</a>
             </div>
         </div>
     </nav>
