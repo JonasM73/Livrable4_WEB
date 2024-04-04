@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Zone protégée"
+AuthUserFile C:/xampp/htdocs/Livrable4_WEB/.htpasswd
+Require valid-user

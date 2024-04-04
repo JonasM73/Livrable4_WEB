@@ -17,3 +17,4 @@ par défaut, il est nécessaire de lui donner un autre nom temporairement).
 
 Etape 4 :
 - Lancer l'application avec l'URL "htpp://localhost/Livrable4_WEB".
+- LOGIN "Utilisateur", MDP "cesi"
