@@ -92,27 +92,27 @@
                 			<div class="submenu">
                     			<div>
 									<input type="radio" id="moins d'un mois" name="durée_stage"  value="30" onchange="updateCate2(this)">
-									<label for="moins d'un mois">Moins d'un mois</label>
+									<label for="moins d'un mois">Moins 1 Mois</label>
 								</div>
                     			<div>
 									<input type="radio" id="entre_1_et_3_mois" name="durée_stage" value="30" onchange="updateCate2(this)">
-									<label for="entre_1_et_3_mois">Entre 1 et 3 mois</label>
+									<label for="entre_1_et_3_mois">Minimum 1 Mois</label>
 								</div>
                    				<div>
 									<input type="radio" id="entre_3_et_6_mois" name="durée_stage" value="90" onchange="updateCate2(this)">
-									<label for="entre_3_et_6_mois">Entre 3 et 6 mois</label>
+									<label for="entre_3_et_6_mois">Minimum 3 Mois</label>
 								</div>
                     			<div>
 									<input type="radio" id="entre_6_et_9_mois" name="durée_stage" value="180" onchange="updateCate2(this)">
-									<label for="entre_6_et_9_mois">Entre 6 et 9 mois</label>
+									<label for="entre_6_et_9_mois">Minimum 6 Mois</label>
 								</div>
                     			<div>
 									<input type="radio" id="entre_9_et_12_mois" name="durée_stage" value="270" onchange="updateCate2(this)">
-									<label for="entre_9_et_12_mois">Entre 9 et 12 mois</label>
+									<label for="entre_9_et_12_mois">Minimum 9 Mois</label>
 								</div>
                     			<div>
 									<input type="radio" id="plus_d_un_an" name="durée_stage" value="365" onchange="updateCate2(this)">
-									<label for="plus_d_un_an">Plus d'un an</label>
+									<label for="plus_d_un_an">Minimum 1 an</label>
 								</div>
                     			<div>
 									<input type="radio" id="aucune_selectionmois" name="durée_stage" value="0" onchange="updateCate2(this)">

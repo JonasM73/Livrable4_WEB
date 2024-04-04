@@ -222,12 +222,20 @@ td {
     box-shadow: 9px 9px 12px rgba(0, 0, 0, 0.6);
 }
 
-.btn-modifier:hover, .btn-supprimer:hover, .pagination a:hover {
+.btn-modifier:hover, .btn-invisible:hover {
     background-color: #0056b3; 
     color: white;
     transform: scale(1.08);
     box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.6);
 }
+
+.btn-supprimer:hover {
+    background-color: #e40d0d; 
+    color: white;
+    transform: scale(1.08);
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.6); /* Ombre plus prononcée au survol */
+}
+
 
 .Utilisateur {
     text-align: center;

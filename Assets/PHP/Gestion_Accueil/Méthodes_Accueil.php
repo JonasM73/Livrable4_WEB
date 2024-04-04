@@ -9,7 +9,7 @@ class Accueil_offre extends SQLconnection {
     public function Afficher_Offres() {
         $sql = "SELECT os.id_Offre_stage, os.titre_offre_stage, os.Descriptif_offres_stage, 
                 CEILING(DATEDIFF(os.Stage_Date_fin, os.Stage_Date_depart) / 7) as Diff, os.Remuneration, os.NB_places_restantes, e.nom_entreprise
-                FROM offre_stage os JOIN entreprise e ON e.id_entreprise = os.id_entreprise ORDER BY os.titre_offre_stage ASC";
+                FROM offre_stage os JOIN entreprise e ON e.id_entreprise = os.id_entreprise Where status_entreprise =1 ORDER BY os.titre_offre_stage ASC";
         $requete = $this->getBDD()->query($sql);
         $offres = array();
         
