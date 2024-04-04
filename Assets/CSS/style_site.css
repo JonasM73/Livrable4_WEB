@@ -3,7 +3,7 @@ body {
 	font-family: "Century Gothic", sans-serif; /* Utilisation de la police "Century Gothic" ou une police sans empattement par défaut */
 	margin: 0; /*Définition de la marge de tous les côtés de l'élément*/
 	padding: 0;
-    background-color:rgb(208 220 238);
+    background-color:rgb(223 248 255);
 }
 
 header {
@@ -237,11 +237,11 @@ input[type="submit"]:hover {
 
 
 .leftfooter {    
-	background-color: #1B5684;  
+	background-color: rgba(43, 52, 65, 1);  
 }
 
 .rightfooter{    
-	background-color: #6FA1BD; 
+	background-color: rgba(43, 52, 65, 1);
 }
 
 .social-media {    
@@ -253,7 +253,7 @@ input[type="submit"]:hover {
 }
 
 .basfooter {    
-	background-color: #153548;   
+	background-color: rgba(43, 52, 65, 1);   
 }
 
 .leftfooter, .rightfooter, .basfooter   { 
@@ -320,6 +320,26 @@ input[type="submit"]:hover {
 	margin-top: 20px;
 }
 
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #0056b3;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#scrollToTop:hover {
+    background-color: #0056b3;
+    color: white;
+}
 /* Styles pour les petits écrans */
 @media (max-width: 768px) {
     /* Styles pour les ensembles de champs de formulaire */

@@ -69,6 +69,7 @@
 				</fieldset><br><br>
 			</form>
 		</main>
+		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>
 		<script src="Assets/JS/Creer_entreprise.js"></script>
 		<script src="Assets/JS/Creer_offre.js"></script>
 		<script src="Assets/PWA/script.js"></script>

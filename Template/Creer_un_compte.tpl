@@ -79,6 +79,7 @@
 				<p>Voici un exemple de mot de passe qui satisfait ces critères : <strong>Passw0rd!</strong></p>
 			</fieldset>
 		</main>
+		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>
 		<script src="Assets/JS/Connexion.js"></script>
 		<script src="Assets/JS/Creer_compte.js"></script>
 		<script src="Assets/PWA/script.js"></script>

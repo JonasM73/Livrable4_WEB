@@ -10,6 +10,28 @@ function validatePostalCode(input) {
     }
 }
 
+var scrollToTopButton = document.getElementById('scrollToTop');
+
+// Fonction pour afficher ou masquer le bouton en fonction du défilement de la page
+function toggleScrollToTopButton() {
+    if (window.scrollY > 300) { // Afficher le bouton lorsque l'utilisateur descend de 300 pixels
+        scrollToTopButton.style.display = 'block';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+}
+
+// Ajouter un écouteur d'événement pour le défilement de la page
+window.addEventListener('scroll', toggleScrollToTopButton);
+
+// Fonction pour faire défiler vers le haut de la page lorsque le bouton est cliqué
+scrollToTopButton.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
 // Fonction de validation du numéro de téléphone
 function validatePhoneNumber(input) {
     const phoneNumberPattern = /^\d{10}$/; // Expression régulière pour 10 chiffres uniquement

@@ -37,6 +37,7 @@
 				</fieldset>
 			</form>
 		</main>
+		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>
 		<script src="Assets/JS/Connexion.js"></script>
 		<script src="Assets/PWA/script.js"></script>
 	</body>

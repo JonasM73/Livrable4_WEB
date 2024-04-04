@@ -56,6 +56,7 @@
 			</form>
 		</main>
 		<script src="Assets/PWA/script.js"></script>
+		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>
 	</body>
 
 	<br><br>
