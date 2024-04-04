@@ -15,6 +15,8 @@ self.addEventListener('install', evt => {
     caches.open(NomDuCache).then(cache => {
       const urls = [
         "/Livrable4_WEB/Assets/CSS/Accueil.css",
+        "/Livrable4_WEB/Assets/CSS/Connexion.css",
+        "/Livrable4_WEB/Assets/CSS/Modifier_offre.css",
         "/Livrable4_WEB/Assets/CSS/style_creer_compte.css",
         "/Livrable4_WEB/Assets/CSS/style_creer_entreprise.css",
         "/Livrable4_WEB/Assets/CSS/style_postulation.css",
@@ -25,6 +27,10 @@ self.addEventListener('install', evt => {
         "/Livrable4_WEB/Assets/JS/Creer_compte.js",
         "/Livrable4_WEB/Assets/JS/Creer_entreprise.js",
         "/Livrable4_WEB/Assets/JS/Creer_offre.js",
+        "/Livrable4_WEB/Assets/JS/Dash_Ent.js",
+        "/Livrable4_WEB/Assets/JS/Dash_Off.js",
+        "/Livrable4_WEB/Assets/JS/Entreprise.js",
+        "/Livrable4_WEB/Assets/JS/Modifier_offre.js",
         "/Livrable4_WEB/Assets/JS/Postuler.js",
 
         "/Livrable4_WEB/Images/images.webp",
