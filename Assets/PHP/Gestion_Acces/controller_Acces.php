@@ -10,7 +10,6 @@ if (isset($_POST['action']) && $_POST['action'] === 'Connexion') {
     $passwd = $_POST['password'];
 
     $connexion_result = $acces->Connexion($email, $passwd);
-
     if ($connexion_result !== false) {
         // Vérifier si les clés existent dans $connexion_result avant de les utiliser
         if(isset($connexion_result['id_utilisateur']) && isset($connexion_result['utilisateur_type']) && isset($connexion_result['prenom_utilisateur'])) {
