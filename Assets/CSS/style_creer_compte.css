@@ -6,6 +6,14 @@ select {
     width: 43%;
     box-sizing: border-box;
 }
+.error_creer{
+    color: red;
+    font-weight: bold;
+}
+.succes_creer{
+    color: green;
+    font-weight: bold;
+}
 
 table {
     width: 50%;
