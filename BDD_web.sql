@@ -379,6 +379,13 @@ CREATE TABLE Candidater(
 
 INSERT INTO Candidater (id_utilisateur, id_Offre_stage, cv_utilisateur_offre, lettre_motiv_utilisateur) VALUES
 (1, 5, 'CV', ' Lettre de motiv'),
+(1, 4, 'CV', ' Lettre de motiv'),
+(1, 2, 'CV', ' Lettre de motiv'),
+(1, 3, 'CV', ' Lettre de motiv'),
+(2, 5, 'CV', ' Lettre de motiv'),
+(3, 4, 'CV', ' Lettre de motiv'),
+(9, 2, 'CV', ' Lettre de motiv'),
+(5, 3, 'CV', ' Lettre de motiv'),
 (9, 16, 'CV', ' Lettre de motiv'),
 (4, 34, 'CV', ' Lettre de motiv'),
 (15, 35, 'CV', ' Lettre de motiv'),
@@ -386,6 +393,7 @@ INSERT INTO Candidater (id_utilisateur, id_Offre_stage, cv_utilisateur_offre, le
 (7, 14, 'CV', ' Lettre de motiv'),
 (7, 20, 'CV', ' Lettre de motiv'),
 (1, 25, 'CV', ' Lettre de motiv');
+
 
 CREATE TABLE Evaluer(
    id_utilisateur INT NOT NULL,
