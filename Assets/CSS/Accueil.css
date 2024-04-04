@@ -124,7 +124,7 @@ td {
 
 .bloc-droite-container{ 
     display: flex;
-    box-flex: row;
+    flex-direction: row;
     width:100%;
 }
 
@@ -342,7 +342,7 @@ td {
     }
 
     .lolo {
-        align-items: left;
+        align-items: flex-start;
         margin-left: 15%;
     }
 }
