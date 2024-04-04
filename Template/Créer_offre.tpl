@@ -34,7 +34,6 @@
 					<input type="date" id="date_fin" name="date_fin" required><br><br>
 					<label>Base de rémunération en euros</label><br><br>
 					<input type="number" id="remuneration" name="remuneration" min="0" placeholder="Entrez la rémunération" required><br><br>
-
 					<fieldset>
 						<h3>Localisation de l'adresse</h3>
 						<label>Code postal</label><br><br>
@@ -47,36 +46,35 @@
 						<input type='text' id='address' name='address' placeholder='Entrez votre adresse' oninput='validateAddress(this)' required><br>
 						<span id='erroraddress' class='TextRed'></span><br><br>
 					</fieldset><br><br>
-					
 					<table>
-					<tr>
-						<td>
-							<input type="submit" value="Créer"><br>
-						</td>
-						<td>
-							<input type="button" value="Réinitialiser" onclick="resetForm()"><br>
-						</td>
-					</tr>
+						<tr>
+							<td>
+								<input type="submit" value="Créer"><br>
+							</td>
+							<td>
+								<input type="button" value="Réinitialiser" onclick="resetForm()"><br>
+							</td>
+						</tr>
 					</table>
 					<span id="soumission" class="TextRed"></span><br><br>
 				</fieldset><br><br>
 				<fieldset>
-				<h1>Compétences</h1>
-				<label>Nombre de compétences requises</label><br><br>
-				<input type="number" id="num_compétence" min="0" placeholder="Entrez le nombre de compétences" required><br><br>
+					<h1>Compétences</h1>
+					<label>Nombre de compétences requises</label><br><br>
+					<input type="number" id="num_compétence" min="0" placeholder="Entrez le nombre de compétences" required><br><br>
 				</fieldset><br><br>
 				<fieldset>
-				<h1>Promotions concernées</h1>
+					<h1>Promotions concernées</h1>
 				</fieldset><br><br>
 			</form>
 		</main>
 		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>
-		<script src="Assets/JS/Creer_entreprise.js"></script>
-		<script src="Assets/JS/Creer_offre.js"></script>
-		<script src="Assets/PWA/script.js"></script>
 		<br><br>
 		<footer>
 			{$content_footer}
 		</footer>
+		<script src="Assets/JS/Creer_entreprise.js"></script>
+		<script src="Assets/JS/Creer_offre.js"></script>
+		<script src="Assets/PWA/script.js"></script>
 	</body>
 </html>

@@ -13,8 +13,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
 	</head>
 
-	
-
 	<body>
 		<header>
 			{$header}
@@ -27,11 +25,11 @@
 		<canvas id="Chart_ANN" width="400" height="400"></canvas>
 	    <button id="scrollToTop" title="Revenir en haut de la page">↑</button>
 		<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
-		<script src="Assets/PWA/script.js"></script>
-		<script src="Assets/JS/Dash_Ent.js"></script>
 		<br><br>
 		<footer>
 			{$content_footer}
 		</footer>
+		<script src="Assets/PWA/script.js"></script>
+		<script src="Assets/JS/Dash_Ent.js"></script>
     </body>
 </html>

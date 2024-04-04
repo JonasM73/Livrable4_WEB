@@ -17,7 +17,8 @@
 		<header>
 			<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
 			{$header}
-		</header><br><br>
+			<br><br>
+		</header>
 		<main>
 			<form id="créer_entreprise">
 				<fieldset>
@@ -31,12 +32,12 @@
 					<div id="addresses"></div>
 					<table>
 						<tr>
-						<td>
-							<input type="submit" value="Créer"><br>
-						</td>
-						<td>
-							<input type="button" value="Réinitialiser" onclick="resetForm()"><br>
-						</td>
+							<td>
+								<input type="submit" value="Créer"><br>
+							</td>
+							<td>
+								<input type="button" value="Réinitialiser" onclick="resetForm()"><br>
+							</td>
 						</tr>
 					</table>
 					<span id="soumission" class="TextRed"></span><br><br>
@@ -44,11 +45,11 @@
 			</form>
 		</main>
 		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>
-		<script src="Assets/JS/Creer_entreprise.js"></script>
-		<script src="Assets/PWA/script.js"></script>
 		<br><br>
 		<footer>
 			{$content_footer}
 		</footer>
+		<script src="Assets/JS/Creer_entreprise.js"></script>
+		<script src="Assets/PWA/script.js"></script>
 	</body>
 </html>

@@ -14,7 +14,7 @@
 	
 	<body>
 		<header>
-		<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
+			<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
 			{$header}
 		</header><br><br>
 		<main>
@@ -57,14 +57,14 @@
 					<input type="password" id="confirmpassword" name="confirmpassword" oninput="verifierMotsDePasse()" placeholder="Confirmez votre mot de passe" required><br>
 					<span id="confirmMDP" class="TextRed"></span><br><br>
 					<table>
-					<tr>
-						<td>
-							<input type="submit" value="Créer"><br><br>
-						</td>
-						<td>
-							<input type="button" value="Réinitialiser" onclick="resetForm()"><br><br>
-						</td>
-					</tr>
+						<tr>
+							<td>
+								<input type="submit" value="Créer"><br><br>
+							</td>
+							<td>
+								<input type="button" value="Réinitialiser" onclick="resetForm()"><br><br>
+							</td>
+						</tr>
 					</table>
 					<span id="soumission" class="TextRed"></span><br><br>
 				</fieldset>
@@ -81,12 +81,12 @@
 			</fieldset>
 		</main>
 		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>
-		<script src="Assets/JS/Connexion.js"></script>
-		<script src="Assets/JS/Creer_compte.js"></script>
-		<script src="Assets/PWA/script.js"></script>
 		<br><br>
 		<footer>
 			{$content_footer}
 		</footer>
+		<script src="Assets/JS/Connexion.js"></script>
+		<script src="Assets/JS/Creer_compte.js"></script>
+		<script src="Assets/PWA/script.js"></script>
 	</body>
 </html>
