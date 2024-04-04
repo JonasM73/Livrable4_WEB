@@ -119,14 +119,13 @@ function HEADER_FOOTER(){
     <footer class='footerbasse'>
         <div class='footer-container'>
             <footer class='leftfooter'>
-                <label for='Navigation' id='navigation-label'>Navigation :</label>
+                <label for='Mentions légales' id='navigation-label'>Mentions légales :</label>
                     <p>&nbsp;&nbsp;~&nbsp;&nbsp;</p>
                 <nav class='navbarfooter'>
-                    <a href='#'>Accueil </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href='#'>Entreprises </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href='#'>Offres </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href='#'>Pilotes / Etudiants </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href='#'>Liste de Souhait </a>  
+                    <a href='#'>Informations légales </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href='#'>CGU </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href='#'>Politique de confidentialité </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href='#'>Nous contacter </a>&nbsp;&nbsp;|&nbsp;&nbsp;
                 </nav>
                 <p>&nbsp;&nbsp;~&nbsp;&nbsp;</p>
             </footer>
