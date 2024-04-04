@@ -31,6 +31,9 @@
 					<span id="MotDePasse" class="TextRed"></span><br><br>
 					<a href="" class="linkMDP">Mot de passe oublié ?</a><br><br>
 					<input type="submit" name="action" value="Connexion"><br>
+					{if $erreur}
+						<p class='erreur_connexion'>{$erreur}</p>
+					{/if}
 					<span id="soumission" class="TextRed"></span><br><br>
 					<hr class="horizontal">
 					<p class="connectext">Vous n'avez pas encore de compte ? <a href="index.php?page=Creer_un_compte" class="link">Créez-en un !</a></p>

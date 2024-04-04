@@ -33,10 +33,12 @@
     				</div>
 				</td>
 				<td>
+				<div class="entrer">
     				<div class="text-area-container">
         				<label for="Ou" id="ou">Où ?</label>
         				<textarea id="textarea_O" placeholder="Ville, Adresse, CP ?" name="Ou"></textarea>
     				</div>
+				</div>
 				</td>
 				<td>
 					<div class="bloc-droite-high">
@@ -319,12 +321,12 @@
 								</div>
 								<div class="lolo">
 									{if $compte_type == 'Admin'}
-										<button type="submit" class="btn-modifier" id="btnModifier" >Modifier</button>
+										<button type="submit" name="modifier_offre_{$offre->getid_offre()}" class="btn-modifier"  >Modifier</button>
 										<button type="submit" name="supprimer_offre_{$offre->getid_offre()}" class="btn-supprimer">Supprimer</button>
-										<button type="submit" name="Postuler_offre_{$offre->getid_offre()}" class="btn-invisible" >Invisibilité</button>
 									{/if}
 									{if $compte_type == 'Étudiant'}
-										<button type="submit" class="btn-modifier" id="btnPostuler" >Postuler</button>
+										<button type="button" class="btn-modifier" id="btnPostuler" onclick="window.location.href='index.php?page=Créer_Offre'">Postuler</button>
+
 									{/if}
 
 								</div>

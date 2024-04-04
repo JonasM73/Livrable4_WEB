@@ -16,8 +16,12 @@ if (isset($_POST['action']) && $_POST['action'] === 'Connexion') {
             $page = 'Acceuil';
             header("Location: index.php");
         }
-    } else {
+    } else { $erreur = "Vueillez entrer le bon mot de passe ou la bonne adresse mail...";
+            $smarty->assign('erreur', $erreur);
+
     }
-}else {}
+}else {     $erreur = '';
+            $smarty->assign('erreur', $erreur);
+}
 
 $smarty->display(MAIN_PATH . "/Template/$page.tpl");

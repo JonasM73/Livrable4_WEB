@@ -12,13 +12,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     }
     foreach ($_POST as $key => $value) {
-        if (strpos($key, 'Postuler_offre_') === 0) {
-            $id_offre = substr($key, strlen('Postuler_offre_'));
-            $Accueil_offre->Supprimer_Offre($id_offre);
-            header("Location: index.php");
-            exit;
+        if (strpos($key, 'modifier_offre_') === 0) {
+            $id_offre = substr($key, strlen('modifier_offre_'));
+            $offre = $Accueil_offre->getOffreParId($id_offre); 
+            if ($offre) {
+                $smarty->assign('offre', $offre);
+                $smarty->display(MAIN_PATH . "/Template/Modifier_offre.tpl");
+                exit;
+            } else {  }
         }
     }
+    
+
     if (isset($_POST['Rechercher_offre'])) {
         $ou_content = $_POST['Ou'].'%';
         $nom_content = $_POST['Nom'].'%';

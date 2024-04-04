@@ -42,7 +42,7 @@
 						<input name='CP' placeholder='CP' id='CP' oninput="fetchCities(this.value)" required><br>
 						<span id='errorCP' class='error'></span><br><br>
 						<label>Ville</label><br>
-						<select name='ville' class='selecity' id='city'></select><br>
+						<select name='ville'  id='city'></select><br>
 						<span id='error' class='error'></span><br><br>
 						<label>Adresse</label><br><br>
 						<input type='text' id='address' name='address' placeholder='Entrez votre adresse' oninput='validateAddress(this)' required><br>

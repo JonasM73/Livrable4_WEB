@@ -39,6 +39,9 @@ function DISPLAY($header, $footer, $compte, $compte_id, $compte_type){
     elseif($page == 'Wishlist' ){
         require_once 'Assets\PHP\Gestion_Candidature\controller_Candidature.php';    
     }
+    elseif($page == 'Wishlist' ){
+        require_once 'Assets\PHP\Gestion_Candidature\controller_Candidature.php';    
+    }
     else {
         require_once 'Assets\PHP\Gestion_Accueil\controller_Accueil.php';    
     }

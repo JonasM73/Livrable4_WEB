@@ -1,0 +1,134 @@
+.divclasse {
+    max-width: 1100px; /* Ajustez la valeur selon vos besoins */
+    margin: 0 auto; /* Centre horizontalement */
+}
+
+
+
+/* Style pour les colonnes */
+.column-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Espacement entre les lignes */
+}
+
+/* Style pour les fieldsets */
+fieldset {
+    width: 45%; /* Ajustez la largeur selon vos besoins */
+}
+
+
+
+.Utilisateur {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px; /* Vous pouvez ajuster cette valeur selon vos besoins */
+}
+fieldset {
+    margin-bottom: 20px;
+}
+
+
+.affichage { 
+    height: 290px; 
+    margin-top: 25px; 
+    overflow: auto; 
+    display: flex;
+    grid-template-columns: 250px auto;
+    border-radius: 15px; 
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(215, 216, 219, 0.5); /* Ombre */
+    border: 2px solid black;
+    margin-bottom: 50px;
+}
+.affichage1 {
+    border: 2px solid black;
+    height: 200px;
+    width: 300px;
+    margin-top: 40px;
+    margin-left: 15px;
+    border-radius: 15px; /* Arrondir les coins du conteneur */
+    overflow: hidden; /* Masquer le débordement de l'image */
+    position: relative; /* Position relative pour gérer les coins arrondis */
+}
+.lolo {
+    display: flex;
+    flex-direction: column; /* Pour empiler les éléments verticalement */
+    align-items: center; /* Pour centrer les boutons horizontalement */
+    width: fit-content; /* Ajuster la largeur du conteneur à la largeur des boutons */
+    padding: 10px; /* Ajouter un peu d'espace intérieur pour une meilleure apparence */
+}
+
+.affichage1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Assurez-vous que l'image remplit le conteneur tout en conservant son ratio */
+    border-radius: 15px; /* Conserver les coins arrondis de l'image */
+}
+
+.conteneur-droite { 
+    margin-left: 30px; 
+    display: flex; 
+    flex-grow: 1;
+    flex-direction: column; 
+    margin-top: 10px; 
+    margin-right: 15%;
+}
+.text-area-container { 
+    display: flex; 
+    flex-direction: column;
+}
+textarea { 
+    resize: none; 
+    font-size: 18px; 
+    font-family: "Century Gothic", sans-serif; 
+    text-align: left; 
+    margin: 0; 
+    padding: 0; 
+    height: 40px; 
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+#Nom,#ou { 
+    font-family: "Century Gothic", sans-serif; 
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-top: 10px;
+}
+
+#Nom,#Entreprises {
+    margin-left: 5px;
+}
+
+#ou, #textarea_O{
+    margin-left: 25px;
+}
+
+
+
+.texte_affichage1 { 
+    height: 35px; 
+    width: 400px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.presentation_affichage1 { 
+    margin-top: 15px; 
+    display: flex;
+    border: 1px solid black; 
+    height: 170px; 
+    width: 600px; 
+    margin-left: 0px;    
+    overflow: auto; 
+    border-top-left-radius: 15px; /* Coin supérieur gauche arrondi */
+    border-bottom-left-radius: 15px; /* Coin inférieur gauche arrondi */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+.texte-presentation { 
+    padding: 10px; 
+    text-align: justify;
+}
