@@ -25,17 +25,18 @@ class MANIP_Entreprise extends SQLconnection {
     public function Afficher_Entreprise() {
         $sql = "";
         $requete = $this->getBDD()->query($sql);
-        $offres = array();
+        $entreprise = array();
         while ($row = $requete->fetch()) {
-            $offre = new Entreprise();
-            $offre->setid_entreprise($row['id_entreprise']);
-            $offre->setnom_entreprise($row['nom_entreprise']);
-            $offre->setsecteur_activite($row['entreprise_secteur_activite']);
-            $offres[] = $offre;
+            $entreprise = new Entreprise();
+            $entreprise->setid_entreprise($row['id_entreprise']);
+            $entreprise->setnom_entreprise($row['nom_entreprise']);
+            $entreprise->setsecteur_activite($row['entreprise_secteur_activite']);
+            $entreprises[] = $entreprise;
         }
-        return $offres;
+        return $entreprises;
     }
-    public function Supprimer_Offre($id_offre) {
+
+    public function Supprimer_Entreprise($id_entreprise) {
         $sql = "DELETE FROM requérir WHERE id_Offre_stage = :id;
                 DELETE FROM Destiner WHERE id_Offre_stage = :id;
                 DELETE FROM mettre_en_favori WHERE id_Offre_stage = :id;
