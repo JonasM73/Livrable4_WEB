@@ -9,14 +9,11 @@ function validateEmail() {
         const domaine = parts[1].split('.');
         const boiteMail = domaine[0];
         const extension = domaine[1];
-        
         // Vérifier si le nom de la boîte mail existe bien
         const boitesMailsConnu = ['outlook', 'gmail', 'hotmail', 'yahoo', 'icloud', 'viacesi', 'exemple'];
         const isValidBoiteMail = boitesMailsConnu.includes(boiteMail.toLowerCase());
-        
         // Vérifier si les deux derniers caractères existent
         const isValidExtension = extension.length >= 2;
-        
         if (isValidBoiteMail && isValidExtension) {
             emailMessage.textContent = '';
         } else {
@@ -66,16 +63,13 @@ function validatePassword() {
 function validateForm(event) {
     // Empêcher l'envoi du formulaire par défaut
     event.preventDefault();
-
     // Valider l'e-mail
     validateEmail();
     // Valider le mot de passe
     validatePassword();
-
     // Récupérer les messages d'erreur
     const emailMessage = document.getElementById('emailMessage').textContent;
     const passwordMessage = document.getElementById('MotDePasse').textContent;
-
     // Vérifier si les deux champs sont valides avant d'envoyer la requête
     if (emailMessage === '' && passwordMessage === '') {
         // Les champs sont valides, vous pouvez envoyer la requête

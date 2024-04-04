@@ -5,7 +5,7 @@ class SQLconnection {
     private $host = 'localhost';
     private $dbname = 'projet_web';
     private $username = 'root';
-    private $password = 'cesi';
+    private $password = 'Finette1789';
 
     // Constructor
     public function __construct() {

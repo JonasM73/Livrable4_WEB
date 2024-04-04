@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Sélectionne toutes les cases à cocher dans les options
     var checkboxes = document.querySelectorAll('.option input[type="checkbox"]');
     // Pour chaque case à cocher, ajoute un écouteur d'événements pour le changement d'état
     checkboxes.forEach(function(checkbox, index) {
@@ -39,33 +40,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-var scrollToTopButton = document.getElementById('scrollToTop');
-
-// Fonction pour afficher ou masquer le bouton en fonction du défilement de la page
-function toggleScrollToTopButton() {
-    if (window.scrollY > 300) { // Afficher le bouton lorsque l'utilisateur descend de 300 pixels
-        scrollToTopButton.style.display = 'block';
-    } else {
-        scrollToTopButton.style.display = 'none';
-    }
-}
-
-// Ajouter un écouteur d'événement pour le défilement de la page
-window.addEventListener('scroll', toggleScrollToTopButton);
-
-// Fonction pour faire défiler vers le haut de la page lorsque le bouton est cliqué
-scrollToTopButton.addEventListener('click', function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
 function validation() {
-    var competence = document.querySelector('input[name="Compétence"]:checked');
-    var duree_stage = document.querySelector('input[name="durée_stage"]:checked');
-    var remuneration = document.querySelector('input[name="remuneration"]:checked');
-    var promo = document.querySelector('input[name="Promo"]:checked');
+    var competence = document.querySelector('input[name="SEC_AC"]:checked');
+    var duree_stage = document.querySelector('input[name="num_stagiaire"]:checked');
+    var remuneration = document.querySelector('input[name="Note"]:checked');
     var entreprise = document.getElementById("Entreprises").value;
     var ou = document.getElementById("textarea_O").value;
     // Vérifier si au moins un champ est rempli
@@ -98,28 +76,21 @@ function validation() {
 
 function updateCate(radio) {
     if (radio.checked) {
-        var cate = document.getElementById('Compétence_titre');
+        var cate = document.getElementById('Secteur_titre');
         cate.value = radio.value;
     }
 }
 
 function updateCate2(radio) {
     if (radio.checked) {
-        var cate2 = document.getElementById('durée_stage_titre');
+        var cate2 = document.getElementById('Postulant_titre');
         cate2.value = radio.value;
     }
 }
 
 function updateCate3(radio) {
     if (radio.checked) {
-        var cate3 = document.getElementById('remuneration_titre');
-        cate3.value = radio.value;
-    }
-}
-
-function updateCate4(radio) {
-    if (radio.checked) {
-        var cate3 = document.getElementById('promotion_titre');
+        var cate3 = document.getElementById('note_titre');
         cate3.value = radio.value;
     }
 }

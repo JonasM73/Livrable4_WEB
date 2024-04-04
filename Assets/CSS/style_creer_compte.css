@@ -1,47 +1,43 @@
-/* Styles pour les menus déroulants */
 select {
-    border: none; /* Pas de bordure */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 10px; /* Espacement interne */
-    margin: 5px 0; /* Marge externe */
-    width: 43%; /* Largeur fixe de 200 pixels */
-    box-sizing: border-box; /* La largeur inclut le remplissage et la bordure */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    width: 43%;
+    box-sizing: border-box;
 }
 
-/* Style pour centrer le tableau */
 table {
-    width: 50%; /* Largeur du tableau */
-    margin: 0 auto; /* Centrage horizontal */
-    border-collapse: collapse; /* Fusionner les bordures de cellules */
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse; 
 }
 
 td {
-    text-align: center; /* Centrer le texte dans les cellules */
+    text-align: center; 
 }
 
-/* Styles pour les ensembles de champs de formulaire */
 fieldset[type="cadre"]{
-	text-align: left; /* Centrer le texte dans le champ */
-    margin: 1% auto; /* Marge automatique horizontale pour centrer le champ */
+	text-align: left;
+    margin: 1% auto; 
 	font-size: 13px;
 }
 
 input[type="button"] {
-    background-color: black; /* Définit la couleur de fond en noir */
-    color: white; /* Définit la couleur du texte en blanc */
-    border: none; /* Supprime la bordure */
-    padding: 10px 20px; /* Ajoute un espace intérieur de 10px en haut/bas et 20px à gauche/droite */
-    text-align: center; /* Centre le texte horizontalement */
-    text-decoration: none; /* Supprime la décoration du texte */
-    font-size: 16px; /* Définit la taille de la police à 16 pixels */
-    margin: 0 10px; /* Ajoute une marge de 5 pixels en haut et en bas */
-    width: 150px; /* Définit une largeur fixe de 100 pixels */
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px;
+    width: 150px;
 }
 
-/* Lorsque le curseur survole un élément de type "button", applique les styles suivants */
 input[type="button"]:hover {
-    text-decoration: underline; /* Souligne le texte lors du survol */
-    background-color: #333; /* Change la couleur de fond en gris foncé */
+    text-decoration: underline; 
+    background-color: #333;
 }
 
 #scrollToTop {

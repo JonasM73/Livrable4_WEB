@@ -56,7 +56,6 @@ document.getElementById("créer_compte").addEventListener("submit", function(eve
     // Récupérer les valeurs des champs de saisie
     var motDePasseA = document.getElementById('password').value;
     var motDePasseB = document.getElementById('confirmpassword').value;
-
     // Vérifier si les mots de passe sont différents
     if (motDePasseA !== motDePasseB) {
         // Annuler l'envoi du formulaire

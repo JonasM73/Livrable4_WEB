@@ -63,12 +63,10 @@ function validateAddress(input, index) {
 function generateAddressFields(num) {
     var addressesDiv = document.getElementById("addresses");
     addressesDiv.innerHTML = ""; // Clear previous content
-    
     if (num > 0){
         addressesDiv.innerHTML = "<br><div id='ADD'></div><br><br>";
         var addresses = document.getElementById("ADD");
     }
-
     for (var i = 1; i <= num; i++) {
         var fieldset = document.createElement("fieldset");
         fieldset.innerHTML = "<h2>Adresse " + i + "</h2>" +
@@ -82,9 +80,7 @@ function generateAddressFields(num) {
             "<input type='text' id='address" + i + "' name='address' placeholder='Entrez votre adresse' oninput='validateAddress(this, " + i + ")' required><br>" +
             "<span id='erroraddress" + i + "' class='TextRed'></span>" +
             "<p class='connectext'>Exemple d'adresse : 123 Main Street</p>";
-
         addresses.appendChild(fieldset);
-
         // Ajout d'un saut de ligne entre chaque fieldset inséré
         if (i < num) {
             var lineBreak = document.createElement("br");
@@ -107,7 +103,7 @@ function generateAddressFields(num) {
 	}
 
     // Empêcher l'envoi du formulaire si un champ est invalide
-    var form = document.getElementById('créer_entreprise'); // Remplacez 'yourFormId' par l'ID de votre formulaire
+    var form = document.getElementById('créer_entreprise');
     form.onsubmit = function() {
         return validateForm();
     };
@@ -120,14 +116,11 @@ function fetchCities(index) {
     var citySelect = document.getElementById("city" + index);
     // Récupération de l'élément affichant une erreur spécifique
     var error = document.getElementById("error" + index);
-
     // Efface les options précédentes dans la liste déroulante des villes s'il y en a
     citySelect.innerHTML = "";
     error.innerHTML = "";
-
     // Création d'une nouvelle requête XMLHttpRequest
     var xhr = new XMLHttpRequest();
-
     // Si la longueur du code postal est correcte
     if (cpInput.length === 5) {
         // Ouverture d'une requête GET vers l'API en utilisant le code postal saisi
@@ -159,5 +152,5 @@ function fetchCities(index) {
 function resetForm() {
     document.getElementById("créer_entreprise").reset();
 	var addressesDiv = document.getElementById("addresses");
-    addressesDiv.innerHTML = ""; // Clear previous content
+    addressesDiv.innerHTML = "";
 }

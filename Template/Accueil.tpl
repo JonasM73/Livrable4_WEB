@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang=fr>
 	<head>
@@ -13,7 +12,6 @@
 		<meta name='theme-color' content='#f3f3f3'>
 	</head>
 
-	<body>
 	<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
 
 	<header>
@@ -327,7 +325,6 @@
 									{/if}
 									{if $compte_type == 'Étudiant'}
 										<button type="submit" class="btn-modifier" id="btnPostuler" >Postuler</button>
-
 									{/if}
 
 								</div>
