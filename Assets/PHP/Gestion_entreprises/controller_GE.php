@@ -4,7 +4,7 @@ $ent= new Entreprise();
 
 $result_secteur = ; // Compter le nombre d'entreprise par secteur d'activité
 $result_localité = ; // Compter le nombre d'entreprise par ville
-$result_annonces = ; // Top 10 des annonces les plus demandés
+$result_annonces = ; // Top des Entreprises dont les annonces sont les plus demandés
 
 // Enregistrer les données dans un tableau avec colonne "secteur d'activité" et "nombre"
 $secteurs_activite = array();
