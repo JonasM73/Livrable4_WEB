@@ -1,6 +1,6 @@
 // Fonction de validation du code postal
 function validatePostalCode(input) {
-    const postalCodePattern = /^\d{5}$/; // Expression régulière pour 5 chiffres uniquement
+    const postalCodePattern = /^\d{5}$/;
     const isValid = postalCodePattern.test(input.value);
     const errorSpan = document.getElementById('errorCP');
     if (!isValid) {
@@ -12,7 +12,7 @@ function validatePostalCode(input) {
 
 // Fonction de validation du numéro de téléphone
 function validatePhoneNumber(input) {
-    const phoneNumberPattern = /^\d{10}$/; // Expression régulière pour 10 chiffres uniquement
+    const phoneNumberPattern = /^\d{10}$/;
     const isValid = phoneNumberPattern.test(input.value);
     const errorSpan = document.getElementById('errorNum');
     if (!isValid) {
@@ -39,11 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById('CP').addEventListener('input', function() {
         validatePostalCode(this);
     });
-
     document.getElementById('num').addEventListener('input', function() {
         validatePhoneNumber(this);
     });
-
     document.getElementById('TVA').addEventListener('input', function() {
         validateVATNumber(this);
     });

@@ -88,15 +88,15 @@ textarea {
 }
 
 table {
-    border-collapse: collapse; /* Fusionne les bordures des cellules */
+    border-collapse: collapse;
 }
 
 tr {
-    text-align: center; /* Centre horizontalement le contenu des cellules */
+    text-align: center;
 }
 
 td {
-    padding: 10px; /* Ajoute un peu d'espace à l'intérieur des cellules */
+    padding: 10px;
 }
 
 .btn-rechercher { 
@@ -135,7 +135,7 @@ td {
     grid-template-columns: 250px auto;
     border-radius: 15px; 
     background-color: white;
-    box-shadow: 5px 5px 10px rgba(215, 216, 219, 0.5); /* Ombre */
+    box-shadow: 5px 5px 10px rgba(215, 216, 219, 0.5);
     border: 2px solid black;
 }
 
@@ -147,15 +147,15 @@ td {
     margin-left: 15px;
     border-radius: 15px;
     background-color: #ABABAB;
-    display: flex; /* Utilisation de flexbox */
-    justify-content: center; /* Alignement horizontal au centre */
-    align-items: center; /* Alignement vertical au centre */
-    overflow: hidden; /* Masquer le débordement de l'image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .affichage1 img {
-    width: 100%; /* Définir la largeur de l'image sur 100% */
-    height: auto; /* Ajuster automatiquement la hauteur de l'image */
+    width: 100%;
+    height: auto;
 }
 
 .conteneur-droite { 
@@ -183,9 +183,9 @@ td {
     width: 600px; 
     margin-left: 0px;    
     overflow: auto; 
-    border-top-left-radius: 15px; /* Coin supérieur gauche arrondi */
-    border-bottom-left-radius: 15px; /* Coin inférieur gauche arrondi */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Ombre */
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .texte-presentation { 
@@ -199,13 +199,12 @@ td {
 
 .lolo {
     display: flex;
-    flex-direction: column; /* Pour empiler les éléments verticalement */
-    align-items: center; /* Pour centrer les boutons horizontalement */
-    width: fit-content; /* Ajuster la largeur du conteneur à la largeur des boutons */
-    padding: 10px; /* Ajouter un peu d'espace intérieur pour une meilleure apparence */
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    padding: 10px;
 }
 
-/* Les styles des boutons */
 .btn-modifier, .btn-supprimer, .btn-invisible {
     background-color: white; 
     color: black;
@@ -217,25 +216,22 @@ td {
     width: 150px;
     height: 50px;
     font-family: "Century Gothic", sans-serif;
-    margin: 20px 0; /* Ajouter de l'espace entre les boutons */
-    box-shadow: 9px 9px 12px rgba(0, 0, 0, 0.6); /* Ombre à droite et en bas */
+    margin: 20px 0;
+    box-shadow: 9px 9px 12px rgba(0, 0, 0, 0.6);
 }
 
-/* Styles hover pour tous les boutons */
 .btn-modifier:hover, .btn-supprimer:hover, .btn-invisible:hover {
     background-color: #0056b3; 
     color: white;
     transform: scale(1.08);
-    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.6); /* Ombre plus prononcée au survol */
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.6);
 }
-
 
 .Utilisateur {
     text-align: center;
     font-weight: bold;
-    font-size: 24px; /* Vous pouvez ajuster cette valeur selon vos besoins */
+    font-size: 24px;
 }
-
 
 .stylabel{
     font-size:20px;

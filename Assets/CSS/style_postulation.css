@@ -1,8 +1,7 @@
-/* Styles pour la ligne horizontale */
 .horizontal_postul {
-    border: none; /* Supprime la bordure par défaut */
-    border-top: 1px solid black; /* Ajoute une bordure supérieure d'une épaisseur de 1 pixel */
-    width: 50%; /* Largeur de la ligne */
+    border: none;
+    border-top: 1px solid black;
+    width: 50%;
 }
 
 #LM{
@@ -28,7 +27,7 @@
 }
 
 textarea {
-  width: 300px; /* Largeur fixe */
-  height: 200px; /* Hauteur fixe */
-  resize: none; /* Désactive le redimensionnement */
+  width: 300px; 
+  height: 200px;
+  resize: none; 
 }

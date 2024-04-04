@@ -69,9 +69,7 @@ class Accueil_offre extends SQLconnection {
         $requete->bindParam(':remuneration', $remuneration, PDO::PARAM_INT);
         $requete->bindParam(':promotion', $promotion, PDO::PARAM_STR);
         $requete->bindParam(':duree', $duree, PDO::PARAM_INT);
-    
         $requete->execute();
-    
         $offres = array();
         while ($row = $requete->fetch()) {
             $offre = new Offre();
@@ -86,8 +84,6 @@ class Accueil_offre extends SQLconnection {
         }
         return $offres;
     }
-    
-
 }
 
 class Offre {

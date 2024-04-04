@@ -1,5 +1,4 @@
 <?php
-
 class Entreprise {
     private $connexion;
     private $table_name = "Entreprise";

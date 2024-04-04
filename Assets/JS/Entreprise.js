@@ -1,16 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Sélectionne toutes les cases à cocher dans les options
     var checkboxes = document.querySelectorAll('.option input[type="checkbox"]');
-    
     // Pour chaque case à cocher, ajoute un écouteur d'événements pour le changement d'état
     checkboxes.forEach(function(checkbox, index) {
         checkbox.addEventListener('change', function(event) {
             // Empêche la propagation de l'événement pour éviter que le clic ne soit transmis aux conteneurs parents
             event.stopPropagation();
-
             // Trouve le sous-menu correspondant à cette case à cocher
             var submenu = this.parentNode.querySelector('.submenu');
-
             // Si la case à cocher est cochée
             if (this.checked) {
                 // Affiche le sous-menu et met le titre en gras
@@ -24,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 label.style.fontWeight = 'normal';
             }
         });
-
         // Ouvre le premier sous-menu par défaut
         if (index === 0) {
             var firstSubmenu = checkbox.parentNode.querySelector('.submenu');
@@ -33,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
             firstmenu.style.fontWeight = 'bold';
         }
     });
-
     const textarea = document.getElementById('singleLineTextarea');
     if (textarea) {
         textarea.addEventListener('input', function() {
@@ -51,15 +46,12 @@ function validation() {
     var remuneration = document.querySelector('input[name="Note"]:checked');
     var entreprise = document.getElementById("Entreprises").value;
     var ou = document.getElementById("textarea_O").value;
-
     // Vérifier si au moins un champ est rempli
     if (!competence && !duree_stage && !remuneration && !promo && !entreprise && !ou) {
         alert("Veuillez remplir au moins un champ de recherche.");
         return false;
     }
-
     // Si au moins un champ est rempli, exécuter la requête de recherche
-    // Vous pouvez remplacer cette partie du code par l'appel à une fonction AJAX pour exécuter la requête en arrière-plan
     var checkboxes = document.querySelectorAll('.option input[type="checkbox"]');
     checkboxes.forEach(function(checkbox, index) {
         // Masque tous les sous-menus
@@ -71,7 +63,6 @@ function validation() {
             if (label) {
                 label.style.fontWeight = 'normal';
             }
-
             // Ouvre le premier sous-menu
             if (index === 0) {
                 submenu.style.display = 'block';
