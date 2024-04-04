@@ -58,9 +58,9 @@
 						<label>Nom de l'entreprise</label><br><br>
 						<input type="text" id="nom_enterprise" name="nom_enterprise" placeholder="Entrez le nom d'entreprise" required><br><br>
 						<label>Places disponibles</label><br><br>
-						<input type="number" name="number" id="num_add" placeholder="Entrez le nombre de places" required min="1"><br><br>
+						<input type="number" name="nb_place_dispo" id="nb_place_dispo" placeholder="Entrez le nombre de places" required min="1"><br><br>
 						<label>Date de publication</label><br><br>
-						<input type="date" id="date_input" name="date_input" required><br><br>
+						<input type="date" id="date_publi" name="date_publi" required><br><br>
 						<label>Date de début du stage</label><br><br>
 						<input type="date" id="date_debut" name="date_debut" required><br><br>
 						<label>Date de fin du stage</label><br><br>
@@ -74,7 +74,7 @@
 							<input name='CP' placeholder='CP' id='CP' oninput="fetchCities(this.value)" required><br>
 							<span id='errorCP' class='error'></span><br><br>
 							<label>Ville</label><br>
-							<select name='ville' class='selecity' id='city'></select><br>
+							<select name='city' class='selecity' id='city'></select><br>
 							<span id='error' class='error'></span><br><br>
 							<label>Adresse</label><br><br>
 							<input type='text' id='address' name='address' placeholder='Entrez votre adresse' oninput='validateAddress(this)' required><br>
