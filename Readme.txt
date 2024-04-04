@@ -39,7 +39,7 @@ Etape 3:
 
 
 	127.0.0.1       localhost
-	127.0.0.1       SLC.local
+	127.0.0.1       SLC.com
 
 Etape 5 :
 - Lancer l'application avec l'URL "htpp://localhost".
