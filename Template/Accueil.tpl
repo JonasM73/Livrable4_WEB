@@ -302,39 +302,37 @@
         			</div>      
     			</div>
 			</div>
-				<div class="divclasse">
-					{if $offres}
-						{foreach $offres as $offre}
-							<div class="affichage" id_offre="{$offre->getid_offre()}">
-								<div class="affichage1">
-									<img src="Images/images.webp" alt="logo {$offre->getnom_entreprise()}">
-								</div>
-								<div class="conteneur-droite">
-									<div class="texte_affichage1">{$offre->gettitre_offre_stage()}&nbsp;-&nbsp;{$offre->getnom_entreprise()}</div>
-									<div class="presentation_affichage1">
-										<div class="texte-presentation">
-											<p>{$offre->getdescriptif_offres_stage()}</p>
-										</div>  
-									</div>
-									<p><strong>Durée :</strong> {$offre->getStage_Date()} Semaines &nbsp;&nbsp;&nbsp; <strong>Rémunération : </strong>{$offre->getRemuneration()} €/mois &nbsp;&nbsp;&nbsp; 
-									<strong>Places restantes : </strong>{$offre->getNB_places_restantes()}</p>
-								</div>
-								<div class="lolo">
-									{if $compte_type == 'Admin'}
-										<button type="submit" name="modifier_offre_{$offre->getid_offre()}" class="btn-modifier"  >Modifier</button>
-										<button type="submit" name="supprimer_offre_{$offre->getid_offre()}" class="btn-supprimer">Supprimer</button>
-									{/if}
-									{if $compte_type == 'Étudiant'}
-										<button type="button" class="btn-modifier" id="btnPostuler" onclick="window.location.href='index.php?page=Créer_Offre'">Postuler</button>
-
-									{/if}
-
-								</div>
+			<div class="divclasse">
+				{if $offres}
+					{foreach $offres as $offre}
+						<div class="affichage" id_offre="{$offre->getid_offre()}">
+							<div class="affichage1">
+								<img src="Images/images.webp" alt="logo {$offre->getnom_entreprise()}">
 							</div>
-						{/foreach}
-					{/if}
-				</div>
-			</form>
+							<div class="conteneur-droite">
+								<div class="texte_affichage1">{$offre->gettitre_offre_stage()}&nbsp;-&nbsp;{$offre->getnom_entreprise()}</div>
+								<div class="presentation_affichage1">
+									<div class="texte-presentation">
+										<p>{$offre->getdescriptif_offres_stage()}</p>
+									</div>  
+								</div>
+								<p><strong>Durée :</strong> {$offre->getStage_Date()} Semaines &nbsp;&nbsp;&nbsp; <strong>Rémunération : </strong>{$offre->getRemuneration()} €/mois &nbsp;&nbsp;&nbsp; 
+								<strong>Places restantes : </strong>{$offre->getNB_places_restantes()}</p>
+							</div>
+							<div class="lolo">
+								{if $compte_type == 'Admin'}
+									<button type="submit" name="modifier_offre_{$offre->getid_offre()}" class="btn-modifier"  >Modifier</button>
+									<button type="submit" name="supprimer_offre_{$offre->getid_offre()}" class="btn-supprimer">Supprimer</button>
+								{/if}
+								{if $compte_type == 'Étudiant'}
+									<button type="button" class="btn-modifier" id="btnPostuler" onclick="window.location.href='index.php?page=Créer_Offre'">Postuler</button>
+								{/if}
+							</div>
+						</div>
+					{/foreach}
+				{/if}
+			</div>
+		</form>
 		</main>
 		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>
 		<script src='Assets/JS/Accueil.js'></script>
