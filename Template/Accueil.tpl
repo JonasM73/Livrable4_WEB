@@ -11,13 +11,15 @@
 		<link rel='apple-touch-icon' sizes='180x180' href='Images/icon-180x180.webp'>
 		<meta name='theme-color' content='#f3f3f3'>
 	</head>
+	<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
+	
+		<header>
+		
+			{$header}
+		</header><br><br>
+
 
 	<body>
-		<header>
-			<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
-			{$header}
-			<br><br>
-		</header>
 		<main>
 			<br>
 			{if $compte}

@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<title>StageLinkCesi - Créer une offre</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
+		<link rel="stylesheet" href="Assets/CSS/Accueil.css">
+
 		<link rel="stylesheet" href="Assets/CSS/style_creer_compte.css">
 		<link rel="stylesheet" href="Assets/CSS/style_creer_entreprise.css">
 		<link rel='manifest' href='Assets/PWA/manifest.json'>
@@ -13,11 +15,15 @@
 		<meta name='theme-color' content='#f3f3f3'>
 	</head>
 
+	<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
+	
+	<header>
+	
+		{$header}
+	</header><br><br>
+
 	<body>
-		<header>
-			<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
-			{$header}
-		</header><br><br>
+
 		<main>
 			<form id="creer_offre">
 				<fieldset>

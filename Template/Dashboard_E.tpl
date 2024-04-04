@@ -5,7 +5,6 @@
 		<title>StageLinkCesi - Accueil</title>
 		<link rel="stylesheet" type="text/css" href="Assets\CSS\style_site.css">
 		<link rel="stylesheet" href="Assets/CSS/Stat_offre.css">
-
 		<link rel='manifest' href='Assets/PWA/manifest.json'/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Dashboard Entreprises.">
@@ -16,11 +15,12 @@
 		<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
 	
 		<header>
+		
 			{$header}
 		</header><br><br>
 	
 		<body>
-	
+			
 			<h1>Repartition des offres par compétences :</h1>
 		<form method="POST">
 			<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des Entreprise par secteur de activité">
