@@ -5,10 +5,10 @@
 		<title>StageLinkCesi - Postuler à une offre</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
 		<link rel="stylesheet" href="Assets/CSS/style_postulation.css">
-		<link rel='manifest' href='Assets/PWA/manifest.json'/>
+		<link rel='manifest' href='Assets/PWA/manifest.json'>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Page de postulation.">
-		<link rel='apple-touch-icon' sizes='180x180' href='Images/icon-180x180.webp'/>
+		<link rel='apple-touch-icon' sizes='180x180' href='Images/icon-180x180.webp'>
 		<meta name='theme-color' content='#f3f3f3'>
 	</head>
 
@@ -23,7 +23,7 @@
 			<form id="postuler">
 				<fieldset>
 					<h1>Postuler à une offre</h1>
-					<label for="pdfFile">Déposez votre CV (PDF)</label><br><br>
+					<label for="CV">Déposez votre CV (PDF)</label><br><br>
 					<div class="custom-file-upload">
 						<input type="file" id="CV" name="CV" accept="application/pdf" required>
 						<label for="CV" id="fileLabel">Choisir un fichier</label>
@@ -40,10 +40,11 @@
 		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>
 		<script src="Assets/JS/Postuler.js"></script>
 		<script src="Assets/PWA/script.js"></script>
-	</body>
+		<br><br>
+		<footer>
+			{$content_footer}
+		</footer>
+		
+        </body>
 
-	<br><br>
-	<footer>
-		{$content_footer}
-	</footer>
 </html>

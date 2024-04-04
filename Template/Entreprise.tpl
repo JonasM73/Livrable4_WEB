@@ -6,20 +6,19 @@
 		<title>StageLinkCesi - Entreprises</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
 		<link rel="stylesheet" href="Assets/CSS/Accueil.css">
-		<link rel='manifest' href='Assets/PWA/manifest.json'/>
+		<link rel='manifest' href='Assets/PWA/manifest.json'>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Page d'affichage des entreprises.">
-		<link rel='apple-touch-icon' sizes='180x180' href='Images/icon-180x180.webp'/>
+		<link rel='apple-touch-icon' sizes='180x180'  href='Images/icon-180x180.webp'>
 		<meta name='theme-color' content='#f3f3f3'>
 	</head>
 
+	<body>
 	<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
 
 	<header>
 		{$header}
 	</header>
-
-	<body >
 		<main>
 		<br>
 		{if $compte}
@@ -29,13 +28,13 @@
 			<table>
 				<td>
     				<div class="text-area-container">
-        				<label for="Nom" id="Nom">Nom ?</label>
+        				<label for="Entreprises" id="Nom">Nom ?</label>
         				<textarea id="Entreprises" placeholder="Entreprises ?" name="Nom"></textarea>
     				</div>
 				</td>
 				<td>
     				<div class="text-area-container">
-        				<label for="Ou" id="ou">Où ?</label>
+        				<label for="textarea_O" id="ou">Où ?</label>
         				<textarea id="textarea_O" placeholder="Ville, Adresse, CP ?" name="Ou"></textarea>
     				</div>
 				</td>
@@ -150,7 +149,7 @@
 									<label for="Entre_1_et_5">Entre 1 et 3</label>
 								</div>
                    				<div>
-									<input type="radio" id="Entre_5_et_10" name="AUCUN" value="5" onchange="updateCate2(this)">
+									<input type="radio" id="Entre_5et_10" name="AUCUN" value="5" onchange="updateCate2(this)">
 									<label for="Entre_5_et_10">Entre 5 et 10</label>
 								</div>
                     			<div>
@@ -198,7 +197,7 @@
 			<div class="divclasse">
 				{if $entreprises}
 					{foreach $entreprises as $entreprise}
-						<div class="affichage" id_entreprise="{$entreprise->getid_entreprise()}">
+						<div class="affichage" data-id_entreprise="{$entreprise->getid_entreprise()}">
 							<div class="affichage1">
 								<img src="Images/images.webp" alt="logo {$entreprise->getnom_entreprise()}">
 							</div>
@@ -208,14 +207,14 @@
 							<div class="lolo">
 								{if $compte_type == 'Admin'}
 									<label>Note de l'entreprise :</label>
-									<input type="number" id="Note" name ="Note" placeholder="Noter l'entreprise" min=0 max=20>
+									<input type="number" id="Note2" name ="Note2" placeholder="Noter l'entreprise" min=0 max=20>
 									<button type="submit" class="btn-modifier" id="btnModifier" >Modifier</button>
 									<button type="submit" name="supprimer_offre_{$entreprise->getid_entreprise()}" class="btn-supprimer">Supprimer</button>
 									<button type="submit" name="Postuler_offre_{$entreprise->getid_entreprise()}" class="btn-invisible" >Invisibilité</button>
 								{/if}
 								{if $compte_type == 'Étudiant'}
 									<label>Note de l'entreprise :</label>
-									<input type="number" id="Note" name ="Note" placeholder="Noter l'entreprise" min=0 max=20>
+									<input type="number" id="Note3" name ="Note3" placeholder="Noter l'entreprise" min=0 max=20>
 									<button type="submit" class="btn-modifier" id="btNote" >Envoyer</button>
 								{/if}
 							</div>
@@ -229,9 +228,12 @@
 		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>
 		<script src='Assets/JS/Accueil.js'></script>
 		<script src="Assets/PWA/script.js"></script>
-	</body>
+
 	<br><br>
 	<footer>
 		{$content_footer}
 	</footer>
+
+	</body>
+
 </html>

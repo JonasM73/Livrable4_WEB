@@ -18,7 +18,7 @@
 		{$header}
 	</header>
 
-	<body >
+	<body>
 		<main>
 		<br>
 		{if $compte}

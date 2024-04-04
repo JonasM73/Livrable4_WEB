@@ -5,12 +5,12 @@
 		<title>StageLinkCesi - Modifier une offre</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
         <link rel="stylesheet" href="Assets/CSS/Modifier_offre.css">
-		<link rel='manifest' href='Assets/PWA/manifest.json'/>
+		<link rel='manifest' href='Assets/PWA/manifest.json'>
 		<link rel="stylesheet" href="Assets/CSS/style_creer_compte.css">
 		<link rel="stylesheet" href="Assets/CSS/style_creer_entreprise.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Page d'accueil.">
-		<link rel='apple-touch-icon' sizes='180x180' href='Images/icon-180x180.webp'/>
+		<link rel='apple-touch-icon' sizes='180x180' href='Images/icon-180x180.webp'>
 		<meta name='theme-color' content='#f3f3f3'>
 	</head>
 
@@ -20,8 +20,6 @@
 	<header>
 		{$header}
 	</header>
-    
-    <body >
 	    <main>
 	    <br>
 	    {if $compte}
@@ -30,7 +28,7 @@
 		<form method="POST">
             <div class="divclasse">
             {if $offre}
-                    <div class="affichage" id_offre="{$offre->getid_offre()}">
+                    <div class="affichage" data-id_offre="{$offre->getid_offre()}">
                         <div class="affichage1">
                             <img src="Images/images.webp" alt="logo {$offre->getnom_entreprise()}">
                         </div>
@@ -48,6 +46,7 @@
                     </div>
             {/if}
 			</div>
+            </form>
             <form id="Modifier_offre">
 				<div class="column-layout">
 
@@ -112,10 +111,12 @@
 		<script src="Assets/JS/Creer_offre.js"></script>
         <script src="Assets/JS/Modifier_offre.js"></script>
 		<script src="Assets/PWA/script.js"></script>
-	</body>
-	
+
 	<br><br>
 	<footer>
 		{$content_footer}
 	</footer>
+
+        </body>
+	
 </html>

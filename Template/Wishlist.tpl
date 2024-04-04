@@ -5,20 +5,21 @@
 		<title>StageLinkCesi - Accueil</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
 		<link rel="stylesheet" href="Assets/CSS/Accueil.css">
-		<link rel='manifest' href='Assets/PWA/manifest.json'/>
+		<link rel='manifest' href='Assets/PWA/manifest.json'>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Page d'accueil.">
-		<link rel='apple-touch-icon' sizes='180x180' href='Images/icon-180x180.webp'/>
+		<link rel='apple-touch-icon' sizes='180x180' href='Images/icon-180x180.webp'>
 		<meta name='theme-color' content='#f3f3f3'>
 	</head>
 
-	<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
+	
+
+	<body>
+        <img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
 
 	<header>
 		{$header}
 	</header>
-
-	<body>
 		<main>
 		<br>
 		{if $compte}
@@ -26,16 +27,17 @@
 		{/if}
 		<form method="POST">
 			<table>
+                                <tr>
 				<td>
     				<div class="text-area-container">
-        				<label for="Nom" id="Nom">Nom ?</label>
+        				<label for="Entreprises" id="Nom">Nom ?</label>
         				<textarea id="Entreprises" placeholder="Entreprises ?" name="Nom"></textarea>
     				</div>
 				</td>
 				<td>
 				<div class="entrer">
     				<div class="text-area-container">
-        				<label for="Ou" id="ou">Où ?</label>
+        				<label for="textarea_O" id="ou">Où ?</label>
         				<textarea id="textarea_O" placeholder="Ville, Adresse, CP ?" name="Ou"></textarea>
     				</div>
 				</div>
@@ -45,6 +47,7 @@
     					<button type="submit" class="btn-rechercher" name="Rechercher_offre" onclick="validation()">Rechercher</button>
 					</div>
 				</td>
+                                </tr>
 			</table>
 			<div class="bloc-gauche">
     			<div class="menu-container">
@@ -91,8 +94,8 @@
                 			<label for="durée_stage" class="stylabel">&nbsp;&nbsp;&nbsp;&nbsp;Durée du Stage :</label>
                 			<div class="submenu">
                     			<div>
-									<input type="radio" id="moins d'un mois" name="durée_stage"  value="30" onchange="updateCate2(this)">
-									<label for="moins d'un mois">Moins d'un mois</label>
+									<input type="radio" id="moins_d'un_mois" name="durée_stage"  value="30" onchange="updateCate2(this)">
+									<label for="moins_d'un_mois">Moins d'un mois</label>
 								</div>
                     			<div>
 									<input type="radio" id="entre_1_et_3_mois" name="durée_stage" value="30" onchange="updateCate2(this)">
@@ -127,8 +130,8 @@
                 			<label for="remuneration" class="stylabel">&nbsp;&nbsp;&nbsp;&nbsp;Rémunération :</label>
                 			<div class="submenu">
                     			<div>
-									<input type="radio" id="sans remuneration" name="remuneration" value="0" onchange="updateCate3(this)">
-									<label for="sans remuneration">Sans rémunération</label>
+									<input type="radio" id="sans_remuneration" name="remuneration" value="0" onchange="updateCate3(this)">
+									<label for="sans_remuneration">Sans rémunération</label>
 								</div>
                     			<div>
 									<input type="radio" id="minimum_200_mensuel" name="remuneration" value="200" onchange="updateCate3(this)">
@@ -144,7 +147,7 @@
 								</div>
 								<div>
 									<input type="radio" id="Au_minimum_2000€_mensuelle" name="remuneration" value="2000" onchange="updateCate3(this)">
-									<label for="remuneration_forfaitaire">Au minimum 2000€ mensuelle</label>
+									<label for="Au_minimum_2000€_mensuelle">Au minimum 2000€ mensuelle</label>
 								</div>
                     			<div>
 									<input type="radio" id="aucune_selectionprix" name="remuneration" value="0" onchange="updateCate3(this)">
@@ -167,13 +170,13 @@
 						{for $i = 1 to $total_pages}
 							<a href="index.php?page={$i}" class="{if $i == $page_actuelle}active{/if}">{$i}</a>
 						{/for}
-						{if $page_actuelle < $total_pages}
+						{if $page_actuelle <$total_pages}
 							<a href="index.php?page={$page_actuelle+1}">Page suivante &raquo;</a>
 						{/if}
 					</div>
 				{/if}
 				{foreach $offres as $offre}
-					<div class="affichage" id_offre="{$offre->getid_offre()}">
+					<div class="affichage" data-id_offre="{$offre->getid_offre()}">
 						<div class="affichage1">
 							<img src="Images/images.webp" alt="logo {$offre->getnom_entreprise()}">
 						</div>
@@ -222,10 +225,12 @@
 		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>
 		<script src='Assets/JS/Accueil.js'></script>
 		<script src="Assets/PWA/script.js"></script>
-	</body>
-	
 	<br><br>
 	<footer>
 		{$content_footer}
 	</footer>
+
+        </body>
+	
+	
 </html>
