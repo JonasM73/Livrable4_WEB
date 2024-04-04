@@ -96,7 +96,7 @@ function HEADER_FOOTER(){
     </nav>
     <nav class='moncompte'>
         <div class='dropdown'>
-            <a href='index.php?page=Mon_Compte'>&nbsp;Mon&nbsp;Compte</a>
+            <a href='index.php?page=Mon_Compte'>&nbsp;Mon&nbsp;Espace</a>
             <div class='dropdown-content'>
                 <a href='index.php?page=Connexion'>S'identifier</a>
                 <a href='index.php?page=Creer_un_compte'>Créer un compte</a>
