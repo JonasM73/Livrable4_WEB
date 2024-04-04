@@ -45,6 +45,7 @@
 				</fieldset>	
 			</form>
 		</main>
+		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>
 	</body>
 
 	<br><br>

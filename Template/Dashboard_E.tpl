@@ -12,6 +12,7 @@
 	</header><br><br>
 
 	<body>
+	    <button id="scrollToTop" title="Revenir en haut de la page">↑</button>
 		<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
     </body>
 

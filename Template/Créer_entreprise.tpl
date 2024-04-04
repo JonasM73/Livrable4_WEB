@@ -37,6 +37,7 @@
 				</fieldset><br><br>
 			</form>
 		</main>
+		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>
 		<script src="Assets/JS/Creer_entreprise.js"></script>
 	</body>
 
