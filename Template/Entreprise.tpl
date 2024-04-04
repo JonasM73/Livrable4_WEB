@@ -196,32 +196,29 @@
     			</div>
 			</div>
 			<div class="divclasse">
-				{if $offres}
-					{foreach $offres as $offre}
-						<div class="affichage" id_offre="{$offre->getid_offre()}">
+				{if $entreprises}
+					{foreach $entreprises as $entreprise}
+						<div class="affichage" id_entreprise="{$entreprise->getid_entreprise()}">
 							<div class="affichage1">
-								<img src="Images/images.webp" alt="logo {$offre->getnom_entreprise()}">
+								<img src="Images/images.webp" alt="logo {$entreprise->getnom_entreprise()}">
 							</div>
 							<div class="conteneur-droite">
-								<div class="texte_affichage1">{$offre->gettitre_offre_stage()}&nbsp;-&nbsp;{$offre->getnom_entreprise()}</div>
-								<div class="presentation_affichage1">
-									<div class="texte-presentation">
-										<p>{$offre->getdescriptif_offres_stage()}</p>
-									</div>  
-								</div>
-								<p><strong>Durée :</strong> {$offre->getStage_Date()} Semaines &nbsp;&nbsp;&nbsp; <strong>Rémunération : </strong>{$offre->getRemuneration()} €/mois &nbsp;&nbsp;&nbsp; 
-								<strong>Places restantes : </strong>{$offre->getNB_places_restantes()}</p>
+								<div class="texte_affichage1">{$entreprise->getnom_entreprise()}&nbsp;-&nbsp;{$entreprise->getsecteur_activite()}</div>
 							</div>
 							<div class="lolo">
 								{if $compte_type == 'Admin'}
+									<label>Note de l'entreprise :</label>
+									<input type="number" id="Note" name ="Note" placeholder="Noter l'entreprise" min=0 max=20>
 									<button type="submit" class="btn-modifier" id="btnModifier" >Modifier</button>
-									<button type="submit" name="supprimer_offre_{$offre->getid_offre()}" class="btn-supprimer">Supprimer</button>
-									<button type="submit" name="Postuler_offre_{$offre->getid_offre()}" class="btn-invisible" >Invisibilité</button>
+									<button type="submit" name="supprimer_offre_{$entreprise->getid_entreprise()}" class="btn-supprimer">Supprimer</button>
+									<button type="submit" name="Postuler_offre_{$entreprise->getid_entreprise()}" class="btn-invisible" >Invisibilité</button>
 								{/if}
 								{if $compte_type == 'Étudiant'}
-									<button type="submit" class="btn-modifier" id="btnPostuler" >Postuler</button>
+									<label>Note de l'entreprise :</label>
+									<input type="number" id="Note" name ="Note" placeholder="Noter l'entreprise" min=0 max=20>
+									<button type="submit" class="btn-modifier" id="btNote" >Envoyer</button>
 								{/if}
-								</div>
+							</div>
 						</div>
 					{/foreach}
 				{/if}
@@ -233,7 +230,6 @@
 		<script src='Assets/JS/Accueil.js'></script>
 		<script src="Assets/PWA/script.js"></script>
 	</body>
-	
 	<br><br>
 	<footer>
 		{$content_footer}
