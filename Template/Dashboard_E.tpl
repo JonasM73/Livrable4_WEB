@@ -22,15 +22,15 @@
 		<body>
 	
 			<h1>Repartition des offres par compétences :</h1>
-		<form method="POST">
-			<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des Entreprise par secteur de activité">
-			<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des Entreprise par localité"><br></br><br></br>
-			<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des Entreprise par promotions">
-			<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher le top des entreprise demandées en fonction de ses offres"><br></br><br></br>
-			<div>
-				<canvas id="myChart"></canvas>
-			</div>
-		</form>
+			<form method="POST">
+				<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des Entreprise par secteur de activité"><br><br>
+				<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des Entreprise par localité"><br><br>
+				<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des Entreprise par promotions"><br><br>
+				<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher le top des entreprise demandées en fonction de ses offres"><br><br>
+				<div>
+					<canvas id="myChart"></canvas>
+				</div>
+			</form>
 	
 			<script src="Assets/PWA/script.js"></script>
 			<script src="Assets/JS/Dash_Off.js"></script>
