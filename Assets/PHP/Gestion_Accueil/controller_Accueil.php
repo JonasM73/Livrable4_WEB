@@ -2,6 +2,12 @@
 require_once 'Méthodes_Accueil.php';
 $Accueil_offre = new Accueil_offre();
 
+
+
+// Page actuelle, par défaut 1
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
+$page = intval($page); 
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     foreach ($_POST as $key => $value) {
         if (strpos($key, 'supprimer_offre_') === 0) {
@@ -32,16 +38,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $remuneration = !empty($_POST['remun']) ? $_POST['remun'] : 0;
         $promotion = $_POST['promotion_value'].'%';
         if (!empty($ou_content) || !empty($nom_content) || !empty($Compétence_value) || !empty($durée_stage) || !empty($remuneration) || !empty($promotion)) {
-        $offres = $Accueil_offre->rechercher_offre($ou_content, $nom_content, $Compétence_value, $durée_stage, $remuneration, $promotion);
-        $smarty->assign('offres', $offres); 
-        $smarty->display(MAIN_PATH . "/Template/Accueil.tpl");
-        exit;
-    }
+            $offres = $Accueil_offre->rechercher_offre($ou_content, $nom_content, $Compétence_value, $durée_stage, $remuneration, $promotion);
+            $smarty->assign('offres', $offres); 
+            $smarty->display(MAIN_PATH . "/Template/Accueil.tpl");
+            exit;
+        }
         exit;
     }
 } else {
-    $offres = $Accueil_offre->Afficher_Offres();
+    // Nombre d'offres par page
+$offres_par_page = 5;
+    // Récupérez toutes les offres
+    $all_offres = $Accueil_offre->Afficher_Offres();
+    // Calculez le nombre total d'offres
+    $total_offres = count($all_offres);
+    // Calculez le nombre total de pages
+    $total_pages = ceil($total_offres / $offres_par_page);
+    // Sélectionnez les offres à afficher sur la page actuelle
+    $offset = ($page - 1) * $offres_par_page;
+    $offres = array_slice($all_offres, $offset, $offres_par_page);
+    // Assignez les offres à Smarty
     $smarty->assign('offres', $offres); 
+    $smarty->assign('total_pages', $total_pages);
+    $smarty->assign('page_actuelle', $page);
 }
-
 $smarty->display(MAIN_PATH . "/Template/Accueil.tpl");
+?>

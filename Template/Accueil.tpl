@@ -302,38 +302,67 @@
         			</div>      
     			</div>
 			</div>
-				<div class="divclasse">
-					{if $offres}
-						{foreach $offres as $offre}
-							<div class="affichage" id_offre="{$offre->getid_offre()}">
-								<div class="affichage1">
-									<img src="Images/images.webp" alt="logo {$offre->getnom_entreprise()}">
-								</div>
-								<div class="conteneur-droite">
-									<div class="texte_affichage1">{$offre->gettitre_offre_stage()}&nbsp;-&nbsp;{$offre->getnom_entreprise()}</div>
-									<div class="presentation_affichage1">
-										<div class="texte-presentation">
-											<p>{$offre->getdescriptif_offres_stage()}</p>
-										</div>  
-									</div>
-									<p><strong>Durée :</strong> {$offre->getStage_Date()} Semaines &nbsp;&nbsp;&nbsp; <strong>Rémunération : </strong>{$offre->getRemuneration()} €/mois &nbsp;&nbsp;&nbsp; 
-									<strong>Places restantes : </strong>{$offre->getNB_places_restantes()}</p>
-								</div>
-								<div class="lolo">
-									{if $compte_type == 'Admin'}
-										<button type="submit" name="modifier_offre_{$offre->getid_offre()}" class="btn-modifier"  >Modifier</button>
-										<button type="submit" name="supprimer_offre_{$offre->getid_offre()}" class="btn-supprimer">Supprimer</button>
-									{/if}
-									{if $compte_type == 'Étudiant'}
-										<button type="button" class="btn-modifier" id="btnPostuler" onclick="window.location.href='index.php?page=Créer_Offre'">Postuler</button>
-
-									{/if}
-
-								</div>
+			<div class="divclasse">
+			{if $offres}
+				<div class="pagination-info">Page {$page_actuelle}/{$total_pages}</div>
+				{if isset($total_pages) && $total_pages > 1}
+					<div class="pagination">
+						{if $page_actuelle > 1}
+							<a href="index.php?page={$page_actuelle-1}">&laquo; Page précédente</a>
+						{/if}
+						{for $i = 1 to $total_pages}
+							<a href="index.php?page={$i}" class="{if $i == $page_actuelle}active{/if}">{$i}</a>
+						{/for}
+						{if $page_actuelle < $total_pages}
+							<a href="index.php?page={$page_actuelle+1}">Page suivante &raquo;</a>
+						{/if}
+					</div>
+				{/if}
+				{foreach $offres as $offre}
+					<div class="affichage" id_offre="{$offre->getid_offre()}">
+						<div class="affichage1">
+							<img src="Images/images.webp" alt="logo {$offre->getnom_entreprise()}">
+						</div>
+						<div class="conteneur-droite">
+							<div class="texte_affichage1">{$offre->gettitre_offre_stage()}&nbsp;-&nbsp;{$offre->getnom_entreprise()}</div>
+							<div class="presentation_affichage1">
+								<div class="texte-presentation">
+									<p>{$offre->getdescriptif_offres_stage()}</p>
+								</div>  
 							</div>
-						{/foreach}
+							<p><strong>Durée :</strong> {$offre->getStage_Date()} Semaines &nbsp;&nbsp;&nbsp; <strong>Rémunération : </strong>{$offre->getRemuneration()} €/mois &nbsp;&nbsp;&nbsp; 
+							<strong>Places restantes : </strong>{$offre->getNB_places_restantes()}</p>
+						</div>
+						<div class="lolo">
+							{if $compte_type == 'Admin'}
+								<button type="submit" name="modifier_offre_{$offre->getid_offre()}" class="btn-modifier"  >Modifier</button>
+								<button type="submit" name="supprimer_offre_{$offre->getid_offre()}" class="btn-supprimer">Supprimer</button>
+							{/if}
+							{if $compte_type == 'Étudiant'}
+								<button type="button" class="btn-modifier" id="btnPostuler" onclick="window.location.href='index.php?page=Créer_Offre'">Postuler</button>
+							{/if}
+						</div>
+					</div>
+				{/foreach}
+			{/if}
+			{if isset($total_pages) && $total_pages > 1}
+				<div class="pagination">
+					{if $page_actuelle > 1}
+						<a href="index.php?page={$page_actuelle-1}">&laquo; Page précédente</a>
+					{/if}
+					{for $i = 1 to $total_pages}
+						<a href="index.php?page={$i}" class="{if $i == $page_actuelle}active{/if}">{$i}</a>
+					{/for}
+					{if $page_actuelle < $total_pages}
+						<a href="index.php?page={$page_actuelle+1}">Page suivante &raquo;</a>
 					{/if}
 				</div>
+			{/if}
+			<br>
+			<div class="pagination-info">Page {$page_actuelle}/{$total_pages}</div>
+
+		</div>
+		
 			</form>
 		</main>
 		<button id="scrollToTop" title="Revenir en haut de la page">↑</button>

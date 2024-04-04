@@ -20,7 +20,7 @@ function DISPLAY($header, $footer, $compte, $compte_id, $compte_type){
     $smarty->assign('compte_type', $compte_type);
     $smarty->assign('content_footer', $footer);
     
-    if ($page == 'Acceuil') {
+    if ($page == 'Acceuil' || $page == 1) {
         require_once 'Assets\PHP\Gestion_Accueil\controller_Accueil.php';
     } 
     elseif($page == 'Créer_entreprise' || $page =="Entreprise" || $page == 'Dashboard_E'){
@@ -68,7 +68,7 @@ function HEADER_FOOTER(){
     <hr>
     <nav class='navbar'>
         <div class='dropdown'>
-            <a href='index.php?page=Accueil'>Accueil </a>
+        <a href='index.php?page=1'>Accueil</a>
         </div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
         <div class='dropdown'>
             <a href='#'>Entreprises </a>
