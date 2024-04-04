@@ -119,13 +119,12 @@ function HEADER_FOOTER(){
     <footer class='footerbasse'>
         <div class='footer-container'>
             <footer class='leftfooter'>
-                <label for='Mentions légales' id='navigation-label'>Mentions légales :</label>
+                <label for='Mentions légales' id='navigation-label'>Informations légales :</label>
                     <p>&nbsp;&nbsp;~&nbsp;&nbsp;</p>
                 <nav class='navbarfooter'>
-                    <a href='#'>Informations légales </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href='#'>CGU </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href='#'>Politique de confidentialité </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href='#'>Nous contacter </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href='http://localhost/Livrable4_WEB/Mentions légales et politique de confidentialité.pdf'>Mentions légales et Politique de confidentialité</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href='http://localhost/Livrable4_WEB/CGU.pdf'>CGU </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href='http://localhost/Livrable4_WEB/Politique de cookies.pdf'>Politique de cookies </a>&nbsp;&nbsp;|&nbsp;&nbsp;
                 </nav>
                 <p>&nbsp;&nbsp;~&nbsp;&nbsp;</p>
             </footer>
@@ -133,17 +132,17 @@ function HEADER_FOOTER(){
                 <label for='contacter' id='reseaux-label'>Suivez-nous ! </label>
                 <div class='social-media'>
                     <img src='Images/insta.webp' alt='logo insta' class='logoinsta'>
-                    <p>@StageLink_Cesi</p>
+                    <a href='https://www.instagram.com/'>@StageLinkCesi </a>&nbsp;&nbsp;
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                     <img src='Images/ytb.webp' alt='logo ytb' class='logoinsta'>
-                    <p>StageLinkCesi_yt</p>
+                    <a href='https://www.youtube.com/'>@StageLinkCesi </a>&nbsp;&nbsp;
                 </div>
                 <div class='social-media'>
                     <img src='Images/gmail.webp' alt='logo gmail' class='logoinsta'>
-                    <a href='https://www.instagram.com/'>@StageLinkCesi </a>&nbsp;&nbsp;
+                    <a href='https://www.gmail.com/'>@StageLinkCesi </a>&nbsp;&nbsp;
                         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                     <img src='Images/linkedin1.webp' alt='logo linkedin' class='logoinsta'>
-                    <p>StageCesi@link.com</p>
+                    <a href='https://www.linkedin.com/'>@StageLinkCesi </a>&nbsp;&nbsp;
                 </div>
             </footer>
         </div>
