@@ -303,9 +303,9 @@
     			</div>
 			</div>
 			<div class="divclasse">
-			{if $offres}
+			{if isset($offres_l)}
 				<div class="pagination-info">Page {$page_actuelle}/{$total_pages}</div>
-				{if isset($total_pages) && $total_pages > 1}
+				{if $total_pages > 1}
 					<div class="pagination">
 						{if $page_actuelle > 1}
 							<a href="index.php?page={$page_actuelle-1}">&laquo; Page précédente</a>
@@ -318,7 +318,7 @@
 						{/if}
 					</div>
 				{/if}
-				{foreach $offres as $offre}
+				{foreach $offres_l as $offre}
 					<div class="affichage" id_offre="{$offre->getid_offre()}">
 						<div class="affichage1">
 							<img src="Images/images.webp" alt="logo {$offre->getnom_entreprise()}">
