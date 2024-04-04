@@ -71,15 +71,14 @@ function HEADER_FOOTER(){
         <a href='index.php?page=1'>Accueil</a>
         </div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
         <div class='dropdown'>
-            <a href='#'>Entreprises </a>
+            <a href='index.php?page=Entreprise'>Entreprises </a>
         <div class='dropdown-content'>
-            <a href='#'>Entreprises</a>
             <a href='index.php?page=Créer_entreprise'>Inscrire mon Entreprise</a>
             <a href='index.php?page=Dashboard_E'>Dashboard Entreprise</a>
         </div>
         </div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
         <div class='dropdown'>
-            <a href='#'>Offres </a>
+            <a href='index.php?page=Accueil'>Offres </a>
             <div class='dropdown-content'>
                 <a href='index.php?page=Créer_offre'>Créer mon offre </a>
                 <a href='index.php?page=Dashboard_O'>Dashboard offre</a>
@@ -97,7 +96,7 @@ function HEADER_FOOTER(){
     </nav>
     <nav class='moncompte'>
         <div class='dropdown'>
-            <a href='#'>&nbsp;Mon&nbsp;Espace</a>
+            <a href='index.php?page=Mon_Compte'>&nbsp;Mon&nbsp;Compte</a>
             <div class='dropdown-content'>
                 <a href='index.php?page=Connexion'>S'identifier</a>
                 <a href='index.php?page=Creer_un_compte'>Créer un compte</a>
@@ -123,11 +122,11 @@ function HEADER_FOOTER(){
                 <label for='Navigation' id='navigation-label'>Navigation :</label>
                     <p>&nbsp;&nbsp;~&nbsp;&nbsp;</p>
                 <nav class='navbarfooter'>
-                    <a href='#'>Accueil </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href='#'>Entreprises </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href='#'>Offres </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href='index.php?page=Accueil'>Accueil </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href='index.php?page=Entreprise'>Entreprises </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href='index.php?page=Accueil'>Offres </a>&nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href='#'>Pilotes / Etudiants </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href='#'>Liste de Souhait </a>  
+                    <a href='index.php?page=Wishlist'>Liste de Souhait </a>  
                 </nav>
                 <p>&nbsp;&nbsp;~&nbsp;&nbsp;</p>
             </footer>
