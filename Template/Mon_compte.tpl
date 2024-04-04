@@ -4,7 +4,6 @@
 		<meta charset="utf-8">
 		<title>StageLinkCesi - Mon compte</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
-		<link rel="stylesheet" href="Assets/CSS/style_mon_compte.css">
 		<link rel='manifest' href='Assets/PWA/manifest.json'/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Page de compte.">
@@ -39,12 +38,12 @@
 					<label>Mot de passe</label><br><br>
 					<input type="password" id="password" name="password" placeholder="" oninput="verifierMotsDePasse()" required><br>
 					<span id="MotDePasse" class="TextRed"></span><br><br>
-				<table>
+					<table>
 						<td>
 							<input type="submit" value="Modifier"><br><br>
 						</td>
 						<td>
-							<input type="button" value="Supprimer" onclick="resetForm()"><br><br>
+							<input type="button" value="Supprimer"><br><br>
 						</td>
 					</table>
 				</fieldset>	

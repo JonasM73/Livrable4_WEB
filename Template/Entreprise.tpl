@@ -3,7 +3,7 @@
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
-		<title>StageLinkCesi - Accueil</title>
+		<title>StageLinkCesi - Entreprises</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
 		<link rel="stylesheet" href="Assets/CSS/Accueil.css">
 		<link rel='manifest' href='Assets/PWA/manifest.json'/>

@@ -2,7 +2,7 @@
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
-		<title>StageLinkCesi - Accueil</title>
+		<title>StageLinkCesi - Deconnexion</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
         
 		<link rel='manifest' href='Assets/PWA/manifest.json'/>

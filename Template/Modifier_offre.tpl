@@ -2,7 +2,7 @@
 <html lang=fr>
 	<head>
 		<meta charset="utf-8">
-		<title>StageLinkCesi - Accueil</title>
+		<title>StageLinkCesi - Modifier une offre</title>
 		<link rel="stylesheet" href="Assets/CSS/style_site.css">
         <link rel="stylesheet" href="Assets/CSS/Modifier_offre.css">
 		<link rel='manifest' href='Assets/PWA/manifest.json'/>
