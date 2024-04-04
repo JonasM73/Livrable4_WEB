@@ -20,22 +20,27 @@
 			{$header}
 		</header><br><br>
 		<h1>Repartition des offres par compétences :</h1>
-		<form method="POST">
-			<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des offres par compétence">
-			<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des offres par localité">
-			<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des offres par promotions"><br>
-			<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des offres par durée de stage">
-			<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher le top des offres mise en wishlist"><br><br>
-			<div>
-				<canvas id="myChart"></canvas>
-			</div>
-		</form>
-		{$new}
-		<br><br>
-		<footer>
-			{$content_footer}
-		</footer>
+	<form method="POST">
+		<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des offres par compétence">
+		<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des offres par localité"><br></br><br></br>
+		<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des offres par promotions">
+		<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des offres par durée de stage"><br></br><br></br>
+		<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher le top des offres mise en wishlist"><br></br><br></br>
+
+	
+		<div>
+			<canvas id="myChart"></canvas>
+		</div>
+	</form>
+
 		<script src="Assets/PWA/script.js"></script>
 		<script src="Assets/JS/Dash_Off.js"></script>
     </body>
+	
+		{$new}
+
+	<br><br>
+	<footer>
+		{$content_footer}
+	</footer>
 </html>

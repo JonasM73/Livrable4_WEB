@@ -24,7 +24,7 @@ function DISPLAY($header, $footer, $compte, $compte_id, $compte_type){
         require_once 'Assets\PHP\Gestion_Accueil\controller_Accueil.php';
     } 
     elseif($page == 'Créer_entreprise' || $page =="Entreprise" || $page == 'Dashboard_E'){
-        require_once 'Assets\PHP\Gestion_entreprises\controller_GE.php';
+        require_once 'Assets\PHP\Gestion_entreprises\controller_entreprise.php';
     }
     elseif($page == 'Connexion'|| $page == 'Deconnexion'){
         require_once 'Assets\PHP\Gestion_Acces\controller_Acces.php';    

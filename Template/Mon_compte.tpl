@@ -19,7 +19,7 @@
 		</header><br><br>
 		
 		<main>
-			<form id="créer_compte">
+			<form method="POST">
 				<fieldset>
 					<h1>Mon compte</h1>
 					<label>Nom</label><br><br>
