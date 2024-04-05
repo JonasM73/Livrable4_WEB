@@ -44,3 +44,16 @@ Etape 3:
 Etape 5 :
 - Lancer l'application avec l'URL "htpp://localhost".
 - LOGIN "Utilisateur", MDP "cesi"
+
+Pour tester différents compte 
+    -admin :
+        login : jdupont@viacesi.com
+        MDP :   Jojojo73!
+
+    -Pilote :
+        login : pmartin@viacesi.com
+        MDP :   Jojojo74!
+
+     -Étudiant :
+        login : sdubois@viacesi.com
+        MDP :   Jojojo75! 
