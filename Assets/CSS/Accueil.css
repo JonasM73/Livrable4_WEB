@@ -1,4 +1,4 @@
-.menu-container { 
+.menu-container {
     border: 2px solid black; 
     border-radius: 10px; 
     padding: 5px; 
@@ -196,7 +196,6 @@ td {
 
 .divclasse{
     margin-left: 500px;
-
 }
 
 .lolo {
@@ -305,9 +304,6 @@ td {
     color: #fff;
 }
 
-
-
-
 @media (max-width: 1025px) {
     .menu-container{
         display:inline-block;
@@ -337,6 +333,7 @@ td {
 
     .divclasse{
         margin-left: 0;
+        width: 90%;
     }
 
     .presentation_affichage1 {
@@ -352,5 +349,40 @@ td {
     .lolo {
         align-items: left;
         margin-left: 15%;
+    }
+
+    .pagination {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 70%;
+        color: black;
+        font-family: "Century Gothic", sans-serif;
+        transition: background-color 0.3s ease;
+        font-weight: bold;
+        display:flex;
+    }
+
+    .pagination-info {
+        text-align: center;
+        margin-bottom: 20px; /* Ajoute un espace en bas pour séparer visuellement de la pagination */
+        font-family: "Century Gothic", sans-serif;
+        font-size: 70%;
+        font-weight: bold;
+    }
+    
+    .pagination a {
+        color: black;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 10px 20px;
+        margin: 0 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    
+    .pagination .active {
+        background-color: #007bff;
+        color: #fff;
     }
 }

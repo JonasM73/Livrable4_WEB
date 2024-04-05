@@ -308,13 +308,13 @@
 				{if $total_pages > 1}
 					<div class="pagination">
 						{if $page_actuelle > 1}
-							<a href="index.php?page={$page_actuelle-1}">&laquo; Page précédente</a>
+							<a href="index.php?page={$page_actuelle-1}">Page précédente</a>
 						{/if}
 						{for $i = 1 to $total_pages}
 							<a href="index.php?page={$i}" class="{if $i == $page_actuelle}active{/if}">{$i}</a>
 						{/for}
 						{if $page_actuelle < $total_pages}
-							<a href="index.php?page={$page_actuelle+1}">Page suivante &raquo;</a>
+							<a href="index.php?page={$page_actuelle+1}">Page suivante</a>
 						{/if}
 					</div>
 				{/if}
@@ -350,13 +350,13 @@
 			{if isset($total_pages) && $total_pages > 1}
 				<div class="pagination">
 					{if $page_actuelle > 1}
-						<a href="index.php?page={$page_actuelle-1}">&laquo; Page précédente</a>
+						<a href="index.php?page={$page_actuelle-1}">Page précédente</a>
 					{/if}
 					{for $i = 1 to $total_pages}
 						<a href="index.php?page={$i}" class="{if $i == $page_actuelle}active{/if}">{$i}</a>
 					{/for}
 					{if $page_actuelle < $total_pages}
-						<a href="index.php?page={$page_actuelle+1}">Page suivante &raquo;</a>
+						<a href="index.php?page={$page_actuelle+1}">Page suivante</a>
 					{/if}
 				</div>
 			{/if}
