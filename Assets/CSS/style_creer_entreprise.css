@@ -27,3 +27,13 @@
     background-color: #0056b3;
     color: white;
 }
+
+.sucess_entreprise{
+    color: green;
+    font-size: 25px;
+}
+
+.erreur_entreprise{
+    color: red;
+    font-size: 25px;
+}

@@ -21,7 +21,7 @@
 	
 		<body>
 	
-			<h1>Repartition des offres par compétences :</h1>
+			<h1>Repartition des offres :</h1>
 			<form method="POST">
 				<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des Entreprise par secteur de activité"><br><br>
 				<input type="submit" name="afficher_stat" class='btn_stat' value="Afficher les statitistiques de la répartition des Entreprise par localité"><br><br>

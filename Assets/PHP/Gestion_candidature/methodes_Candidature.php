@@ -1,53 +1,37 @@
 <?php
-class Utilisateur_fonctions {
-    private $BDD;
-    public function __construct() {
-        try{
-            $dns = 'mysql:host=localhost;dbname=wk';
-            $this->BDD = new PDO($dns, 'root', 'cesi');
-            $this->BDD->exec("SET NAMES utf8");
-            $this->BDD->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        }
-        catch(Exception $e){
-            $e->getMessage();
-        }
-    }
-    public function getUtilisateurs() {}
+require_once "Assets/PHP/SQLConnection.php";
+require_once 'Assets/PHP/Gestion_Accueil/Méthodes_Accueil.php';
 
+class wishlist  extends SQLconnection{
+    public function __construct() {
+        parent::__construct();
+    }
+    public function Afficher_Offres($id_utl) {
+        $sql = "SELECT os.id_Offre_stage, os.titre_offre_stage, os.Descriptif_offres_stage, 
+                CEILING(DATEDIFF(os.Stage_Date_fin, os.Stage_Date_depart) / 7) as Diff, os.Remuneration, os.NB_places_restantes, e.nom_entreprise FROM projet_web.mettre_en_favori	m
+                join utilisateur u on u.id_utilisateur = m.id_utilisateur
+                join offre_stage os on os.id_Offre_stage = m.id_Offre_stage
+                join entreprise e on e.id_entreprise = os.id_entreprise
+                where m.id_utilisateur = :id_utl 
+                AND status_entreprise =1";
+        $requete = $this->getBDD()->prepare($sql);
+        $requete->bindParam(':id_utl', $id_utl, PDO::PARAM_INT);
+        $requete->execute();        $offres = array();
+        
+        while ($row = $requete->fetch()) {
+            $offre = new Offre();
+            $offre->setid_offre($row['id_Offre_stage']);
+            $offre->settitre_offre_stage($row['titre_offre_stage']);
+            $offre->setdescriptif_offres_stage($row['Descriptif_offres_stage']);
+            $offre->setStage_Date($row['Diff']);
+            $offre->setRemuneration($row['Remuneration']);
+            $offre->setNB_places_restantes($row['NB_places_restantes']);
+            $offre->setnom_entreprise($row['nom_entreprise']);
+            $offres[] = $offre;
+        }
+        return $offres;
+    }
     public function ajouterUtilisateur() {}
 
     public function supprimerUtilisateur() {}
-}
-
-class Utilisateur {
-    private $NomPil;
-    private $NatPil;
-    private $NomTV;
-    private $NomGP;
-    private $LieuCirc;
-    private $DateGP;
-    private $RecTour;
-    private $Place;
-    private $PtObt;
-
-    // Setters
-    public function setNomPil($NomPil) {$this->NomPil = $NomPil;}
-    public function setNatPil($NatPil) {$this->NatPil = $NatPil;}
-    public function setNomTV($NomTV) {$this->NomTV = $NomTV;}
-    public function setNomGP($NomGP) {$this->NomGP = $NomGP;}
-    public function setLieuCirc($LieuCirc) {$this->LieuCirc = $LieuCirc;}
-    public function setDateGP($DateGP) {$this->DateGP = $DateGP;}
-    public function setRecTour($RecTour) {$this->RecTour = $RecTour;}    
-    public function setPlace($Place) {$this->Place = $Place;}
-    public function setPtObt($PtObt) {$this->PtObt = $PtObt;}
-    // Getters
-     public function getNomPil() {return $this->NomPil;}
-    public function getNatPil() {return $this->NatPil;}
-    public function getNomTV() {return $this->NomTV;}
-    public function getNomGP() {return $this->NomGP;}
-    public function getLieuCirc() {return $this->LieuCirc;}
-    public function getDateGP() {return $this->DateGP;}
-    public function getRecTour() {return $this->RecTour;}
-    public function getPlace() {return $this->Place;}
-    public function getPtObt() {return $this->PtObt;}
 }

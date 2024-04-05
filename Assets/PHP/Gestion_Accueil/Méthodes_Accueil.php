@@ -65,6 +65,13 @@ class Accueil_offre extends SQLconnection {
         $requete->bindParam(':id', $id_offre, PDO::PARAM_INT);
         $requete->execute();
     }
+    public function Mettre_en_favorie($id_offre, $utilisateur) {
+        $sql = "INSERT INTO mettre_en_favori (id_utilisateur, id_Offre_stage) VALUES (:utilisateur, :id_offre)";
+        $requete = $this->getBDD()->prepare($sql);
+        $requete->bindParam(':utilisateur', $utilisateur, PDO::PARAM_INT);
+        $requete->bindParam(':id_offre', $id_offre, PDO::PARAM_INT);
+        $requete->execute();
+    }
     public function rechercher_offre($ou, $nom, $competence, $duree, $remuneration, $promotion) {
         $sql = "SELECT 
                     os.id_Offre_stage, 
@@ -116,6 +123,18 @@ class Accueil_offre extends SQLconnection {
     public function Modifier_offre(){
         
     }
+
+    public function postuler($Lettre_motiv, $nom_fichier_cv, $id_ut, $id_offre){
+        $sql = "INSERT INTO Candidater (id_utilisateur, id_Offre_stage, cv_utilisateur_offre, lettre_motiv_utilisateur) VALUES (:id_uti, :id_offre, :cv, :lettre);";
+        $requete = $this->getBDD()->prepare($sql);
+        $requete->bindParam(':id_uti', $id_ut, PDO::PARAM_INT);
+        $requete->bindParam(':id_offre', $id_offre, PDO::PARAM_INT);
+        $requete->bindParam(':cv', $nom_fichier_cv, PDO::PARAM_STR);
+        $requete->bindParam(':lettre', $Lettre_motiv, PDO::PARAM_STR);
+
+        $requete->execute();
+            }
+
 
 
 }

@@ -48,7 +48,7 @@
                     </div>
             {/if}
 			</div>
-            <form id="Modifier_offre">
+            <form method="POST">
 				<div class="column-layout">
 
 					<fieldset>

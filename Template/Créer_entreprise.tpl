@@ -12,30 +12,36 @@
 		<link rel='apple-touch-icon' sizes='180x180' href='Images/icon-180x180.webp'/>
 		<meta name='theme-color' content='#f3f3f3'>
 	</head>
+	<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
 
 	<header>
 		{$header}
 	</header><br><br>
 
 	<body>
-		<img class="banière_1" src="Images/B.webp" alt="logo Stage Cesi Link">
 		<main>
-			<form id="créer_entreprise">
+			<form method="POST">
 				<fieldset>
+				{if isset($succes_E)}
+					{$succes_E}
+				{/if}
+				{if isset($erreur_E)}
+					{$erreur_E}
+				{/if}
 					<h1>Inscrire mon entreprise</h1>
 					<label>Nom de l'entreprise</label><br><br>
-					<input type="text" id="enterprise" name="enterprise" placeholder="Entrez le nom d'entreprise" required><br><br>
+					<input type="text" id="nom_enterprise" name="nom_enterprise" placeholder="Entrez le nom d'entreprise" required><br><br>
 					<label>Secteur d'activité</label><br><br>
-					<input type="text" id="sector" name="sector" placeholder="Entrez un secteur d'activité" required><br><br><br>
+					<input type="text" id="secteur" name="secteur" placeholder="Entrez un secteur d'activité" required><br><br><br>
 					<label>Nombre de centre de l'entreprise</label><br><br>
 					<input type="number" name="number" placeholder="Entrez le nombre de centres" id="num_add" oninput="generateAddressFields(this.value)" required min="1"><br><br>
 					<div id="addresses"></div>
 					<table>
 						<td>
-							<input type="submit" value="Créer"><br>
+							<input type="submit" name="action" value="Créer_entreprise"><br>
 						</td>
 						<td>
-							<input type="button" value="Réinitialiser" onclick="resetForm()"><br>
+							<input type="submit" value="Réinitialiser" onclick="resetForm()"><br>
 						</td>
 					</table>
 					<span id="soumission" class="TextRed"></span><br><br>

@@ -70,16 +70,16 @@ function generateAddressFields(num) {
     for (var i = 1; i <= num; i++) {
         var fieldset = document.createElement("fieldset");
         fieldset.innerHTML = "<h2>Adresse " + i + "</h2>" +
-            "<label>Code postal</label><br><br>" +
-            "<input name='CP' placeholder='CP' id='CP" + i + "' oninput='fetchCities(" + i + "); validatePostalCode(this, " + i + ")' required><br>" +
-            "<span id='errorCP" + i + "' class='error'></span><br><br>" +
-            "<label>Ville</label><br>" +
-            "<select name='ville' class='selecity' id='city" + i + "'></select><br>" +
-            "<span id='error" + i + "' class='error'></span><br><br>" +
-            "<label>Adresse</label><br><br>" +
-            "<input type='text' id='address" + i + "' name='address' placeholder='Entrez votre adresse' oninput='validateAddress(this, " + i + ")' required><br>" +
-            "<span id='erroraddress" + i + "' class='TextRed'></span>" +
-            "<p class='connectext'>Exemple d'adresse : 123 Main Street</p>";
+                            "<label>Code postal</label><br><br>" +
+                            "<input name='CP" + i + "' placeholder='CP' id='CP" + i + "' oninput='fetchCities(" + i + "); validatePostalCode(this, " + i + ")' required><br>" +
+                            "<span id='errorCP" + i + "' class='error'></span><br><br>" +
+                            "<label>Ville</label><br>" +
+                            "<select name='ville" + i + "' class='selecity' id='ville" + i + "'></select><br>" +
+                            "<span id='error" + i + "' class='error'></span><br><br>" +
+                            "<label>Adresse</label><br><br>" +
+                            "<input type='text' id='address" + i + "' name='address" + i + "' placeholder='Entrez votre adresse' oninput='validateAddress(this, " + i + ")' required><br>" +
+                            "<span id='erroraddress" + i + "' class='TextRed'></span>" +
+                            "<p class='connectext'>Exemple d'adresse : 123 Main Street</p>";
         addresses.appendChild(fieldset);
         // Ajout d'un saut de ligne entre chaque fieldset inséré
         if (i < num) {
@@ -113,7 +113,7 @@ function fetchCities(index) {
     // Récupération de la valeur dans le champ de saisie du code postal spécifique
     var cpInput = document.getElementById("CP" + index).value;
     // Récupération du menu déroulant des villes spécifique
-    var citySelect = document.getElementById("city" + index);
+    var citySelect = document.getElementById("ville" + index);
     // Récupération de l'élément affichant une erreur spécifique
     var error = document.getElementById("error" + index);
     // Efface les options précédentes dans la liste déroulante des villes s'il y en a

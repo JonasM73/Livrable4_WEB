@@ -339,7 +339,9 @@
 								<button type="submit" name="supprimer_offre_{$offre->getid_offre()}" class="btn-supprimer">Supprimer</button>
 							{/if}
 							{if $compte_type == 'Étudiant'}
-								<button type="button" class="btn-modifier" id="btnPostuler" onclick="window.location.href='index.php?page=Créer_Offre'">Postuler</button>
+								<button type="submit" name="postuler_offre_{$offre->getid_offre()}" class="btn-modifier" >Postuler</button>
+								<button type="submit" name="Wishlist_{$offre->getid_offre()}" class="btn-modifier" >Wishlist</button>
+
 							{/if}
 						</div>
 					</div>

@@ -129,4 +129,4 @@
 
 
   
-$smarty->display(MAIN_PATH . "/Template/Dashboard_O.tpl");
+$smarty->display(MAIN_PATH . "/Template/$page.tpl");

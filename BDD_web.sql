@@ -73,14 +73,14 @@ CREATE TABLE Entreprise(
 );
 
 INSERT INTO Entreprise (nom_entreprise, entreprise_secteur_activite, status_entreprise ) VALUES
-('Entreprise A', 'Technologie', 0), 
-('Entreprise B', 'Finance', 0), 
-('Entreprise C', 'Industrie', 0), 
-('Entreprise D', 'Santé', 0), 
-('Entreprise E', 'Éducation', 0), 
-('Entreprise F', 'Commerce', 0), 
-('Entreprise G', 'Immobilier', 0), 
-('Entreprise H', 'Services', 0), 
+('Entreprise A', 'Technologie', 1), 
+('Entreprise B', 'Finance', 1), 
+('Entreprise C', 'Industrie', 1), 
+('Entreprise D', 'Santé', 1), 
+('Entreprise E', 'Éducation', 1), 
+('Entreprise F', 'Commerce', 1), 
+('Entreprise G', 'Immobilier', 1), 
+('Entreprise H', 'Services', 1), 
 ('Entreprise I', 'Marketing', 1), 
 ('Entreprise J', 'Communication', 1), 
 ('Entreprise K', 'Transport', 1), 
@@ -435,14 +435,10 @@ CREATE TABLE Assigner(
 );
 
 INSERT INTO Assigner (id_utilisateur, id_promotion) VALUES
-(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (1, 12), (1, 13), (1, 14), (1, 15), 
-(1, 16), (1, 17), (1, 18), (1, 19), (1, 20), (1, 21), (1, 22), (1, 23), (1, 24), (1, 25), (1, 26), (1, 27), (1, 28), (1, 29), 
-(1, 30), (1, 31), (1, 32), (1, 33), (2, 1), (2, 2), (2, 3), (2, 4),(3, 1), (3, 2), (3, 3), (3, 4),(4, 1), (4, 2), (4, 3), (4, 4),
-(5, 1), (5, 2), (5, 3), (5, 4),(6, 1), (6, 2), (6, 3), (6, 4), (7, 1), (7, 2), (7, 3), (7, 4),(8, 1), (8, 2), (8, 3), (8, 4),
-(9, 1), (9, 2), (9, 3), (9, 4),(10, 1), (10, 2), (10, 3), (10, 4), (11, 5),(12, 6),(13, 7),(14, 8),(15, 9),(16, 10),(17, 11),
-(18, 12),(19, 13),(20, 14),(21, 15),(22, 16),(23, 17),(24, 18),(25, 19),(26, 20), (27, 21),(28, 22),(29, 23),(30, 24),(31, 25),
-(32, 26),(33, 27),(34, 28),(35, 29),(36, 30),(37, 31),(38, 5),(39, 6),(40, 7),(41, 8),(42, 9), (43, 1),(44, 2),(45, 1),(46, 1);
-
+(1, 1), (2, 2), (3, 3), (4, 4), (5, 1), (6, 2), (7, 3), (8, 4), (9, 1), (10, 2), (11, 3), (12, 4), (13, 1), (14, 2), (15, 3),
+(16, 4), (17, 1), (18, 2), (19, 3), (20, 4), (21, 1), (22, 2), (23, 3), (24, 4), (25, 1), (26, 2), (27, 3), (28, 4), (29, 1),
+(30, 2), (31, 3), (32, 4), (33, 1), (34, 2), (35, 3), (36, 4), (37, 1), (38, 2), (39, 3), (40, 4), (41, 5), (42, 6), (43, 7),
+(44, 8), (45, 9), (46, 10), (47, 11), (48, 12), (49, 13), (50, 14), (51, 15);
 CREATE TABLE Destiner(
    id_Offre_stage INT NOT NULL,
    id_promotion INT NOT NULL,

@@ -5,6 +5,11 @@
 
 
     $stat_entreprise = new méthodes_entreprises();
+    $succes_E = "";
+    $erreur_E = "";
+    $entreprise = array();
+    $note = ""; // Définition initiale de la variable $note
+    $id_ut = ""; // Définition initiale de la variable $id_ut
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (isset($_POST['afficher_stat'])) {
@@ -113,6 +118,86 @@
         $smarty->assign('new', $new); 
     }
 
+    if ($page == 'Créer_entreprise') {
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            if (isset($_POST['action']) && $_POST['action'] === 'Créer_entreprise') {
+                $nom_entreprise = isset($_POST['nom_enterprise']) ? $_POST['nom_enterprise'] : '';
+                $secteur_activite = isset($_POST['secteur']) ? $_POST['secteur'] : '';
+                $nombre_centre = isset($_POST['number']) ? $_POST['number'] : '';
+                $adresses = array();
+                for ($i = 1; $i <= $nombre_centre; $i++) {
+                    $cp = isset($_POST['CP' . $i]) ? $_POST['CP' . $i] : '';
+                    $ville = isset($_POST['ville' . $i]) ? $_POST['ville' . $i] : ''; // Modification ici
+                    $adresse = isset($_POST['address' . $i]) ? $_POST['address' . $i] : '';
+                    $adresses[] = array('CP' => $cp, 'AD' => $adresse, 'ville' => $ville); // Modification ici
+                }
+    
+                $entreprise = new Entreprise();
+                $entreprise->setNom($nom_entreprise);
+                $entreprise->setSecteurActivite($secteur_activite);
+                $resultat = $stat_entreprise->insererEntrepriseAvecAdresses($entreprise, $adresses);
+    
+                if ($resultat) {
+                    // L'entreprise a été insérée avec succès
+                    $succes_E = "<p class='sucess_entreprise'>Entreprise insérée avec succès.<p>";
+                } else {
+                    // Une erreur s'est produite lors de l'insertion de l'entreprise
+                    $erreur_E = "<p class='erreur_entreprise'>Echec de l'insértion.<p>";
+                }
+            }
+        }
+    }
+    
+    
+    if ($page == 'Rechercher_Entreprise'){
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            if(isset($_POST['action']) && $_POST['action'] === 'rechercher') {
+                // Vérifier si le bouton "Rechercher" a été cliqué
+            
+                // Récupérer les valeurs des champs
+                $nom = isset($_POST['nom']) ? $_POST['nom'] . '%' : '';
+                $secteur = isset($_POST['secteur']) ? $_POST['secteur'] . '%' : '';
+                $centre = isset($_POST['ville']) ? $_POST['ville'] . '%' : '';
+                $CP = isset($_POST['CP']) ? $_POST['CP'] . '%' : '';
+                $AP = isset($_POST['AP']) ? $_POST['AP'] . '%' : '';
+            
+                $entreprise = $stat_entreprise->afficher_une_entreprise($nom, $secteur, $centre, $CP, $AP);
 
-  
+            
+        }
+        foreach ($_POST as $key => $value) {
+            if (strpos($key, 'Invisible_') === 0) {
+                $id_offre = substr($key, strlen('Invisible_'));
+                $entreprise = $stat_entreprise->invisibilite($id_offre); 
+                $entreprise = $stat_entreprise->afficher_entreprise();
+
+            }
+        }
+        
+
+        foreach ($_POST as $key => $value) {
+        if (strpos($key, 'noter_') === 0) {
+            $id_offre = substr($key, strlen('noter_'));
+            if (isset($_POST['Note_' . $id_offre]) && !empty($_POST['Note_' . $id_offre])) {
+                $note = $_POST['Note_' . $id_offre] ;
+                $id_ut = $_SESSION['id_utilisateur'];
+                $stat_entreprise->noter($id_offre, $note, $id_ut); 
+                var_dump($status);
+            }              
+        $entreprise = $stat_entreprise->afficher_entreprise();
+    }
+}
+    }else {
+        $entreprise = $stat_entreprise->afficher_entreprise();
+
+    }
+}
+
+
+
+
+    $smarty->assign('entreprise', $entreprise);
+    $smarty->assign('succes_E', $succes_E);
+    $smarty->assign('erreur_E', $erreur_E);
+
 $smarty->display(MAIN_PATH . "/Template/$page.tpl");

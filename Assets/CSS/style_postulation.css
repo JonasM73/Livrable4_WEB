@@ -4,6 +4,19 @@
     width: 50%;
 }
 
+.bravo{
+  color: green;
+  font-size: 50;
+  text-align: center;
+}
+.bravo_vous{
+  color: green;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
 #LM{
 	width: 70%;
 	height: 200px;

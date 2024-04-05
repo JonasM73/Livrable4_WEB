@@ -23,7 +23,7 @@ function DISPLAY($header, $footer, $compte, $compte_id, $compte_type){
     if ($page == 'Acceuil' || $page == 1) {
         require_once 'Assets\PHP\Gestion_Accueil\controller_Accueil.php';
     } 
-    elseif($page == 'Créer_entreprise' || $page =="Entreprise" || $page == 'Dashboard_E'){
+    elseif($page == 'Créer_entreprise' || $page =="Rechercher_Entreprise" || $page == 'Dashboard_E'){
         require_once 'Assets\PHP\Gestion_entreprises\controller_entreprise.php';
     }
     elseif($page == 'Connexion'|| $page == 'Deconnexion'){
@@ -73,6 +73,7 @@ function HEADER_FOOTER(){
         <div class='dropdown'>
             <a href='index.php?page=Entreprise'>Entreprises </a>
         <div class='dropdown-content'>
+            <a href='index.php?page=Rechercher_Entreprise'>Rechercher une Entreprise</a>
             <a href='index.php?page=Créer_entreprise'>Inscrire mon Entreprise</a>
             <a href='index.php?page=Dashboard_E'>Dashboard Entreprise</a>
         </div>
